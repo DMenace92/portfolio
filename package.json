@@ -52,6 +52,7 @@
     "@babel/cli": "7.22.5",
     "@babel/core": "7.22.5",
     "babel-loader": "8.3.0",
-    "webpack": "5.87.0"
+    "webpack": "5.87.0",
+    "webpack-dev-server": "4.15.1"
   }
 }
