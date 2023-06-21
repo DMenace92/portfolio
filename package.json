@@ -51,6 +51,7 @@
   "devDependencies": {
     "@babel/cli": "7.22.5",
     "@babel/core": "7.22.5",
-    "babel-loader": "8.3.0"
+    "babel-loader": "8.3.0",
+    "webpack": "5.87.0"
   }
 }
