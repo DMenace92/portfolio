@@ -47,9 +47,9 @@ function NavBarComponent() {
                     <li className="navbar-item">
                         <a href="/Projects" className="navbar-link">Projects</a>
                     </li>
-                    <li className="navbar-item">
+                    {/* <li className="navbar-item">
                         <a href="/contact" className="navbar-link">Contact</a>
-                    </li>
+                    </li> */}
                     <li className="navbar-item">
                         <a href="/certifications" className="navbar-link">certificates</a>
                     </li>
