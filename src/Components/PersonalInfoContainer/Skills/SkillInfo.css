@@ -8,7 +8,11 @@
 
 
 
+
+
 }
+
+
 
 .skillWrapper {
     width: 60vmax;
@@ -18,7 +22,9 @@
 
 }
 
-@keyframes identifier {}
+.imageHolder {}
+
+
 
 .skillWrapper:hover {
     border: 7px solid rgb(67, 0, 0);
@@ -26,7 +32,9 @@
 }
 
 .skillIcon {
-    width: 30px;
+    justify-content: center;
+
+    /* width: 60vmax; */
     display: flex;
     flex-wrap: wrap;
 }
@@ -51,8 +59,8 @@
     .skillInfoHolder {
         /* width: 60vmax; */
 
-        display: flex;
-        justify-content: center;
+        /* display: flex; */
+        /* justify-content: center; */
 
 
     }
@@ -63,7 +71,7 @@
     } */
 
     .skillWrapper {
-        width: 60vmax;
+        width: 65vmax;
 
         border: 4px solid rgba(67, 0, 0, 0.698);
         border-radius: 20px !important;
@@ -71,23 +79,24 @@
     }
 
     .skillIcon {
-        /* width: 20px;
-        display: flex;
+
+        /* display: flex;
         flex-wrap: wrap; */
     }
 
     .imageHolder {
+
         padding: 10px;
-        width: 100px;
+        width: 60px;
         border: 7px solid rgba(130, 1, 1, 0.596);
         border-radius: 15px;
-        margin: 10px;
+        /* margin: 10px; */
 
     }
 
 
 
     .imageDetailing {
-        height: 65px;
+        height: 55px;
     }
 }
