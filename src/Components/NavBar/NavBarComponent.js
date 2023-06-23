@@ -41,9 +41,9 @@ function NavBarComponent() {
                     <li className="navbar-item">
                         <a href="/" className="navbar-link">Home</a>
                     </li>
-                    <li className="navbar-item">
+                    {/* <li className="navbar-item">
                         <a href="/about" className="navbar-link">About</a>
-                    </li>
+                    </li> */}
                     <li className="navbar-item">
                         <a href="/Projects" className="navbar-link">Projects</a>
                     </li>

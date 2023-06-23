@@ -64,6 +64,7 @@
 .navbar-container {
     display: flex;
     justify-content: space-between;
+    margin-right: 100px !important;
     align-items: center;
     /* max-width: 960px; */
     margin: 0 auto;
@@ -106,6 +107,7 @@
     .navbar-container {
         display: felx;
         justify-content: left;
+        margin-left: 30px;
     }
 
     .navbar-link {

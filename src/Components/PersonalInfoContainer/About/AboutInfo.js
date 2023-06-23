@@ -1,10 +1,12 @@
 import React from 'react';
 // import { Grid, Paper } from '@material-ui/core'
+import NavBar from '../../NavBar/NavBarComponent'
 import { Grid, Paper } from '@mui/material'
 
 const AboutInfo = () => {
     return (
         <div>
+            {/* <NavBar /> */}
             <Grid>
                 <div className="skillInfoHolder" >
                     <Paper className="skillWrapper" elevation="12">
