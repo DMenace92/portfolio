@@ -3,6 +3,12 @@ import React, { useState } from 'react';
 import { Grid, Paper } from '@mui/material'
 import './EmailForm.css'
 
+//create a react life cycle to handle the state of this form
+const componentDidMount = () => {
+    //
+
+}
+
 const EmailForm = () => {
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
