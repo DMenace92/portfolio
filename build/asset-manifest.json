@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bfa5011d.css",
+    "main.js": "/static/js/main.83ff2ac3.js",
+    "static/media/Dennis_Andrew_Enwiya_Resume.pdf": "/static/media/Dennis_Andrew_Enwiya_Resume.c4681aac6a35cf3f3380.pdf",
+    "static/media/profilePic.jpg": "/static/media/profilePic.7362ddd2cd654f265354.jpg",
+    "static/media/MyLogo1.jpg": "/static/media/MyLogo1.7ac29d968a345a5be646.jpg",
+    "static/media/mongodb.png": "/static/media/mongodb.9fb9b3d1d58ca685ddc2.png",
+    "static/media/java-script.png": "/static/media/java-script.b63616c3dd013fa265c3.png",
+    "index.html": "/index.html",
+    "main.bfa5011d.css.map": "/static/css/main.bfa5011d.css.map",
+    "main.83ff2ac3.js.map": "/static/js/main.83ff2ac3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bfa5011d.css",
+    "static/js/main.83ff2ac3.js"
+  ]
+}

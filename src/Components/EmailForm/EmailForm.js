@@ -1,104 +1,101 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 // import { Grid, Paper } from '@material-ui/core';
+// import { useDispatch } from 'react-redux';
+// import EmailerAction from '../../Actions/EmailerAction'
 import { Grid, Paper } from '@mui/material'
 import './EmailForm.css'
 
-//create a react life cycle to handle the state of this form
-const componentDidMount = () => {
-    //
+class EmailForm extends Component {
+    state = {
+        username: '',
+        phoneNumber: '',
+        email: '',
+        message: ''
+    }
 
+    _onSubmit = (e) => {
+        e.preventDefault();
+        this.props.emailer(this.state);
+        console.log(this.props)
+        this.setState({ username: '', phoneNumber: '', email: '', message: '' })
+    }
+    _onChange = ({ target }) => {
+        this.setState({ [target.name]: target.value })
+    }
+    render() {
+        console.log(this.props)
+        console.log(this.state)
+        return (
+            < Grid >
+
+                <div className="contactInfoHolder" >
+                    <Paper className="contactWrapper" elevation="12">
+                        <form className="contact-form"
+
+                            onSubmit={this._onSubmit}
+                        >
+                            <h2 className="contactDesign">Contact Me</h2>
+                            <div className="form-group">
+                                <label htmlFor="username">Name:</label>
+                                <input
+                                    onChange={this._onChange}
+
+                                    id="username"
+                                    name="username"
+                                    value={this.state.username}
+                                    // onChange={handleNameChange}
+                                    // onChange={(e) => setName(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="phoneNumber">Phone:</label>
+                                <input
+                                    onChange={this._onChange}
+
+                                    id="phoneNumber"
+                                    name="phoneNumber"
+                                    value={this.state.phoneNumber}
+                                    // onChange={handlePhoneChange}
+                                    // onChange={(e) => setPhone(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Email</label>
+                                <input
+                                    onChange={this._onChange}
+
+                                    id="email"
+                                    name="email"
+                                    value={this.state.email}
+                                    // onChange={handleEmailChange}
+                                    // onChange={(e) => setEmail(e.target.value)}
+                                    required
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="message">Message</label>
+                                <textarea
+                                    onChange={this._onChange}
+                                    id="message"
+                                    name="message"
+                                    value={this.state.message}
+                                    // onChange={handleMessageChange}
+                                    // onChange={(e) => setMessage(e.target.value)}
+                                    required
+                                ></textarea>
+                            </div>
+                            <button type="submit">Send</button>
+                        </form>
+                    </Paper>
+                </div>
+            </Grid >
+
+
+        )
+    }
 }
 
-const EmailForm = () => {
-    const [name, setName] = useState('');
-    const [phone, setPhone] = useState('');
-    const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-
-    const handleNameChange = (e) => {
-        setEmail(e.target.value);
-    };
-    const handlePhoneChange = (e) => {
-        setEmail(e.target.value);
-    };
-
-    const handleEmailChange = (e) => {
-        setEmail(e.target.value);
-    };
-
-    const handleMessageChange = (e) => {
-        setMessage(e.target.value);
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        // Add logic to handle form submission (e.g., send email)
-        console.log('Name', name);
-        console.log('Phone', phone);
-        console.log('Email:', email);
-        console.log('Message:', message);
-
-        // Clear form fields
-        setName('');
-        setPhone('');
-        setEmail('');
-        setMessage('');
-
-    };
-
-    return (
-
-        <Grid>
-            <div className="contactInfoHolder" >
-                <Paper className="contactWrapper" elevation="12">
-                    <form className="contact-form" onSubmit={handleSubmit}>
-                        <h2 className="contactDesign">Contact Me</h2>
-                        <div className="form-group">
-                            <label htmlFor="name">Name:</label>
-                            <input
-                                type="name"
-                                id="name"
-                                value={name}
-                                onChange={handleNameChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="name">Phone:</label>
-                            <input
-                                type="phone"
-                                id="phone"
-                                value={phone}
-                                onChange={handlePhoneChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input
-                                type="email"
-                                id="email"
-                                value={email}
-                                onChange={handleEmailChange}
-                                required
-                            />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="message">Message</label>
-                            <textarea
-                                id="message"
-                                value={message}
-                                onChange={handleMessageChange}
-                                required
-                            ></textarea>
-                        </div>
-                        <button type="submit">Send</button>
-                    </form>
-                </Paper>
-            </div>
-        </Grid >
-
-    );
-};
 
 export default EmailForm;

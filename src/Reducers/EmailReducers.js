@@ -1,7 +1,7 @@
 import { CREATE_EMAIL_SUCCESS, CREATE_EMAIL_LOADING, CREATE_EMAIL_ERROR } from "../Actions/EmailerAction";
 
 const initState = {
-    email: [],
+    mail: [],
     emailLoading: false,
     emailError: false
 }
@@ -15,13 +15,15 @@ const EmailReducers = (state = initState, action) => {
             }
         case CREATE_EMAIL_SUCCESS:
             return {
-                email: [...state.email, action.payload]
+                mail: [...state.mail, action.payload]
             }
         case CREATE_EMAIL_ERROR:
             return {
                 ...state,
                 emailError: true
             }
+        default:
+            return state
 
     }
 }

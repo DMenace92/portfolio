@@ -11,13 +11,13 @@ const createEmailError = () => ({ type: CREATE_EMAIL_ERROR })
 //email Thunk
 
 export const emailer = (mail) => dispatch => {
-    dispatchEvent(
+    dispatch(
         createEmailLoading()
     )
-    fetch(`${APICall}/send-email`, {
-        method: 'POST',
+    fetch(`http://localhost:9000/send-email`, {
+        method: "POST",
         body: JSON.stringify(mail),
-        header: {
+        headers: {
             'Content-Type': 'application/json'
         }
     })
@@ -29,7 +29,7 @@ export const emailer = (mail) => dispatch => {
         })
         .catch(err => {
             dispatch(
-                createEmailError(err)
+                createEmailError()
             )
         })
 }

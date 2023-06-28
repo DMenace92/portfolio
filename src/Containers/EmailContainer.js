@@ -1,13 +1,17 @@
 import { connect } from "react-redux";
-import Emailer from "../Components/EmailForm/EmailForm"
+import EmailForm from "../Components/EmailForm/EmailForm"
 import { emailer } from "../Actions/EmailerAction";
 
-
+const mapStateToProps = (mail) => {
+    return {
+        mail: mail
+    }
+}
 const mapDispatchToProps = dispatch => {
     return {
-        emailer: (email) => {
-            dispatch(emailer(email));
+        emailer: (mail) => {
+            dispatch(emailer(mail));
         }
     }
 }
-export default connect(null, mapDispatchToProps)(Emailer)
+export default connect(mapStateToProps, mapDispatchToProps)(EmailForm)
