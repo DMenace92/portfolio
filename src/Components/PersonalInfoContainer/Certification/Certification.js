@@ -15,17 +15,53 @@ const Certification = () => {
              */}
             <Grid>
                 <div className="certificationContainer">
-                    <Paper className="certificationWrapper" eleveation="12">
-                        <h1>My Certictes</h1>
-                        <h3>Education</h3>
+                    <Paper className="certificationWrapper" elevation="24">
+
                         <div>
+                            <h1 className="certificationTitleStyle">University and High School deplomas</h1>
+                            {/* <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
+                            <img className="certificationImages" src={pListCert1} alt='a certificate'></img> */}
+                        </div>
+                    </Paper>
+                </div>
+            </Grid>
+
+            <Grid>
+                <div className="certificationContainerChildren">
+                    <Paper className="certificationWrapper" elevation="24">
+
+                        <div>
+                            <h1 className="certificationTitleStyle">Coding Boot Camp</h1>
+                            {/* <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
+                            <img className="certificationImages" src={pListCert1} alt='a certificate'></img> */}
+                        </div>
+                    </Paper>
+                </div>
+            </Grid>
+            <Grid>
+                <div className="certificationContainerChildren">
+                    <Paper className="certificationWrapper" elevation="24">
+
+                        <div>
+                            <h1 className="certificationTitleStyle">Technology Certifications</h1>
+                            {/* <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
+                            <img className="certificationImages" src={pListCert1} alt='a certificate'></img> */}
+                        </div>
+                    </Paper>
+                </div>
+            </Grid>
+            <Grid>
+                <div className="certificationContainerChildren">
+                    <Paper className="certificationWrapper" elevation="24">
+
+                        <div>
+                            <h1 className="certificationTitleStyle">Academic Achievments</h1>
                             <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
                             <img className="certificationImages" src={pListCert1} alt='a certificate'></img>
                         </div>
                     </Paper>
                 </div>
             </Grid>
-
 
         </div >
     )
