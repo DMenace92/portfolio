@@ -51,7 +51,7 @@ function NavBarComponent() {
                         <a href="/contact" className="navbar-link">Contact</a>
                     </li> */}
                     <li className="navbar-item">
-                        <a href="/certifications" className="navbar-link">certificates</a>
+                        <a href="/certifications" className="navbar-link">Certificates</a>
                     </li>
                 </ul>
             </div>

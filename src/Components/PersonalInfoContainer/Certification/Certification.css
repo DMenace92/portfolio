@@ -18,7 +18,7 @@
 }
 
 .certificationWrapper {
-    width: 66vmax;
+    width: 60vmax;
     border: 7px solid rgba(67, 0, 0, 0.698);
     border-radius: 20px !important;
 
@@ -27,11 +27,12 @@
 }
 
 .certificationTitleStyle {
-    color: rgba(67, 0, 0, 0.698)
+    color: rgba(67, 0, 0, 0.698);
 }
 
 .certificationImages {
-    width: 57vmax;
+    /* width: 57vmax; */
+    width: 40vmax;
     margin: 10px;
     border: 10px solid rgba(67, 0, 0, 0.698);
     border-radius: 20px !important;
@@ -44,26 +45,31 @@
 
     .certificationContainerChildren {
         margin-top: -5px;
+
     }
 
     .certificationWrapper {
-        width: 50vmax;
+        /* width: 50vmax; */
+        /* width: 10vmax; */
 
     }
 
-    .certificationImages {
-        width: 40vmax;
-    }
+
 
     .certificationTitleStyle {
         font-size: 20px;
     }
 
     .certificationImages {
-        /* width: 57vmax; */
-        width: 260px;
+
         margin: 10px;
         border: 7px solid rgba(67, 0, 0, 0.698);
         border-radius: 20px !important;
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .certificationImages {
+        width: 200px;
     }
 }

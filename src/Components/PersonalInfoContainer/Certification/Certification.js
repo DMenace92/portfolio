@@ -18,7 +18,7 @@ const Certification = () => {
                     <Paper className="certificationWrapper" elevation="24">
 
                         <div>
-                            <h1 className="certificationTitleStyle">University and High School deplomas</h1>
+                            <h1 className="certificationTitleStyle">University and High School Deplomas</h1>
                             {/* <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
                             <img className="certificationImages" src={pListCert1} alt='a certificate'></img> */}
                         </div>
