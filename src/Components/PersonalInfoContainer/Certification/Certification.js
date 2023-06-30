@@ -5,6 +5,7 @@ import { Grid, Paper } from '@mui/material'
 // import commingSoon from '../../../Images/commingsoon/25516.jpg'
 import pListCert1 from '../../../Images/PresListS2022.PNG'
 import pListCert2 from '../../../Images/PresListW2023.PNG'
+import awards from '../../../Images/badgesAwards.PNG'
 import './Certification.css'
 
 const Certification = () => {
@@ -58,6 +59,7 @@ const Certification = () => {
                             <h1 className="certificationTitleStyle">Academic Achievments</h1>
                             <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
                             <img className="certificationImages" src={pListCert1} alt='a certificate'></img>
+                            <img className="certificationImages" src={awards}></img>
                         </div>
                     </Paper>
                 </div>

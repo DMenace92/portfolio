@@ -4,6 +4,7 @@ import { Grid, Paper } from '@mui/material'
 import profilePic from '../../Images/profilePic.jpg'
 import DownloadImage from '../../Images/download-file.png'
 import FileDownload from '../../Images/Dennis_Andrew_Enwiya_Resume.pdf'
+import github from '../../Images/github.png'
 import './ProfileComponent.css';
 
 const ProfileComponent = () => {
@@ -16,24 +17,23 @@ const ProfileComponent = () => {
                             <img className="myImage" src={profilePic} alt="this is me" />
                         </div>
                         <div className="aboutMeWrapper">
-                            <h6 className="aboutMeItem">I obtained a Bachelor's degree in Computer Science from Southern New Hampshire University, where I developed a strong foundation in programming, algorithms, software development, and computer systems. Through challenging coursework and hands-on projects, I honed my problem-solving and critical thinking skills, finding creative solutions to complex technical challenges. I actively engaged with fellow students, enhancing my teamwork and communication abilities. I made the most of resources provided by the Computer Science Department, attending workshops, participating in coding competitions, and joining tech-related clubs to stay updated with industry trends.
-
-                                During my academic journey, I gained a deep appreciation for the transformative power of technology, particularly in areas like artificial intelligence, machine learning, and cybersecurity. With my Bachelor's degree in hand, I'm eager to apply my knowledge and skills to real-world challenges. I am ready to contribute to a dynamic team, creating cutting-edge solutions that have a positive impact on society.
-
-                                My time at Southern New Hampshire University has equipped me with the necessary expertise and tools to thrive in the ever-changing field of computer science. I look forward to the next chapter of my journey, where I can make a meaningful contribution to the world of technology.</h6>
+                            <h6 className="aboutMeItem">
+                            </h6>
 
                             <h6 className="aboutMeItem">
-                                Attending the Galvanize 6-month immersive boot camp in 2018-2019 was an incredibly enriching experience that propelled my skills in JavaScript,Node.js, SQL, React.js, and self-taught technology like MongoDB to new heights. From the moment I stepped into the program, I knew I was embarking on a transformative journey.
+                                Hey there! I'm Dennis Enwiya, and I'm thrilled to share my passion for software development with you. I have always been captivated by the world of technology, and pursuing a career in this field has been a dream come true.
 
-                                Throughout the boot camp, I immersed myself in an intensive curriculum that covered the fundamentals and advanced concepts of JavaScript, SQL, and React.js. The instructors were knowledgeable and passionate, going above and beyond to ensure we grasped the intricacies of these technologies. Their guidance and support were instrumental in my growth as a developer.
+                                To kickstart my journey, I enrolled in Galvanize, a prestigious 6-month boot camp dedicated to software development. This intense program provided me with invaluable certifications, helping me establish a strong foundation in the field. During my time at Galvanize, I not only sharpened my technical skills but also learned the importance of collaboration and innovative problem-solving.
+                                <br /><br />
+                                Fueling my desire for knowledge, I decided to pursue a degree in Computer Science from Southern New Hampshire University. This academic experience expanded my understanding of core computer science principles, algorithms, and software development methodologies. It also instilled in me a lifelong passion for learning and staying up to date with the latest technological advancements.
 
-                                One of the highlights of the program was the opportunity to explore self-taught technology like MongoDB, which I later utilized in my capstone project. This hands-on experience allowed me to deepen my understanding of databases and gain practical skills that have proven invaluable in my career.
+                                Equipped with certifications from Galvanize and a degree from Southern New Hampshire University, I am excited to make a meaningful impact in the software development industry. I thrive on tackling complex coding challenges, building robust applications, and contributing to the continuous innovation that drives the tech landscape forward.
+                                <br /><br />
 
-                                The collaborative nature of the boot camp fostered an environment where I could learn from and with my peers. Working on group projects not only enhanced my technical abilities but also taught me the importance of teamwork and effective communication in a professional setting.
+                                I'm an avid believer in personal and professional growth, constantly seeking new opportunities to expand my skill set. With my determination, drive, and solid foundation in software development, I am confident in my ability to bring value to any organization looking for a dedicated and accomplished software developer.
 
-                                As the program neared its end, I felt a profound sense of accomplishment. The career support provided by Galvanize was exceptional, equipping me with the tools and knowledge needed to navigate the job market successfully. I left the boot camp with newfound confidence and secured a position in the tech industry soon after.
-
-                                Attending the Galvanize boot camp was a transformative experience that elevated my skills in JavaScript, SQL, React.js, and self-taught technology like MongoDB. The knowledge, connections, and personal growth I gained during those six months continue to shape my career in profound ways.</h6>
+                                Join me on this exciting journey as I strive to make a lasting impact in the ever-evolving world of software development. Together, let's push boundaries and create innovative solutions that shape the future.
+                            </h6>
 
                             {/* <h6 className='aboutMeItem'>
                                 Hi there! I'm thrilled to share a summary about my journey of obtaining a Bachelor's degree in Computer Science from Southern New Hampshire University.
@@ -50,11 +50,26 @@ const ProfileComponent = () => {
 
 
                         </div>
-                        <h5>download my resume right here</h5>
-                        <a href={FileDownload} download="FileDownload">
-                            <img className="DownloadableContent" src={DownloadImage} alt="this is a download"></img>
-                        </a>
+                        <div className="contactMainWrapper">
+                            <div className='contactInfo'>
+                                <div className="phoneAndEmail">
+                                    Mobile Phone: 6024596200
 
+                                </div>
+                                <div className="phoneAndEmail">
+
+                                    <img className="profileImageIcon" src={github}></img>
+                                </div>
+                                <div className="socialMediaLinks">
+                                </div>
+                            </div>
+                            <div className="downloadWrapper">
+                                {/* <h5>download my resume right here</h5> */}
+                                <a href={FileDownload} download="FileDownload">
+                                    <img className="DownloadableContent" src={DownloadImage} alt="this is a download"></img>
+                                </a>
+                            </div>
+                        </div>
 
                     </Paper>
                 </div>
