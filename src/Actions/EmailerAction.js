@@ -1,4 +1,5 @@
-import APICall from '../env'
+const LocalApiURL = process.env.LOCAL_REACT_APP_API_URL;
+
 export const CREATE_EMAIL_SUCCESS = "CREATE_EMAIL_SUCCESS"
 const createEmailSuccess = (mail) => ({ type: CREATE_EMAIL_SUCCESS, payload: mail })
 
@@ -14,7 +15,9 @@ export const emailer = (mail) => dispatch => {
     dispatch(
         createEmailLoading()
     )
-    fetch(`http://localhost:9000/send-email`, {
+    // fetch(`http://localhost:9000/send-email`, {
+    fetch("https://myportfolio-api-44ada9ce9fb4.herokuapp.com/send-email", {
+
         method: "POST",
         body: JSON.stringify(mail),
         headers: {

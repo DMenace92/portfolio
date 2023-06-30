@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { Grid, Paper } from '@material-ui/core'
 import { Grid, Paper } from '@mui/material'
+import {
+    Dropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+} from 'reactstrap';
 import image1 from '../../../Images/javascript.png'
 import image2 from '../../../Images/html.png'
 import image3 from '../../../Images/mongodb.png'
@@ -21,7 +27,8 @@ import './SkillInfo.css'
 
 //icons for skills https://iconscout.com/icons/javascript
 
-const SkillInfo = () => {
+const SkillInfo = (props) => {
+
     return (
         <div>
             <Grid>
@@ -31,11 +38,16 @@ const SkillInfo = () => {
                             My Tool Belt
                         </h1>
                         <div className="skillIcon">
+
                             <div className="imageHolder">
                                 <img className="imageDetailing" src={image1} alt="javascript"></img>
                             </div>
+
+
+
+
                             <div className="imageHolder">
-                                <img className="imageDetailing" src={image2} alt="javascript"></img>
+                                <img className="imageDetailing" src={image2} alt="HTML"></img>
                             </div>
                             <div className="imageHolder">
                                 <img className="imageDetailing" src={image9} alt="javascript"></img>
@@ -85,7 +97,8 @@ const SkillInfo = () => {
                     </Paper>
                 </div>
             </Grid >
-        </div>
+
+        </div >
     )
 }
 export default SkillInfo;

@@ -1,0 +1,39 @@
+.mainAboutContainer {
+    text-align: center;
+}
+
+.AboutInfoHolder {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.AboutWrapper {
+    width: 60vmax;
+    border: 7px solid rgba(67, 0, 0, 0.698);
+    border-radius: 20px !important;
+
+}
+
+h5 {
+    border: none;
+    margin-right: 20px;
+}
+
+hr {
+    /* width: 50vmax; */
+    border: 2px solid rgba(67, 0, 0, 0.698);
+    margin-right: 40px;
+}
+
+ul {
+    text-align: left;
+}
+
+p {
+    text-align: center;
+}
+
+.AboutWrapper h5 {
+    text-align: left;
+}
