@@ -33,7 +33,7 @@ const SkillInfo = (props) => {
         <div>
             <Grid>
                 <div className="skillInfoHolder" >
-                    <Paper className="skillWrapper" elevation="12">
+                    <Paper className="skillWrapper" id="skillWrapper" elevation="12">
                         <h1 className="skillTextStyling">
                             My Tool Belt
                         </h1>
