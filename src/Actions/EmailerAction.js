@@ -1,6 +1,7 @@
 import api_connect from '../utils'
 
 
+
 export const CREATE_EMAIL_SUCCESS = "CREATE_EMAIL_SUCCESS"
 const createEmailSuccess = (mail) => ({ type: CREATE_EMAIL_SUCCESS, payload: mail })
 
@@ -15,12 +16,12 @@ const createEmailError = () => ({ type: CREATE_EMAIL_ERROR })
 
 
 export const emailer = (mail) => dispatch => {
-    console.log(`${api_connect}send-email`)
+    // console.log(`${api_connect}send-email`)
     dispatch(
         createEmailLoading()
     )
     // fetch(`http://localhost:9000/send-email`, {
-    fetch(`${api_connect}send-email`, {
+    fetch(`/send-email`, {
 
         method: "POST",
         body: JSON.stringify(mail),
