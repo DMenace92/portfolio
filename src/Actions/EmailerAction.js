@@ -1,5 +1,6 @@
 import api_connect from '../utils'
 
+
 export const CREATE_EMAIL_SUCCESS = "CREATE_EMAIL_SUCCESS"
 const createEmailSuccess = (mail) => ({ type: CREATE_EMAIL_SUCCESS, payload: mail })
 
@@ -14,6 +15,7 @@ const createEmailError = () => ({ type: CREATE_EMAIL_ERROR })
 
 
 export const emailer = (mail) => dispatch => {
+    console.log(`${api_connect}send-email`)
     dispatch(
         createEmailLoading()
     )
@@ -30,11 +32,13 @@ export const emailer = (mail) => dispatch => {
         .then(mail => {
             dispatch(
                 createEmailSuccess(mail)
+
             )
         })
         .catch(err => {
             dispatch(
                 createEmailError()
+
             )
         })
 }
