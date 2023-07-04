@@ -1,4 +1,4 @@
-const LocalApiURL = process.env.LOCAL_REACT_APP_API_URL;
+import api_connect from '../utils'
 
 export const CREATE_EMAIL_SUCCESS = "CREATE_EMAIL_SUCCESS"
 const createEmailSuccess = (mail) => ({ type: CREATE_EMAIL_SUCCESS, payload: mail })
@@ -11,12 +11,14 @@ const createEmailError = () => ({ type: CREATE_EMAIL_ERROR })
 
 //email Thunk
 
+
+
 export const emailer = (mail) => dispatch => {
     dispatch(
         createEmailLoading()
     )
     // fetch(`http://localhost:9000/send-email`, {
-    fetch("https://myportfolio-api-44ada9ce9fb4.herokuapp.com/send-email", {
+    fetch(`${api_connect}send-email`, {
 
         method: "POST",
         body: JSON.stringify(mail),

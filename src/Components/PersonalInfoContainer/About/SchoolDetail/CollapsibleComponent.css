@@ -6,10 +6,12 @@
 
 .content-parent {
     height: 0px;
+    transition: height ease 1s;
     overflow: hidden;
-    transition: height ease 0.5s;
+
 }
 
 .content-show {
     height: auto;
+
 }
