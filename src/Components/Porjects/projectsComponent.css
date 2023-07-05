@@ -1,4 +1,36 @@
+.projectContainer {
+    height: 100%;
+}
+
 .projectCommingSoon {
     width: 100%;
-    height: 50%;
+    height: 100%;
+}
+
+@media only screen and (max-width:400px) {
+    .projectsContainer {
+        height: 100vmax;
+        background-color: black;
+
+    }
+
+    .projectCommingSoon {
+
+        height: 50vmax;
+        margin-top: 20%;
+
+
+
+    }
+
+}
+
+@media only screen and (max-width: 280px) {
+    .projectCommingSoon {
+        /* height: 100vmax;
+        border: 10px solid white; */
+
+
+    }
+
 }

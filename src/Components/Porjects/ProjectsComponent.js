@@ -7,7 +7,9 @@ const ProjectComponent = () => {
     return (
         <div>
             <NavBar />
-            <img className="projectCommingSoon" src={commingSoon} ></img>
+            <div className="projectsContainer">
+                <img className="projectCommingSoon" src={commingSoon} ></img>
+            </div>
 
         </div>
     )
