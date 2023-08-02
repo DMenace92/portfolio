@@ -37,7 +37,7 @@ const FooterComponent = () => {
             </div>
             <div className="footer__bottom">
                 <div className="container">
-                    <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Dennis Enwiya. All rights reserved.</p>
                 </div>
                 <div className="footer__social-media">
                     {/* Add your social media icons or links here */}

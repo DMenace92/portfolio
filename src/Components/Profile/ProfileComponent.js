@@ -56,9 +56,10 @@ const ProfileComponent = () => {
                                     Mobile Phone: 6024596200
 
                                 </div>
-                                <div className="phoneAndEmail">
-
+                                <div>
+<a href="https://github.com/DMenace92"> 
                                     <img className="profileImageIcon" src={github}></img>
+                                    </a>
                                 </div>
                                 <div className="socialMediaLinks">
                                 </div>
