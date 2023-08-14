@@ -19,10 +19,13 @@ import image8 from '../../../Images/java.png'
 import image9 from '../../../Images/css3.png'
 import image11 from '../../../Images/sql.png'
 import image12 from '../../../Images/postgresql.png'
+import image13 from '../../../Images/docker.png'
 import image14 from '../../../Images/nodejs.png'
 import image15 from '../../../Images/github.png'
 import image16 from '../../../Images/heroku.png'
 import image17 from '../../../Images/agile.png'
+import image18 from '../../../Images/aws.png'
+import image19 from '../../../Images/android-studio.png'
 import './SkillInfo.css'
 
 //icons for skills https://iconscout.com/icons/javascript
@@ -42,10 +45,6 @@ const SkillInfo = (props) => {
                             <div className="imageHolder">
                                 <img className="imageDetailing" src={image1} alt="javascript"></img>
                             </div>
-
-
-
-
                             <div className="imageHolder">
                                 <img className="imageDetailing" src={image2} alt="HTML"></img>
                             </div>
@@ -83,6 +82,9 @@ const SkillInfo = (props) => {
                                 <img className="imageDetailing" src={image12} alt="javascript"></img>
                             </div>
                             <div className="imageHolder">
+                                <img className="imageDetailing" src={image13} alt="javascript"></img>
+                            </div>
+                            <div className="imageHolder">
                                 <img className="imageDetailing" src={image15} alt="javascript"></img>
                             </div>
                             <div className="imageHolder">
@@ -91,6 +93,13 @@ const SkillInfo = (props) => {
                             <div className="imageHolder">
                                 <img className="imageDetailing" src={image17} alt="javascript"></img>
                             </div>
+                            <div className="imageHolder">
+                                <img className="imageDetailing" src={image18} alt="AWS"></img>
+                            </div>
+                            <div className="imageHolder">
+                                <img className="imageDetailing" src={image19} alt="Android studios"></img>
+                            </div>
+
 
                         </div>
 
