@@ -1,10 +1,23 @@
 .projectContainer {
-    height: 100%;
+    /* height: 100%; */
+    margin-top: 75px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.projectWrapper {
+    width: 60vmax;
+    border: 7px solid rgba(67, 0, 0, 0.698);
+
+    border-radius: 20px !important;
 }
 
 .projectCommingSoon {
+    z-index: -4;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
+
 }
 
 @media only screen and (max-width:400px) {
