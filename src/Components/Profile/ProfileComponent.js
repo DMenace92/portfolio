@@ -66,7 +66,7 @@ const ProfileComponent = () => {
                             </div>
                             <div className="downloadWrapper">
                                 {/* <h5>download my resume right here</h5> */}
-                                <a href={FileDownload} download="FileDownload">
+                                <a href={FileDownload} download="Dennis_Enwiya_Resume">
                                     <img className="DownloadableContent" src={DownloadImage} alt="this is a download"></img>
                                 </a>
                             </div>
