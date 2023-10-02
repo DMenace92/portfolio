@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Paper } from '@mui/material'
 import profilePic from '../../Images/profilePic.jpg'
 import DownloadImage from '../../Images/download-file.png'
-import FileDownload from '../../Images/Dennis_Andrew_Enwiya_Resume.pdf'
+import FileDownload from '../../Images/Dennis Andrew Enwiya Resume.pdf'
 import github from '../../Images/github.png'
 import './ProfileComponent.css';
 
@@ -66,7 +66,7 @@ const ProfileComponent = () => {
                             </div>
                             <div className="downloadWrapper">
                                 {/* <h5>download my resume right here</h5> */}
-                                <a href={FileDownload} download="Dennis_Enwiya_Resume">
+                                <a href={FileDownload} download="Dennis Andrew Enwiya Resume">
                                     <img className="DownloadableContent" src={DownloadImage} alt="this is a download"></img>
                                 </a>
                             </div>
