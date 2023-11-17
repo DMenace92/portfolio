@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Paper } from '@mui/material'
 import profilePic from '../../Images/profilePic.jpg'
 import DownloadImage from '../../Images/download-file.png'
-import FileDownload from '../../Images/Dennis Andrew Enwiya Resume.pdf'
+import FileDownload from '../../Images/DennisEnwiyaResume.pdf'
 import github from '../../Images/github.png'
 import './ProfileComponent.css';
 
