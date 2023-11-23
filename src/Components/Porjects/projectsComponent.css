@@ -9,16 +9,27 @@
 .projectWrapper {
     width: 60vmax;
     border: 7px solid rgba(67, 0, 0, 0.698);
+    background-color: rgba(0, 0, 0, 0.528) !important;
 
     border-radius: 20px !important;
 }
-
-.projectCommingSoon {
-    z-index: -4;
-    width: 100%;
-    /* height: 100%; */
-
+.VideoTag{
+    width:50vmax;
 }
+.PCStylesMain{
+    display: flex;
+    justify-content: center;
+    /* width: 100vmax; */
+}
+.PCStyles{
+    background-color: white;
+    padding:20px;
+    border-radius: 20px;
+    /* width:50vmax; */
+    
+    
+}
+
 
 @media only screen and (max-width:400px) {
     .projectsContainer {
