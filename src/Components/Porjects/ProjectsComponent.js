@@ -15,7 +15,7 @@ const ProjectComponent = () => {
             {/* <div className="projectsContainer">
                 <img className="projectCommingSoon" src={commingSoon} ></img>
             </div> */}
-            <Grid>
+            <Grid className="PCGrid">
                 <div className="projectContainer">
                     <Paper className="projectWrapper" elevation="24">
 

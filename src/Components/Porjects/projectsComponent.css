@@ -32,29 +32,61 @@
 
 
 @media only screen and (max-width:400px) {
-    .projectsContainer {
-        height: 100vmax;
-        background-color: black;
+    .projectContainer {
+       /* width:30vmax; */
+        /* height: 100vmax; */
+        /* background-color: black; */
 
     }
+    .VideoTag{
+        width:35vmax;
+    }
+    .PCStyles h1{
+        font-size:20px;
+    }
+    .PCStyles h2{
+        font-size: 16px;
+        text-align: left;
+    }
+    .PCStyles p, li {
+        font-size: 12px;
 
-    .projectCommingSoon {
+    }
+.PCStyles li{
+    text-align: left;
+
+}
+    /* .projectCommingSoon {
 
         height: 50vmax;
         margin-top: 20%;
 
 
 
-    }
+    } */
 
 }
 
-@media only screen and (max-width: 280px) {
-    .projectCommingSoon {
-        /* height: 100vmax;
-        border: 10px solid white; */
-
-
+@media only screen and (max-width:390px) {
+    /* .MuiGrid-root {
+        display: flex;
+        justify-content: center;
+    } */
+    .PCGrid{
+        display: flex;
+        justify-content: center;
     }
+    .projectContainer {
+       
+        
+        width: 40vmax;
+ 
+ 
+     }
+    .VideoTag{
+        width:29;
+   
+    
 
-}
+    }}
+
