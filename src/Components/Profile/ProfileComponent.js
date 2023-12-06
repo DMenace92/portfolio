@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Paper } from '@mui/material'
 import profilePic from '../../Images/profilePic.jpg'
 import DownloadImage from '../../Images/download-file.png'
-import FileDownload from '../../Images/DennisEnwiyaResume.pdf'
+import FileDownload from '../../Images/Dennis_Andrew_Enwiya_Resume.pdf'
 import github from '../../Images/github.png'
 import './ProfileComponent.css';
 
@@ -53,7 +53,7 @@ const ProfileComponent = () => {
                         <div className="contactMainWrapper">
                             <div className='contactInfo'>
                                 <div className="phoneAndEmail">
-                                    Mobile Phone: 6024596200
+                                    Contact me Below.
 
                                 </div>
                                 <div>
@@ -67,8 +67,11 @@ const ProfileComponent = () => {
                             <div className="downloadWrapper">
                                 {/* <h5>download my resume right here</h5> */}
                                 <a href={FileDownload} download="Dennis Andrew Enwiya Resume">
+                                   
                                     <img className="DownloadableContent" src={DownloadImage} alt="this is a download"></img>
+                                    
                                 </a>
+                                <p className="downloadDiscription">My Resume</p>
                             </div>
                         </div>
 
