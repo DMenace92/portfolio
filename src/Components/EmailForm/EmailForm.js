@@ -20,7 +20,7 @@ class EmailForm extends Component {
         console.log(this.props)
         if (this.state.hidden.trim()!==''){
             console.log("Submission Failed")
-            prompt("not valid")
+          
             return
         }else{
             this.props.emailer(this.state);
