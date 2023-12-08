@@ -12,13 +12,13 @@ import './MainPageComponent.css'
 function MainPageComponent() {
     return (
         <div>
-            <NavBarComponent />
+            {/* <NavBarComponent /> */}
             <div className="MainPageWrapper">
                 <Profile />
-                <AboutInfo />
+                {/* <AboutInfo />
                 <SkillInfo />
-                <EmailForm />
-                <FooterComponent />
+                <EmailForm /> */}
+                {/* <FooterComponent /> */}
             </div>
         </div>
     )

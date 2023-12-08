@@ -1,4 +1,115 @@
-.profileHolder {
+/* 
+html{
+    margin:-100 auto;
+} */
+
+.portfolioHolder{
+   background-color: rgba(240, 248, 255, 0);
+    position: absolute;
+    top:0px;
+    /* border:2px solid white; */
+    /* margin-bottom:1px auto; */
+    
+
+    width:30vw;
+    height:100vh;
+    /* display: flex;
+    justify-content: center; */
+}
+.ProfileImageHolder{
+    margin-top: 100px;
+
+    /* border:5px solid white; */
+    border-radius: 50%;
+    width:50%;
+    height:30%;
+}
+.nameTextStyle{
+    color:lightgray;
+}
+.navigationSelection{
+    margin-left:5vw;
+    text-align:left;
+
+}
+.selectionItem{
+    font-size:30px;
+    text-decoration: none;
+    color: lightgray;
+}
+.ScrollItemsContainer{
+    position: absolute;
+    top:0px;
+    right:0px;
+    /* display: flex;
+    float: right; */
+    /* border:3px solid white; */
+    width:69vw;
+    height:100vh;
+
+}
+.footer__social-media a {
+    color: #555555;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.footer__social-media a:hover {
+    color: #333333;
+}
+
+.footerIcons {
+    width: 40px;
+    margin-top: 10px;
+    transition: 1s;
+}
+
+.footerIcons:hover {
+    width: 50px;
+    z-index: 6;
+    transition: .5s;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .ProfileImageHolder{
+       
+        width:50%;
+        height:15%;
+    }
+    .selectionItem{
+        font-size:20px;
+       
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .profileHolder {
 
     display: flex;
     justify-content: center;
@@ -12,7 +123,6 @@
     margin: 10px;
     border: 7px solid rgba(67, 0, 0, 0.698);
     border-radius: 20px !important;
-    /* background-color: black !important; */
 
 }
 
@@ -23,7 +133,6 @@
 }
 
 .myImage {
-    /* margin-top: 40px; */
     width: 200px;
 
 }
@@ -82,11 +191,7 @@
 
 
 
-/* @media only screen and (max-width:950px) {
-    .myImage {
-        width: 22vmax;
-    }
-} */
+
 
 @media only screen and (max-width: 400px) {
     .profileHolder {
@@ -113,4 +218,4 @@
         margin: 20px;
     }
 
-}
+} */

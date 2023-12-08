@@ -1,3 +1,8 @@
+html {
+  
+  /* scrollbar-color: #6969dd #e0e0e0;
+  scrollbar-width: thin; */
+}
 .App {
   text-align: center;
 
@@ -18,28 +23,26 @@ html::-webkit-scrollbar-thumb {
   box-shadow: inset 0 0 6px rgba(251, 2, 2, 0.747);
 }
 
-html {
+/* html {
   scrollbar-width: thin;
-}
+} */
 
-html {
-  scrollbar-color: #6969dd #e0e0e0;
-  scrollbar-width: thin;
-}
+
 
 /* apply background:linear-gradient */
 html {
+  background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   /* background-color: #d1E8E2; */
   /* background: linear-gradient(to left, rgba(49, 49, 49, 0.316), rgba(72, 72, 72, 0.507) 100%, 50%, rgba(41, 41, 41, 0.593) 100%); */
   /* background-color: rgba(0, 0, 0, 0.826); */
-  background-color: rgba(0, 0, 0, 0.582);
+  /* background-color: rgba(0, 0, 0, 0.582); */
 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -59,7 +62,7 @@ html {
 }
 
 .App-link {
-  /* color: #61dafb; */
+  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
