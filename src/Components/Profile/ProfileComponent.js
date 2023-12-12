@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 // import { Grid, Paper } from '@material-ui/core';
 import { Grid, Paper } from '@mui/material'
 import profilePic from '../../Images/profilePic.jpg'
@@ -10,71 +10,65 @@ import twitter from '../../Images/twitter.png'
 import linkedin from '../../Images/linkedin.png'
 import github from '../../Images/github.png'
 // import github from '../../Images/github.png'
-import './ProfileComponent.css';
-import ScrollItems from './ScrollItems';
+import './ProfileComponent.css'
+import ScrollItems from './ScrollItems'
 
 const ProfileComponent = () => {
-    return (
-        // <div>
-        <Grid>
-            <Paper style={{backgroundColor:"rgba(240, 248, 255, 0)"}} className="portfolioHolder" elevation={24}>
-                {/* <div className="ProfileImageHolder"> */}
-                    <img  className="ProfileImageHolder" src={profilePic}></img>
-                    <div>
-                        <h1 className="nameTextStyle" >Dennis A, Enwiya</h1>
-                        <ul className="navigationSelection">
-                            <li className="selectionItem">About</li>
-                            <li className="selectionItem">experience</li>
-                            <li className="selectionItem">Project</li>
-                            <li className="selectionItem">Contact Me</li>
-                        </ul>
-                    </div>
-                    <div className="footer__social-media">
-                    {/* Add your social media icons or links here */}
-                    <a href="https://www.facebook.com/dennis.enwiya/">
-                        <i className="fab fa-facebook"></i>
-                        <img className="footerIcons" src={facebook}></img>
-                    </a>
-                    <a href="https://twitter.com/DEnwiya">
-                        <i className="fab fa-twitter"></i>
-                        <img className="footerIcons" src={twitter}></img>
-                    </a>
-                    <a href="https://www.instagram.com/theonlymenace/">
-                        <i className="fab fa-instagram"></i>
-                        <img className="footerIcons" src={instagram}></img>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dennisenwiya">
-                        <i className="fab fa-instagram"></i>
-                        <img className="footerIcons" src={linkedin}></img>
-                    </a>
-                    <a href="https://github.com/DMenace92">
-                        <i className="fab fa-twitter"></i>
-                        <img className="footerIcons" src={github}></img>
-                    </a>
-                </div>
+  return (
+    // <div>
+    <Grid>
+      <Paper
+        style={{ backgroundColor: 'rgba(240, 248, 255, 0)' }}
+        className="portfolioHolder"
+        elevation={24}
+      >
+        {/* <div className="ProfileImageHolder"> */}
+        <img className="ProfileImageHolder" src={profilePic}></img>
+        <div>
+          <h1 className="nameTextStyle">Dennis A, Enwiya</h1>
+          <ul className="navigationSelection">
+            <li className="selectionItem">About</li>
+            <li className="selectionItem">experience</li>
+            <li className="selectionItem">Project</li>
+            <li className="selectionItem">Contact Me</li>
+          </ul>
+        </div>
+        <div className="footer__social-media">
+          {/* Add your social media icons or links here */}
+          <a href="https://www.facebook.com/dennis.enwiya/">
+            <i className="fab fa-facebook"></i>
+            <img className="footerIcons" src={facebook}></img>
+          </a>
+          <a href="https://twitter.com/DEnwiya">
+            <i className="fab fa-twitter"></i>
+            <img className="footerIcons" src={twitter}></img>
+          </a>
+          <a href="https://www.instagram.com/theonlymenace/">
+            <i className="fab fa-instagram"></i>
+            <img className="footerIcons" src={instagram}></img>
+          </a>
+          <a href="https://www.linkedin.com/in/dennisenwiya">
+            <i className="fab fa-instagram"></i>
+            <img className="footerIcons" src={linkedin}></img>
+          </a>
+          <a href="https://github.com/DMenace92">
+            <i className="fab fa-twitter"></i>
+            <img className="footerIcons" src={github}></img>
+          </a>
+        </div>
 
-                {/* </div> */}
-            </Paper>
-            <div className="ScrollItemsContainer">
-                
-                <ScrollItems/>
-            </div>
-            </Grid>
-      
-    )
+        {/* </div> */}
+      </Paper>
+      <div className="ScrollItemsContainer">
+        <ScrollItems />
+      </div>
+    </Grid>
+  )
 }
-export default ProfileComponent;
+export default ProfileComponent
 
-
-
-
-
-
-
-
-
-
-      {/* <Grid>
+{
+  /* <Grid>
                 <div className="profileHolder">
                     <Paper className='profileWrapper' elevation="12">
                         <div className="profileImageDesign">
@@ -127,4 +121,5 @@ export default ProfileComponent;
 
                     </Paper>
                 </div>
-            </Grid > */}
+            </Grid > */
+}
