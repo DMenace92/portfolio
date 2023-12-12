@@ -1,12 +1,12 @@
-import React from "react";
-import NavBarComponent from "../NavBar/NavBarComponent";
-import Profile from "../Profile/ProfileComponent";
-import AboutInfo from "../PersonalInfoContainer/About/AboutInfo";
-import SkillInfo from "../PersonalInfoContainer/Skills/SkillsInfo";
+import React from 'react'
+import NavBarComponent from '../NavBar/NavBarComponent'
+import Profile from '../Profile/ProfileComponent'
+import AboutInfo from '../PersonalInfoContainer/About/AboutInfo'
+import SkillInfo from '../PersonalInfoContainer/Skills/SkillsInfo'
 // import EmailForm from '../EmailForm/EmailForm'
-import EmailForm from "../../Containers/EmailContainer";
-import FooterComponent from "../Footer/FooterComponent";
-import "./MainPageComponent.css";
+import EmailForm from '../../Containers/EmailContainer'
+import FooterComponent from '../Footer/FooterComponent'
+import './MainPageComponent.css'
 //import { Grid, Paper } from '@material_ui/core'
 
 function MainPageComponent() {
@@ -20,6 +20,6 @@ function MainPageComponent() {
        */}
       <Profile />
     </div>
-  );
+  )
 }
-export default MainPageComponent;
+export default MainPageComponent

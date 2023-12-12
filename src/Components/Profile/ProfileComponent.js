@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 // import { Grid, Paper } from '@material-ui/core';
 import { Grid, Paper } from '@mui/material'
 import profilePic from '../../Images/profilePic.jpg'
@@ -10,26 +10,30 @@ import twitter from '../../Images/twitter.png'
 import linkedin from '../../Images/linkedin.png'
 import github from '../../Images/github.png'
 // import github from '../../Images/github.png'
-import './ProfileComponent.css';
-import ScrollItems from './ScrollItems';
+import './ProfileComponent.css'
+import ScrollItems from './ScrollItems'
 
 const ProfileComponent = () => {
     return (
         // <div>
         <Grid>
-            <Paper style={{backgroundColor:"rgba(240, 248, 255, 0)"}} className="portfolioHolder" elevation={24}>
+            <Paper
+                style={{ backgroundColor: 'rgba(240, 248, 255, 0)' }}
+                className="portfolioHolder"
+                elevation={24}
+            >
                 {/* <div className="ProfileImageHolder"> */}
-                    <img  className="ProfileImageHolder" src={profilePic}></img>
-                    <div>
-                        <h1 className="nameTextStyle" >Dennis A, Enwiya</h1>
-                        <ul className="navigationSelection">
-                            <li className="selectionItem">About</li>
-                            <li className="selectionItem">experience</li>
-                            <li className="selectionItem">Project</li>
-                            <li className="selectionItem">Contact Me</li>
-                        </ul>
-                    </div>
-                    <div className="footer__social-media">
+                <img className="ProfileImageHolder" src={profilePic}></img>
+                <div>
+                    <h1 className="nameTextStyle">Dennis A, Enwiya</h1>
+                    <ul className="navigationSelection">
+                        <li className="selectionItem">About</li>
+                        <li className="selectionItem">experience</li>
+                        <li className="selectionItem">Project</li>
+                        <li className="selectionItem">Contact Me</li>
+                    </ul>
+                </div>
+                <div className="footer__social-media">
                     {/* Add your social media icons or links here */}
                     <a href="https://www.facebook.com/dennis.enwiya/">
                         <i className="fab fa-facebook"></i>
@@ -56,25 +60,15 @@ const ProfileComponent = () => {
                 {/* </div> */}
             </Paper>
             <div className="ScrollItemsContainer">
-                
-                <ScrollItems/>
+                <ScrollItems />
             </div>
-            </Grid>
-      
+        </Grid>
     )
 }
-export default ProfileComponent;
+export default ProfileComponent
 
-
-
-
-
-
-
-
-
-
-      {/* <Grid>
+{
+    /* <Grid>
                 <div className="profileHolder">
                     <Paper className='profileWrapper' elevation="12">
                         <div className="profileImageDesign">
@@ -127,4 +121,5 @@ export default ProfileComponent;
 
                     </Paper>
                 </div>
-            </Grid > */}
+            </Grid > */
+}
