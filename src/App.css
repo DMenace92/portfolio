@@ -1,10 +1,17 @@
+
 html {
-  
-  /* scrollbar-color: #6969dd #e0e0e0;
-  scrollbar-width: thin; */
+  background: #200122;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
 }
 .App {
   text-align: center;
+  /* background-image: URL('./Images/backgroundNode.png') !important; */
+
 
   /* background-color: #116466; */
 }
@@ -30,17 +37,7 @@ html::-webkit-scrollbar-thumb {
 
 
 /* apply background:linear-gradient */
-html {
-  background: #200122;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #6f0000, #200122);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #6f0000, #200122); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  /* background-color: #d1E8E2; */
-  /* background: linear-gradient(to left, rgba(49, 49, 49, 0.316), rgba(72, 72, 72, 0.507) 100%, 50%, rgba(41, 41, 41, 0.593) 100%); */
-  /* background-color: rgba(0, 0, 0, 0.826); */
-  /* background-color: rgba(0, 0, 0, 0.582); */
-
-}
 
 
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import { useDispatch } from 'react-redux';
 // import EmailerAction from '../../Actions/EmailerAction'
 import { Grid, Paper } from '@mui/material'
-import './EmailForm.css'
+import styles from './EmailForm.css'
 
 class EmailForm extends Component {
     state = {
@@ -36,14 +36,14 @@ class EmailForm extends Component {
         console.log(this.state)
         return (
             < Grid >
-                <div className="contactInfoHolder" >
-                    <Paper className="contactWrapper" elevation="12">
-                        <form className="contact-form"
+                <div className={styles.contactInfoHolder} >
+                    <Paper className={styles.contactWrapper} elevation="12">
+                        <form className={styles.contactForm}
 
                             onSubmit={this._onSubmit}
                         >
-                            <h2 className="contactDesign">Contact Me</h2>
-                            <div className="form-group">
+                            <h2 className={styles.contactDesign}>Contact Me</h2>
+                            <div className={styles.formGroup}>
                                 <label htmlFor="username">Name:</label>
                                 <input
                                     onChange={this._onChange}
@@ -56,7 +56,7 @@ class EmailForm extends Component {
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className={styles.formGroup}>
                                 <label htmlFor="phoneNumber">Phone:</label>
                                 <input
                                     onChange={this._onChange}
@@ -69,7 +69,7 @@ class EmailForm extends Component {
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className={styles.formGroup}>
                                 <label htmlFor="email">Email</label>
                                 <input
                                     onChange={this._onChange}
@@ -82,7 +82,7 @@ class EmailForm extends Component {
                                     required
                                 />
                             </div>
-                            <div className="form-group">
+                            <div className={styles.formGroup}>
                                 <label htmlFor="message">Message</label>
                                 <textarea
                                     onChange={this._onChange}
@@ -94,7 +94,7 @@ class EmailForm extends Component {
                                     required
                                 ></textarea>
                             </div>
-                            <div className="form-group">
+                            <div className={styles.formGroup}>
                                 <label htmlFor="hiddenInput"></label>
                                 <input
                                     type="hidden"

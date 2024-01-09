@@ -1,0 +1,16 @@
+
+
+.aboutMeItem{
+   text-align: left;
+
+   color:lightgray;
+   margin:30px;
+}
+.aboutMeWrapper{
+    max-width: 500px;
+}
+.scrollItemsWrapper{
+    display: flex;
+    justify-content: center;
+    width:100%;
+}
