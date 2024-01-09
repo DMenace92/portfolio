@@ -1,39 +1,94 @@
-import React, {useEffect, useState} from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import styles from './ScrollItem.module.css'
-import AboutMe from '../../Content/AboutMe';
-import useDetectScroll from '@smakss/react-scroll-direction';
+import AboutMe from '../../Content/AboutMe'
 
 const ScrollItems = () => {
-    const { scrollDir, scrollPosition } = useDetectScroll()
-    const [scrollUp, setScrollUp] = useState(false);
-    useEffect(() => {
-      const scrollAction = (e) => {
-        // console.log('scroll has been attempted')
-        // console.log('scrollDir: ', scrollDir)
-        // console.log( e.deltaX)
-        if(!scrollUp && e.deltaX<0){
-            setScrollUp(true);
-            console.log('scrolled up')
-        }else if( e.deltaX === 0){
-          setScrollUp(false)
-        }
+  // refs
+  const pageOneRef = useRef(null)
+  const pageTwoRef = useRef(null)
+  const pageThreeRef = useRef(null)
+  const pageFourRef = useRef(null)
+  const scrollWrapper = useRef(null)
+
+  // state
+  // NOTE: currentPage will eventually be moved to global state via redux for the sidebar to use
+  const [currentPage, setCurrentPage] = useState(1)
+  const [pageHeights, setPageHeights] = useState([0, 0, 0, 0])
+
+  // utils
+  const getViewHeight = useCallback((componentRef) => {
+    if (
+      componentRef.current &&
+      componentRef.current.clientHeight > window.outerHeight
+    ) {
+      return componentRef.current.clientHeight
+    } else {
+      return window.outerHeight
+    }
+  }, [])
+
+  // get page heights
+  useEffect(() => {
+    const pageOneHeight = getViewHeight(pageOneRef)
+    const pageTwoHeight = getViewHeight(pageTwoRef)
+    const pageThreeHeight = getViewHeight(pageThreeRef)
+    const pageFourHeight = getViewHeight(pageFourRef)
+
+    setPageHeights([
+      pageOneHeight,
+      pageTwoHeight,
+      pageThreeHeight,
+      pageFourHeight,
+    ])
+  }, [getViewHeight])
+
+  // update current page on scroll
+  useEffect(() => {
+    const scrollAction = (e) => {
+      let newPage
+      if (
+        e.target.scrollTop >=
+        pageHeights[0] + pageHeights[1] + pageHeights[2]
+      ) {
+        newPage = 4
+      } else if (e.target.scrollTop >= pageHeights[0] + pageHeights[1]) {
+        newPage = 3
+      } else if (e.target.scrollTop >= pageHeights[0]) {
+        newPage = 2
+      } else {
+        newPage = 1
       }
-      window.addEventListener('wheel', (e) => scrollAction(e))
-      return () => {
-        window.removeEventListener('wheel', (e) => scrollAction(e))
+
+      if (currentPage !== newPage) {
+        setCurrentPage(newPage)
       }
-    })
-  
-  
-  
-  
-  
-  
-    return (
-        <div className={styles.scrollItemsWrapper}>
-            <AboutMe/>
-            
-        </div>
-    )
+    }
+
+    const scrollElement = scrollWrapper.current
+    scrollElement.addEventListener('scroll', scrollAction)
+
+    return () => {
+      scrollElement.removeEventListener('scroll', scrollAction)
+    }
+  }, [currentPage, pageHeights])
+
+  return (
+    <div className={styles.scrollItemsWrapper} ref={scrollWrapper}>
+      {/* Uncomment the code below to see the pages update in the top left of the screen */}
+      {/* <div style={{ position: 'fixed', top: 0, left: 0, color: 'white' }}>
+        Page: {currentPage}
+      </div> */}
+
+      {/**
+       * Currently I'm reusing the AboutMe component below as a placeholder for the other content.
+       * Use the forwardRef like the AboutMe.js component
+       */}
+      <AboutMe ref={pageOneRef} />
+      <AboutMe ref={pageTwoRef} />
+      <AboutMe ref={pageThreeRef} />
+      <AboutMe ref={pageFourRef} />
+      <div style={{ minHeight: pageHeights.reduce((a, b) => a + b) }} />
+    </div>
+  )
 }
 export default ScrollItems
