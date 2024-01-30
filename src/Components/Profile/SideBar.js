@@ -11,8 +11,14 @@ import linkedin from '../../Images/linkedin.png'
 import github from '../../Images/github.png'
 // import github from '../../Images/github.png'
 import styles from'./ProfileComponent.module.css'
+import {useSelector} from'react-redux'
 
 const ProfileComponent = () => {
+  const currentPage = useSelector((state)=> state.currentPage)
+  const getNum = currentPage.currentPage
+  console.log(getNum)
+
+
   return (
     <div className={styles.gridDesign}>
       <div
@@ -24,10 +30,10 @@ const ProfileComponent = () => {
         <div>
           <h1 className={styles.nameTextStyle}>Dennis A, Enwiya</h1>
           <ul className={styles.navigationSelection}>
-            <li className={styles.selectionItem}>About</li>
-            <li className={styles.selectionItem}>experience</li>
-            <li className={styles.selectionItem}>Project</li>
-            <li className={styles.selectionItem}>Contact Me</li>
+            <li className={getNum ===1? styles.selectionItemPage : styles.selectionItem}>About</li>
+            <li className={getNum ===2? styles.selectionItemPage: styles.selectionItem}>Experience</li>
+            <li className={getNum ===3? styles.selectionItemPage: styles.selectionItem}>Project</li>
+            <li className={getNum ===4? styles.selectionItemPage: styles.selectionItem}>Contact Me</li>
           </ul>
         </div>
         <div className={styles.footerSocialMedia}>
@@ -53,7 +59,6 @@ const ProfileComponent = () => {
             <img className={styles.footerIcons} src={github}></img>
           </a>
         </div>
-
       </div>
       <div className={styles.ScrollItemsContainer}>
       </div>

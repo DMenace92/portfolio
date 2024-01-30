@@ -37,6 +37,12 @@ html{
     text-decoration: none;
     color: lightgray;
 }
+.selectionItemPage{
+    font-size: 35px;
+    text-decoration: none;
+    color:black !important;
+
+}
 .ScrollItemsContainer{
     display: flex;
     flex:1;
