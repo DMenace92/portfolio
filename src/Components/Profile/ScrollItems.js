@@ -1,15 +1,15 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { setCurrentPage } from '../../Actions/PageAction';
+import { useSelector, useDispatch } from 'react-redux'
+import { setCurrentPage } from '../../Actions/PageAction'
 import styles from './ScrollItem.module.css'
 import AboutMe from '../../Content/AboutMe'
-import Experience from '../../Content/Experience';
+import Experience from '../../Content/Experience'
 import TopDecor from '../../Images/topDecor.svg'
 
 const ScrollItems = () => {
   // refs
-  const dispatch = useDispatch();
-  const currentPage = useSelector((state) => state.currentPage);
+  const dispatch = useDispatch()
+  const currentPage = useSelector((state) => state.currentPage)
 
   const pageOneRef = useRef(null)
   const pageTwoRef = useRef(null)
@@ -18,19 +18,17 @@ const ScrollItems = () => {
   const scrollWrapper = useRef(null)
 
   // state
-  // NOTE: currentPage will eventually be moved to global state via redux for the sidebar to use
-//   const [currentPage, setCurrentPage] = useState(1)
   const [pageHeights, setPageHeights] = useState([0, 0, 0, 0])
-console.log(pageTwoRef, "P2")
+
   // utils
   const getViewHeight = useCallback((componentRef) => {
     if (
       componentRef.current &&
       componentRef.current.clientHeight > window.outerHeight
     ) {
-      return componentRef.current.clientHeight
+      return componentRef.current.clientHeight - window.outerHeight
     } else {
-      return window.outerHeight
+      return 50
     }
   }, [])
 
@@ -52,10 +50,11 @@ console.log(pageTwoRef, "P2")
   // update current page on scroll
   useEffect(() => {
     const scrollAction = (e) => {
+      e.preventDefault()
       let newPage
       if (
         e.target.scrollTop >=
-        pageHeights[0] + pageHeights[1] + pageHeights[2] 
+        pageHeights[0] + pageHeights[1] + pageHeights[2]
       ) {
         newPage = 4
       } else if (e.target.scrollTop >= pageHeights[0] + pageHeights[1]) {
@@ -67,7 +66,6 @@ console.log(pageTwoRef, "P2")
       }
 
       if (currentPage !== newPage) {
-        // setCurrentPage(newPage)
         dispatch(setCurrentPage(newPage))
       }
     }
@@ -78,28 +76,60 @@ console.log(pageTwoRef, "P2")
     return () => {
       scrollElement.removeEventListener('scroll', scrollAction)
     }
-  }, [currentPage,dispatch, pageHeights] , console.log(currentPage, "test"))
+  }, [currentPage, dispatch, pageHeights])
+
+  useEffect(() => {
+    switch (true) {
+      case currentPage.currentPage === 2:
+        pageTwoRef.current.classList.add = styles.fadeIn
+        break
+      case currentPage.currentPage === 3:
+        pageThreeRef.current.classList.add = styles.fadeIn
+        break
+      case currentPage.currentPage === 4:
+        pageFourRef.current.classList.add = styles.fadeIn
+        break
+      default:
+        pageOneRef.current.classList.add = styles.fadeIn
+    }
+  }, [currentPage.currentPage])
 
   return (
     <div className={styles.scrollItemsWrapper} ref={scrollWrapper}>
       {/* Uncomment the code below to see the pages update in the top left of the screen */}
-      <div style={{ position: 'fixed', top: 0, left: 0, color: 'white' }}>
-        Page: {currentPage.currentPage}
-      </div>
+      {/* <div style={{ position: 'fixed', top: 0, left: 0, color: 'white' }}>
+        <div>Page: {currentPage.currentPage}</div>
+        <div>Is Animating: {isAnimating ? 'True' : 'False'}</div>
+      </div> */}
       <div className={styles.topDecorStyle}>
         <h1>&lt; &gt;</h1>
-        <img src={TopDecor}></img>
+        <img src={TopDecor} alt="code thingy" />
       </div>
-
-      {/**
-       * Currently I'm reusing the AboutMe component below as a placeholder for the other content.
-       * Use the forwardRef like the AboutMe.js component
-       */}
-      <AboutMe ref={pageOneRef} />
-      <Experience ref={pageTwoRef} />
-      <AboutMe ref={pageThreeRef} />
-      <AboutMe ref={pageFourRef} />
-      <div style={{ minHeight: pageHeights.reduce((a, b) => a + b) }} />
+      <AboutMe
+        ref={pageOneRef}
+        className={`${styles.animateMe} ${
+          currentPage.currentPage === 1 ? styles.fadeIn : ''
+        }`}
+      />
+      <Experience
+        ref={pageTwoRef}
+        className={`${styles.animateMe} ${
+          currentPage.currentPage === 2 ? styles.fadeIn : ''
+        }`}
+      />
+      <AboutMe
+        ref={pageThreeRef}
+        className={`${styles.animateMe} ${
+          currentPage.currentPage === 3 ? styles.fadeIn : ''
+        }`}
+      />
+      <AboutMe
+        ref={pageFourRef}
+        className={`${styles.animateMe} ${
+          currentPage.currentPage === 4 ? styles.fadeIn : ''
+        }`}
+      />
+      <div style={{ minHeight: pageHeights.reduce((a, b) => a + b) + 200 }} />
     </div>
   )
 }
