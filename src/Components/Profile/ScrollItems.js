@@ -103,7 +103,7 @@ const ScrollItems = () => {
       </div> */}
       <div className={styles.topDecorStyle}>
         <h1>&lt; &gt;</h1>
-        <img src={TopDecor}></img>
+        <img src={TopDecor} alt="code thingy" />
       </div>
       <AboutMe
         ref={pageOneRef}
@@ -129,7 +129,7 @@ const ScrollItems = () => {
           currentPage.currentPage === 4 ? styles.fadeIn : ''
         }`}
       />
-      <div style={{ minHeight: pageHeights.reduce((a, b) => a + b) }} />
+      <div style={{ minHeight: pageHeights.reduce((a, b) => a + b) + 200 }} />
     </div>
   )
 }
