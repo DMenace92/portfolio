@@ -4,6 +4,7 @@ import { setCurrentPage } from '../../Actions/PageAction';
 import styles from './ScrollItem.module.css'
 import AboutMe from '../../Content/AboutMe'
 import Experience from '../../Content/Experience';
+import TopDecor from '../../Images/topDecor.svg'
 
 const ScrollItems = () => {
   // refs
@@ -84,6 +85,10 @@ console.log(pageTwoRef, "P2")
       {/* Uncomment the code below to see the pages update in the top left of the screen */}
       <div style={{ position: 'fixed', top: 0, left: 0, color: 'white' }}>
         Page: {currentPage.currentPage}
+      </div>
+      <div className={styles.topDecorStyle}>
+        <h1>&lt; &gt;</h1>
+        <img src={TopDecor}></img>
       </div>
 
       {/**
