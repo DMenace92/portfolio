@@ -1,13 +1,16 @@
 import React, { forwardRef } from 'react'
-import {useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import styles from '../Components/Profile/ScrollItem.module.css'
 
 const AboutMe = forwardRef((props, ref) => {
+  useParams()
+  const { style, className } = props
 
-    useParams()
-    // console.log(useParams)
   return (
-    <div className={styles.aboutMeWrapper}>
+    <div
+      className={`${styles.aboutMeWrapper} ${className}`}
+      style={{ ...style }}
+    >
       <div className={styles.aboutMeItem} ref={ref}>
         <h1 className={styles.aboutMeHeader}>About Me:</h1>
         <div>
@@ -45,7 +48,6 @@ const AboutMe = forwardRef((props, ref) => {
           boundaries and create innovative solutions that shape the future.
         </div>
       </div>
-     
     </div>
   )
 })

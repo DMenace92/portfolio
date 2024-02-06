@@ -1,21 +1,21 @@
 .experienceHeader {
-    margin-top: 800px;
-  }
-  
-  .experienceWrapper {
-    max-width: 500px;
-    min-height: 100vh;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: left;
-    color: lightgray;
-  }
-  
-  .experienceItem {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
+  margin-top: 0px;
+}
+
+.experienceWrapper {
+  max-width: 500px;
+  min-height: 100vh;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  color: lightgray;
+}
+
+.experienceItem {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
