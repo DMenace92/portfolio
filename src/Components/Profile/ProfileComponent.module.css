@@ -6,16 +6,63 @@ html{
     height:100vh;
     
 }
+
 .portfolioHolder{
-   background-color: rgba(240, 248, 255, 0);
-   border-top-right-radius: 180px;
-   border-bottom-left-radius: 180px;
+   background-color: rgba(0, 0, 0, 0.46);
+   /* border-top-right-radius: 180px;
+   border-bottom-left-radius: 180px; */
    width:400px;
     height:100vh;
     /* display: flex;
     justify-content: center; */
 }
+.shapeContainer .ProfileImageHolder .shape1 .shape2{
+    /* position: relative; */
+    /* grid-row: 1/2; */
+}
+.shape1{
+    z-index: -1;
+    margin-top: -190px;
+    margin-left:85px;
+    position: absolute;
+    border-radius: 50%;
+    height:200px;
+    width:200px;
+    background-color: #C12854;
+    /* border: 3px solid rgb(255, 255, 255); */
+
+}
+.shape2{
+    margin-top: -220px;
+    margin-left:115px;
+    border-radius: 50%;
+    height:200px;
+    width:200px;
+    /* border: 3px solid black; */
+    background-color: #22474C;
+
+}
+.NodeIcon{
+    height:135px;
+    position: absolute;  
+    left:95px;  
+    top:370px;
+}
+.NodeDesign{
+    width:40px;
+    border: 2px solid black;
+    margin-top:30px;
+    margin-right:20px;
+
+}
+.NodeLineVert{
+    border:1px solid black;
+    height:200px;
+    width:0px;
+    margin-left: 10px;
+}
 .ProfileImageHolder{
+    /* position: absolute; */
     margin-top: 30px;
 
     /* border:5px solid white; */
@@ -24,8 +71,23 @@ html{
     width:200px;
     /* height:30%; */
 }
+.nameContainer{
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+}
 .nameTextStyle{
+    margin-top: 60px;
     color:lightgray;
+    margin-left:10px;
+
+}
+.nameTextStyle1{
+    font-weight: 100;
+    margin-top: 60px;
+    color:lightgray;
+    margin-left:10px;
+
 }
 .navigationSelection{
     margin-left:100px;
@@ -38,7 +100,7 @@ html{
     color: lightgray;
 }
 .selectionItemPage{
-    font-size: 35px;
+    font-size: 30px;
     text-decoration: none;
     color:black !important;
 
@@ -51,6 +113,9 @@ html{
 
 }
 .footerSocialMedia a {
+    margin:20px;
+    position: relative;
+    bottom: -170px;
     color: #555555;
     margin-right: 10px;
     font-size: 20px;
@@ -63,13 +128,16 @@ html{
 .footerIcons {
     width: 40px;
     margin-top: 10px;
-    transition: 1s;
+    transition:  all 1s ease-in-out;
+    transform: translateY(0px);
+
 }
 
 .footerIcons:hover {
-    width: 50px;
+    /* width: 50px; */
+    transform: translateY(-7px);
     z-index: 6;
-    transition: .5s;
+    transition: .3s;
 }
 
 
