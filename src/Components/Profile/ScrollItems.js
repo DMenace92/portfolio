@@ -4,6 +4,7 @@ import { setCurrentPage } from '../../Actions/PageAction'
 import styles from './ScrollItem.module.css'
 import AboutMe from '../../Content/AboutMe'
 import Experience from '../../Content/Experience'
+import TopDecor from '../../Images/topDecor.svg'
 
 const ScrollItems = () => {
   // refs
@@ -100,6 +101,10 @@ const ScrollItems = () => {
         <div>Page: {currentPage.currentPage}</div>
         <div>Is Animating: {isAnimating ? 'True' : 'False'}</div>
       </div> */}
+      <div className={styles.topDecorStyle}>
+        <h1>&lt; &gt;</h1>
+        <img src={TopDecor}></img>
+      </div>
       <AboutMe
         ref={pageOneRef}
         className={`${styles.animateMe} ${

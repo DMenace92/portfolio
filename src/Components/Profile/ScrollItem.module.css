@@ -27,6 +27,11 @@
   width: 100%;
   position: relative;
 }
+.topDecorStyle{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 30px;
+}
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .scrollItemsWrapper::-webkit-scrollbar {
