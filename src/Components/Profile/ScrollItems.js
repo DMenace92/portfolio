@@ -102,7 +102,7 @@ const ScrollItems = () => {
         <div>Is Animating: {isAnimating ? 'True' : 'False'}</div>
       </div> */}
       <div className={styles.topDecorStyle}>
-        <h1>&lt; &gt;</h1>
+        <h1 className={styles.greaterLessThanSym}>&lt; &gt;</h1>
         <img src={TopDecor} alt="code thingy" />
       </div>
       <AboutMe

@@ -66,7 +66,6 @@ const Experience = forwardRef((props, ref) => {
                 label="Galvanize"
               >
                 <p className="textExample">
-                  {' '}
                   Attending the Galvanize 6-month immersive boot camp in
                   2018-2019 was an incredibly enriching experience that
                   propelled my skills in JavaScript,Node.js, SQL, React.js, and

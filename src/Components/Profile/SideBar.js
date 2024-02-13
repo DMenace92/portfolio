@@ -22,6 +22,7 @@ const ProfileComponent = () => {
 
   return (
     <div className={styles.gridDesign}>
+      
       <div
         // style={{ backgroundColor: 'rgba(240, 248, 255, 0)' }}
         className={styles.portfolioHolder}
