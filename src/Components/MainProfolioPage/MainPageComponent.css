@@ -1,11 +1,10 @@
-.MainPageWrapper{
-    width:100vw;
-    height:100vh;
- display: flex;
- flex-direction: row;
+.MainPageWrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 
-.sideBarPositionWrapper{
-    width:30vw;
-    
+.sideBarPositionWrapper {
+  width: 400px;
 }

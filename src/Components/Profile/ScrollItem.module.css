@@ -32,8 +32,9 @@
   display: flex;
   width: 70%;
   position: absolute;
-  left: 50px;
+  left: 10px;
   top: -10px;
+  z-index: -1;
 }
 
 .bottomDecorStyle {
@@ -44,6 +45,7 @@
   right: 10px;
   bottom: -10px;
   transform: rotate(180deg);
+  z-index: -1;
 }
 
 .contentContainersWrapper {

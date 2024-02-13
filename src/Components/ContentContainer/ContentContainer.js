@@ -18,7 +18,7 @@ export const ContentContainer = (props) => {
   const goToNextPage = useCallback(async () => {
     setIsAnimating(true)
 
-    containerRef.current.style.transform = 'translateY(-100vh) rotate(15deg)'
+    containerRef.current.style.transform = 'translateY(-100vh) rotate(22deg)'
     containerRef.current.style.opacity = 0
 
     setTimeout(() => {
@@ -30,7 +30,7 @@ export const ContentContainer = (props) => {
   const goToPrevPage = useCallback(async () => {
     setIsAnimating(true)
 
-    containerRef.current.style.transform = 'translateY(100vh) rotate(-15deg)'
+    containerRef.current.style.transform = 'translateY(100vh) rotate(-22deg)'
     containerRef.current.style.opacity = 0
 
     setTimeout(() => {
