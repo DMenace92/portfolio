@@ -1,16 +1,14 @@
 import MainPageComponent from './Components/MainProfolioPage/MainPageComponent'
 
-
-
 import './App.css'
+import { ActivePageProvider } from './providers/activePageProvider'
 
 function App() {
   return (
     <div className="App">
-      <MainPageComponent/>
-      {/* <Routes> */}
-        {/* TODO: Routes are no longer necessary, go ahead and remove the library and go with single page experience */}
-  
+      <ActivePageProvider>
+        <MainPageComponent />
+      </ActivePageProvider>
     </div>
   )
 }
