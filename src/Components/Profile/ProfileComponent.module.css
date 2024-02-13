@@ -98,6 +98,7 @@ html{
     font-size:30px;
     text-decoration: none;
     color: lightgray;
+    list-style-type: none;
 }
 .selectionItemPage{
     font-size: 30px;

@@ -7,6 +7,7 @@ import Experience from '../../Content/Experience'
 import TopDecor from '../../Images/topDecor.svg'
 import { ActivePageProvider } from '../../providers/activePageProvider'
 import { ContentContainer } from '../ContentContainer/ContentContainer'
+import CodeDecal from '../CodeDecal/CodeDecal'
 
 const ScrollItems = () => {
   // refs
@@ -149,7 +150,12 @@ const ScrollItems = () => {
           />
         </ContentContainer>
         <div style={{ minHeight: pageHeights.reduce((a, b) => a + b) }} />
-        {/* </div> */}
+        <div className={styles.topDecorStyle}>
+          <CodeDecal />
+        </div>
+        <div className={styles.bottomDecorStyle}>
+          <CodeDecal />
+        </div>
       </div>
     </ActivePageProvider>
   )
