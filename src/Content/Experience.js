@@ -5,14 +5,11 @@ import CollapsibleComponent from '../Components/PersonalInfoContainer/About/Scho
 
 const Experience = forwardRef((props, ref) => {
   useParams()
-  const { style, className } = props
+  const { style } = props
 
   return (
-    <div
-      className={`${styles.experienceWrapper} ${className}`}
-      style={{ ...style }}
-    >
-      <div className={styles.experienceItem} ref={ref}>
+    <div style={{ ...style, maxWidth: 'calc(100% - 8vw)' }}>
+      <div ref={ref}>
         <h1 className={styles.experienceHeader}>Experience:</h1>
 
         <div className="AboutInfoHolder">

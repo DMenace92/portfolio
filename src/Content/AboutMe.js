@@ -4,13 +4,10 @@ import styles from '../Components/Profile/ScrollItem.module.css'
 
 const AboutMe = forwardRef((props, ref) => {
   useParams()
-  const { style, className } = props
+  const { style } = props
 
   return (
-    <div
-      // className={`${styles.aboutMeWrapper} ${className}`}
-      style={{ ...style }}
-    >
+    <div style={{ ...style, width: 500, maxWidth: '90%' }}>
       <div ref={ref}>
         <h1 className={styles.aboutMeHeader}>About Me:</h1>
         <div>
