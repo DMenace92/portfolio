@@ -27,19 +27,38 @@
   width: 100%;
   position: relative;
 }
-.topDecorStyle{
-  color:white;
+.topDecorStyle {
+  color: white;
   display: flex;
-  margin-top: 15px;
-  margin-left: 30px;
   width: 70%;
-}
-.greaterLessThanSym{
   position: absolute;
-  /* font-size:100px; */
+  left: 50px;
+  top: -10px;
+}
+
+.bottomDecorStyle {
+  color: white;
+  display: flex;
+  width: 70%;
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
+  transform: rotate(180deg);
+}
+
+.contentContainersWrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.brackets {
+  top: -22px;
+  left: -22px;
+  font-size: 33px;
   font-weight: 100;
-  top:-30px;
-  left:175px
+  position: absolute;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -76,8 +95,5 @@
   /* padding-bottom: 0px; */
 }
 
-
-@media only screen and (max-width:1024px){
-
-  
+@media only screen and (max-width: 1024px) {
 }
