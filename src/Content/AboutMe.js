@@ -8,10 +8,10 @@ const AboutMe = forwardRef((props, ref) => {
 
   return (
     <div
-      className={`${styles.aboutMeWrapper} ${className}`}
+      // className={`${styles.aboutMeWrapper} ${className}`}
       style={{ ...style }}
     >
-      <div className={styles.aboutMeItem} ref={ref}>
+      <div ref={ref}>
         <h1 className={styles.aboutMeHeader}>About Me:</h1>
         <div>
           Hey there! I'm Dennis Enwiya, and I'm thrilled to share my passion for
