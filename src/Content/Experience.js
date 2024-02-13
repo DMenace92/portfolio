@@ -8,7 +8,7 @@ const Experience = forwardRef((props, ref) => {
   const { style } = props
 
   return (
-    <div style={{ ...style, maxWidth: 'calc(100% - 8vw)' }}>
+    <div style={{ ...style, maxWidth: 'calc(100% - 8vw)', paddingBottom: 100 }}>
       <div ref={ref}>
         <h1 className={styles.experienceHeader}>Experience:</h1>
 
