@@ -46,6 +46,13 @@
   transform: rotate(180deg);
 }
 
+.contentContainersWrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 .brackets {
   top: -22px;
   left: -22px;
