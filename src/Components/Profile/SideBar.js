@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import profilePic from '../../Images/profilePic.jpg'
 import NodeIcon from '../../Images/NodeIcon.svg'
 import facebook from '../../Images/Vector5.svg'
@@ -12,30 +12,34 @@ import { useActivePage } from '../../providers/activePageProvider'
 const ProfileComponent = () => {
   const { activePage } = useActivePage()
 
+
   return (
     <div className={styles.gridDesign}>
       <div className={styles.portfolioHolder}>
         {/* <div className="ProfileImageHolder"> */}
         <div className={styles.shapeContainer}>
-          <img
-            className={styles.ProfileImageHolder}
-            src={profilePic}
-            alt="Dennis Enwiya"
-          ></img>
+          <div className="imagePosition">
+            <img
+              className={styles.ProfileImageHolder}
+              src={profilePic}
+              alt="Dennis Enwiya"
+            ></img>
+          </div>
           <div className={styles.shape1}></div>
           <div className={styles.shape2}></div>
         </div>
         <div>
-          <img className={styles.NodeIcon} src={NodeIcon} alt="Node"></img>
-          {/* <div className={styles.NodeLineVert}></div>
-          <div className={styles.NodeDesign}></div>
-          <div className={styles.NodeDesign}></div>
-          <div className={styles.NodeDesign}></div>
-          <div className={styles.NodeDesign}></div> */}
+
+    
           <div className={styles.nameContainer}>
             <h1 className={styles.nameTextStyle}>DENNIS</h1>
             <h1 className={styles.nameTextStyle1}>ENWIYA</h1>
           </div>
+
+          <div className={styles.contentItemsWrapper}>
+          <img className={styles.NodeIcon} src={NodeIcon} alt="Node"></img>
+
+
           <ul className={styles.navigationSelection}>
             {/* <div className={styles.NodeDesign}></div> */}
             <li
@@ -74,7 +78,9 @@ const ProfileComponent = () => {
             >
               Contact Me
             </li>
+
           </ul>
+          </div>
         </div>
         <div className={styles.footerSocialMedia}>
           {/* Add your social media icons or links here */}

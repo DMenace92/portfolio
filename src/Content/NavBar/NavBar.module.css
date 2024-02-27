@@ -1,0 +1,29 @@
+
+.PortfolioNavBarComponent{
+    background-color: rgba(2, 0, 0, 0.238);
+    height:50px;
+    width: 100% !important;
+    /* width:100vh; */
+    /* display: flex; */
+}
+.hamburgerMenu{
+    position: absolute;
+    right:75px;
+    top:7px;
+    
+    float:right;
+    
+}
+.hamburgerMenuButton{
+    position: absolute;
+    right:75px;
+    top:7px;
+    
+    float:right;
+}
+.mailIcon{
+    position: absolute;
+    top:5px;
+    right:10px;
+    height:36px;
+}

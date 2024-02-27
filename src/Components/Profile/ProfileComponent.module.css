@@ -1,27 +1,33 @@
-/* 
-html{
-    margin:-100 auto;
-} */
-.gridDesign.MuiPaper-root{
+.gridDesign{
     height:100vh;
-    
 }
 
 .portfolioHolder{
+
    background-color: rgba(0, 0, 0, 0.46);
-   /* border-top-right-radius: 180px;
-   border-bottom-left-radius: 180px; */
    width:400px;
     height:100vh;
-    /* display: flex;
-    justify-content: center; */
+ 
 }
 .shapeContainer .ProfileImageHolder .shape1 .shape2{
-    /* position: relative; */
-    /* grid-row: 1/2; */
+   
+}
+.ProfileImageHolder{
+    position: relative;
+    z-index: 2;
+    margin-top: 30px;
+    max-width: 100%;
+    border-radius: 50%;
+    width:200px;
+}
+.contentItemsWrapper{
+    display: flex;
+    justify-content: center;
+    flex:2;
+    flex-wrap: wrap;
 }
 .shape1{
-    z-index: -1;
+    
     margin-top: -190px;
     margin-left:85px;
     position: absolute;
@@ -33,6 +39,8 @@ html{
 
 }
 .shape2{
+    z-index: 1;
+    position: relative;
     margin-top: -220px;
     margin-left:115px;
     border-radius: 50%;
@@ -44,33 +52,17 @@ html{
 }
 .NodeIcon{
     height:135px;
-    position: absolute;  
+    position: relative;
+left:30px;
+top:30px;
+    /* position: absolute;  
     left:95px;  
-    top:370px;
+    
+    bottom:220px; */
 }
-.NodeDesign{
-    width:40px;
-    border: 2px solid black;
-    margin-top:30px;
-    margin-right:20px;
 
-}
-.NodeLineVert{
-    border:1px solid black;
-    height:200px;
-    width:0px;
-    margin-left: 10px;
-}
-.ProfileImageHolder{
-    /* position: absolute; */
-    margin-top: 30px;
 
-    /* border:5px solid white; */
-    max-width: 100%;
-    border-radius: 50%;
-    width:200px;
-    /* height:30%; */
-}
+
 .nameContainer{
     display: flex;
     justify-content: center;
@@ -90,8 +82,12 @@ html{
 
 }
 .navigationSelection{
-    margin-left:100px;
-    text-align:left;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+    /* margin-left:100px;
+    text-align:left; */
 
 }
 .selectionItem{
@@ -104,6 +100,8 @@ html{
     font-size: 30px;
     text-decoration: none;
     color:black !important;
+    list-style-type: none;
+    font-weight: 500;
 
 }
 .ScrollItemsContainer{
@@ -143,39 +141,20 @@ html{
 
 
 @media only screen and (max-width: 1000px) {
-    .ProfileImageHolder{
-/*        
-        width:50%;
-        height:15%; */
+    .gridDesign{
+        display: none;
+        
     }
+     .ProfileImageHolder{
+        
+    }
+    /*
     .selectionItem{
         font-size:20px;
        
-    }
+    } */
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

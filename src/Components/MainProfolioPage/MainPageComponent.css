@@ -8,3 +8,8 @@
 .sideBarPositionWrapper {
   width: 400px;
 }
+@media only screen and (max-width: 1000px) {
+  .sideBarPositionWrapper {
+    width: 0px;
+  }
+}

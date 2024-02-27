@@ -4,6 +4,7 @@ import AboutMe from '../../Content/AboutMe'
 import Experience from '../../Content/Experience'
 import { ContentContainer } from '../ContentContainer/ContentContainer'
 import CodeDecal from '../CodeDecal/CodeDecal'
+import EmailForm from '../EmailForm/EmailForm'
 
 const ScrollItems = () => {
   return (
@@ -18,7 +19,7 @@ const ScrollItems = () => {
         <AboutMe />
       </ContentContainer>
       <ContentContainer pageNumber={4}>
-        <AboutMe />
+        <EmailForm />
       </ContentContainer>
       <div className={styles.topDecorStyle}>
         <CodeDecal />

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // import { useDispatch } from 'react-redux';
 // import EmailerAction from '../../Actions/EmailerAction'
 import { Grid, Paper } from '@mui/material'
-import styles from './EmailForm.css'
+import styles from './EmailForm.module.css'
 
 class EmailForm extends Component {
     state = {
