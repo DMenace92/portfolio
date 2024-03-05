@@ -1,44 +1,39 @@
+.PortfolioNavBarComponent {
+  background-color: rgba(2, 0, 0, 0.238);
+  height: 50px;
+  width: 100% !important;
+  /* width:100vh; */
+  /* display: flex; */
+}
+.hamburgerMenu {
+  position: absolute;
+  right: 75px;
+  top: 7px;
 
-.PortfolioNavBarComponent{
-    background-color: rgba(2, 0, 0, 0.238);
-    height:50px;
-    width: 100% !important;
-    /* width:100vh; */
-    /* display: flex; */
+  float: right;
 }
-.hamburgerMenu{
-    position: absolute;
-    right:75px;
-    top:7px;
-    
-    float:right;
-    
+.hamburgerMenuButton {
+  position: absolute;
+  right: 75px;
+  top: 7px;
+
+  float: right;
 }
-.hamburgerMenuButton{
-    position: absolute;
-    right:75px;
-    top:7px;
-    
-    float:right;
-}
-.mailIcon{
-    position: absolute;
-    top:5px;
-    right:10px;
-    height:36px;
+.mailIcon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  height: 36px;
 }
 
-.hideViewModal{
-    display: none;
-    }
-.viewModal{
+.hideViewModal {
+  display: none;
+}
 
- }
+.closeButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
 
-.closeButton{
-    position: absolute;
-    top:0px;
-    right:0px;
-
-    z-index: 1;
+  z-index: 1;
 }

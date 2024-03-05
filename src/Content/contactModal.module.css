@@ -1,115 +1,101 @@
-.ContactModalMainContainer{
-
-background-color: rgba(0, 0, 0, 0.6);
-position: relative;
-/* z-index: 1 ; */
-display: flex;
-justify-content: space-between;
-height:100vh;
+.ContactModalMainContainer {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  /* z-index: 1 ; */
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
 }
-.ContactModleBody{
-
-    overflow: hidden;
-    position: relative;
-    z-index: 1;
-    /* border: 1px solid black; */
-    border-radius: 20px;
-    margin-left:200px;
-    background-color: white;
-    height:500px;
-    width: 700px;
-    max-width: 90%;
-    top: 5vh;
-    box-shadow: 0 0 15px rgba(0,0,0,.6);
-    max-height: 90vh;
+.ContactModleBody {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  background-color: white;
+  height: 500px;
+  width: 700px;
+  max-width: 90vw;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
 }
-.modalKingWrapper{
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    padding: 0 30px;
+.modalKingWrapper {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  padding: 0 30px;
 }
 
-.hedderLable{
-   /* border: 1px solid #410A1A; */
-   display: flex;;
-   float:left;
-   
-height:40px;
-width:90vw;
-background-color: #410A1A;
+.hedderLable {
+  background-color: #410a1a;
+  padding: 20px;
 }
-.headerTitle{
-    position: relative;
-    left:15px;
-    bottom:10px;
+.headerTitle {
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+  padding: 0;
 }
-.lableDecorator{
-    justify-content: space-between;
+.lableDecorator {
+  justify-content: space-between;
 }
-.formLayoutDesign{
-    margin-top:100px;
-    display: flex;
-    flex: 2;
-    /* flex-direction: ; */
-    flex-wrap: wrap;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    min-height: 100px;
-    min-width: 1px;
-    
-  
-
+.formLayoutDesign {
+  margin-top: 60px;
+  display: flex;
+  flex: 2 1;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  width: 100%;
 }
 
+.inputLableDesign {
+  color: black;
+  width: 200px;
+  margin-top: 30px;
+  text-align: left;
+  font-size: 12px;
+  /* text-align: left; */
+}
+.textAreaContainer {
+  /* border:2px solid black; */
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.inputLableTextArea {
+  font-size: 12px;
 
-.inputLableDesign{
-    color:black;
-    width:200px;
-    margin-top: 30px;
-    text-align: left;
-    font-size: 12px;
-    /* text-align: left; */
+  display: flex;
+  left: 30px;
+  position: absolute;
+  color: black;
+  /* width:200px; */
 }
-.textAreaContainer{
-    /* border:2px solid black; */
-    display: flex;
-    justify-content: center;
-    margin-top:40px;
-}
-.inputLableTextArea{
-    font-size: 12px;
-
-    display: flex;
-    left:30px;
-    position: absolute;
-    color:black;
-    /* width:200px; */
-}
-.inputTextArea{
-    margin-top:30px;
-    background-color:#F7F7F7 ;
-    width:90%;
-    
+.inputTextArea {
+  margin-top: 30px;
+  background-color: #f7f7f7;
+  width: 100%;
 
   /* flex-wrap: nowrap; */
 }
-.inputDesign{
-    width:180px;
-    margin-right:20px;
-   
-    border:none;
-    border-bottom:1px solid #B8B8B8 ;
-
+.inputDesign {
+  width: 100%;
+  margin-right: 0;
+  border: none;
+  border-bottom: 1px solid #b8b8b8;
+  outline: none;
 }
-.messageButtonWrapper{
-    align-items: center;
-    display: flex;
-    justify-content: flex-end;
-    /* position: absolute;
+.messageButtonWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  /* position: absolute;
     bottom:0px;
     right:10px;
     margin:10px;
@@ -117,22 +103,22 @@ background-color: #410A1A;
 justify-content: space-between;
 width:200px; */
 }
-.messageStyleButtonCancel{
-    border:1px solid #C12854;
-    color:#C12854;
-    background-color: white;
-    border-radius:10px;
-    /* margin-left:10px; */
-    margin:10px;
-    width: 90px;
-    height:30px;
+.messageStyleButtonCancel {
+  border: 1px solid #c12854;
+  color: #c12854;
+  background-color: white;
+  border-radius: 10px;
+  /* margin-left:10px; */
+  margin: 10px;
+  width: 90px;
+  height: 30px;
 }
-.messageStyleButtonSend{
-    border:1px solid #C12854;
-    border-radius: 10px;
-    color:white;
-    width: 90px;
-    height:30px;
+.messageStyleButtonSend {
+  border: 1px solid #c12854;
+  border-radius: 10px;
+  color: white;
+  width: 90px;
+  height: 30px;
 
-    background-color: #C12854;
+  background-color: #c12854;
 }
