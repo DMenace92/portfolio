@@ -27,3 +27,18 @@
     right:10px;
     height:36px;
 }
+
+.hideViewModal{
+    display: none;
+    }
+.viewModal{
+
+ }
+
+.closeButton{
+    position: absolute;
+    top:0px;
+    right:0px;
+
+    z-index: 1;
+}
