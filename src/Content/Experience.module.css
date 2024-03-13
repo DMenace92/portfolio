@@ -1,10 +1,103 @@
-.ExperienceMainContainer{
-  border: 2px solid white;
+.EdExMainContainer{
+  /* border: 2px solid white; */
   height:90vh;
-  width:60%;
+  width:80%;
 
 }
 
-.ExperienceBanner{
+.EducationBanner{
+ width:390px;
   background-color: rgba(0, 0, 0, 0.372);
+  /* height:60px; */
+  display: flex;
+  
+  /* justify-content: center; */
+  margin:20px;
+}
+.EdTextHolder{
+  margin-left:10px;
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+  height: 50px;
+  width:370px;
+  position: relative;
+  bottom:20px;
+
+}
+.EducationBannerText2{
+  
+  font-weight: 100;
+}
+.EducationBannerText1 .EducationBannerText2 .EducationBannerText3{
+  /* display: flex;
+  justify-content: center; */
+  /* border:1px solid white; */
+/* 
+  padding:5px;
+  margin-left:20px */
+}
+.educationSegment{
+  /* border:1px solid white; */
+  justify-content: space-between;
+  display: flex;
+  height:30vh;
+  
+}
+.segmentOne{
+  height:auto;
+  /* border:1px dashed black; */
+  width:30%;
+  margin-left:20px;
+
+
+
+}
+.segmentTwo{
+  /* border:1px dashed black; */
+  width:50%;
+  
+
+
+}
+.segmentTwo p h6{
+
+
+}
+.schoolInfoTitle{
+text-align: left;
+margin-bottom:-30px;
+text-shadow: 5px 5px 8px rgb(0, 0, 0) !important;
+}
+.EducationYearText{
+  font-weight: 100;
+}
+
+.ExTextHolder{
+  margin-left:10px;
+  display: flex;
+  justify-content: space-between;
+  width:32vw;
+
+}
+.ExperienceSegment{
+  position: relative;
+  /* margin-bottom:100px; */
+  bottom:100px;
+}
+.segmentThree{
+  height:auto;
+  /* border:1px dashed black; */
+  /* width:30%; */
+  margin-left:20px;
+}
+.workInfoTitle{
+  margin-left: 20px;;
+  text-align: left;
+  margin-bottom: -20px;
+
+}
+.WorkSummery{
+  margin-left:20px;
+  font-weight:100
 }

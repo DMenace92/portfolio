@@ -1,0 +1,20 @@
+.MainNavFooter{
+    border:1px solid white;
+    width:100%;
+    position: absolute;
+    bottom:0px;
+    /* flex-direction: c; */
+    
+}
+.navigatorLables{
+    display: flex;
+    /* width:80%; */
+
+}
+.testMNF{
+    display: flex;
+    justify-content: space-around;
+}
+.navLabelText{
+    /* margin-left: 100px; */
+}

@@ -5,15 +5,24 @@ import './App.css'
 import { ActivePageProvider } from './providers/activePageProvider'
 import NavBar from './Content/NavBar/NavBar'
 import MailNav from './Content/NavBar/MailNav';
+import MobileNavFooter from './Content/NavBar/MobileNavFooter';
 
 
 function App() {
   const [windowSize, setWindowSize] = useState()
  const renderContent =()=>{
-  if(window.innerWidth > 400){
+  if(window.innerWidth > 1024){
      return <MailNav/>
-  }else if(window.innerWidth > 400){
-    return <NavBar/>
+  }else if(window.innerWidth <= 1024){
+    return <NavBar/> 
+  }else{
+    return null
+
+  }
+}
+const footerContent =()=>{
+  if(window.innerWidth <= 1024){
+     return <MobileNavFooter/>
   }else{
     return null
 
@@ -26,6 +35,7 @@ function App() {
       <ActivePageProvider>
         <MainPageComponent />
       </ActivePageProvider>
+      {footerContent()}
     </div>
   )
 }

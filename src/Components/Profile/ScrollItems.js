@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './ScrollItem.module.css'
 import AboutMe from '../../Content/AboutMe'
 import Experience from '../../Content/Experience'
+import Projects from '../../Content/Projects'
 import { ContentContainer } from '../ContentContainer/ContentContainer'
 import CodeDecal from '../CodeDecal/CodeDecal'
 import EmailForm from '../EmailForm/EmailForm'
@@ -16,7 +17,7 @@ const ScrollItems = () => {
         <Experience />
       </ContentContainer>
       <ContentContainer pageNumber={3}>
-        <AboutMe />
+        <Projects />
       </ContentContainer>
       <ContentContainer pageNumber={4}>
         <EmailForm />

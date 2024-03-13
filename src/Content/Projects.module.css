@@ -1,0 +1,75 @@
+.ProjectMainContainer{
+        /* border:1px dashed white; */
+   
+
+    width:80%;
+}
+.ProjectBanner{
+    
+    /* border:1px dashed white; */
+    width:90%;
+    margin-left:45px;
+
+}
+.objectTest{
+    background-color: rgba(0, 0, 0, 0.372);
+    /* padding:3px; */
+    height:50px;
+ 
+}
+.ProjectTextArea{
+    margin-left:10px;
+}
+.MainImageHolderContainer{
+    /* border:1px dashed rgb(30, 0, 255); */
+    height:300px;
+    display: flex;
+    justify-content: center;
+    
+    
+    
+    flex-direction: column;
+}
+.navigationImageButton{
+    position: relative;
+    top:200px;
+    height:30px;
+    background-color: rgba(255, 255, 255, 0);
+    border:none;
+    margin:10px;
+
+}
+.arrowIconDesign{
+    transform: rotate(180deg);
+    color:white;
+}
+.projectImageHolderTest{
+    margin-top:60px;
+ display: flex;
+ justify-content: center;
+    
+   
+}
+
+.projectImageHolder{
+    background-color: gray;
+    margin-top:70px;
+    /* border: 1px dashed rgb(0, 255, 34); */
+    width:90%;
+    height:350px;
+    /* display: flex; */
+    /* justify-content: center; */
+}
+.ProjectTitleInfo{
+    /* border:1px dashed white; */
+    width:70%;
+    margin-left:45px;
+
+    
+   
+
+}
+.projectTitleText{
+    text-align: left;
+    font-weight: 600;
+}

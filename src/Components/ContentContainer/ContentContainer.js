@@ -69,6 +69,7 @@ export const ContentContainer = (props) => {
     <div
       className={`${styles.contentContainer} ${
         activePage === pageNumber ? styles.active : ''
+        
       }`}
       ref={containerRef}
     >
