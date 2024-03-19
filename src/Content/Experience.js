@@ -21,12 +21,20 @@ const Experience = forwardRef((props, ref) => {
           <h1>Education</h1>
         </div>
         <div className={styles.segmentTwo}>
+          <div className={styles.schoolInfoHolder}>
           <p className={styles.schoolInfoTitle}>Southern New Hampshire University</p>
           <h6 className={styles.EducationYearText}>2021 - 2023</h6>
+          </div>
+          <div className={styles.schoolInfoHolder}>
+
           <p className={styles.schoolInfoTitle}>Galvanize</p>
           <h6 className={styles.EducationYearText}>2018 - 2019</h6>
+          </div>
+          <div className={styles.schoolInfoHolder}>
+
           <p className={styles.schoolInfoTitle}>Greenway High School</p>
           <h6 className={styles.EducationYearText}>2021 - 2023</h6>
+          </div>
         </div>
       </div>
       <div  className={styles.ExperienceSegment}>
@@ -34,8 +42,10 @@ const Experience = forwardRef((props, ref) => {
           <h1>Experience</h1>
         </div>
         <div className={styles.segmentFour}></div>
+        <div className={styles.workExpHolder}>
         <p className={styles.workInfoTitle}>Enwiya Software Solutions, LLC (March 2019 - present) </p>
         <p className={styles.workInfoTitle}>Full-Stack Developer</p>
+        </div>
           <h6 className={styles.WorkSummery}>In my freelance career, I've independently crafted personal web projects that showcase my creativity and technical proficiency, leveraging cutting-edge technologies to deliver innovative solutions. Recognizing the importance of staying current, I'm committed to continuous learning through online courses, workshops, and industry publications. Additionally, I actively participate in developer communities, engage in forums, and attend conferences to exchange insights, expand my skill set, and remain competitive in the dynamic tech landscape. This proactive approach ensures that I stay updated with the latest trends and advancements, enabling me to deliver exceptional results to my clients while pushing the boundaries of web development. </h6>
         <p className={styles.workInfoTitle}>Walmart (April 2012 - present) </p>
         <p className={styles.workInfoTitle}>Certified Pharmay Technician</p>
