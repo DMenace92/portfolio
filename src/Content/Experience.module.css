@@ -64,14 +64,26 @@
 
 
 }
+.schoolInfoHolder{
+  padding: 2px; 
+  /* height: 30px; */
+  padding: 10px;
+  border-radius: 0px;
+  width: auto;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.287);
+
+}
 .schoolInfoTitle{
- 
-text-align: left;
-margin-bottom:-30px;
+  text-align: left;
+  /* margin-bottom: -30px; */
+  margin: 0;
+  padding: 0;
 }
 .EducationYearText{
   font-weight: 100;
-}
+  margin: 0;
+  line-height: 1;}
 
 .ExTextHolder{
   margin-left:10px;
@@ -91,13 +103,28 @@ margin-bottom:-30px;
   /* width:30%; */
   margin-left:20px;
 }
+.workExpHolder{
+  /* padding:1px; */
+  margin:0px;
+  border-radius: 30px;
+  width:fit-content;
+  height:50px;
+  /* background-color: rgba(0, 0, 0, 0.155); */
+}
 .workInfoTitle{
-  margin-left: 20px;;
+
+  font-family: inter;
+  /* text-shadow: black 10px 0 8px; */
+    margin-left: 20px;;
   text-align: left;
   margin-bottom: -20px;
 
 }
 .WorkSummery{
+  font-family: Rajdhani;
+  text-align: left;
+  letter-spacing: .1rem;
+  font-size: 14px;
   margin-left:20px;
   font-weight:100
 }
