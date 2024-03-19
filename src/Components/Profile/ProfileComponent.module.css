@@ -1,11 +1,17 @@
 .gridDesign {
   height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .portfolioHolder {
   background-color: rgba(0, 0, 0, 0.46);
   width: 400px;
   height: 100vh;
+}
+.shapeContainer {
+  text-align: center;
 }
 .shapeContainer .ProfileImageHolder .shape1 .shape2 {
 }
@@ -76,7 +82,7 @@
   text-align: left;
   justify-content: space-between;
   height: 160px;
-  width: 160px;
+  width: 200px;
 }
 .selectionOption {
   font-weight: 600;

@@ -1,130 +1,117 @@
-.EdExMainContainer{
+.EdExMainContainer {
   /* border: 2px solid white; */
-  height:90vh;
-  width:80%;
-
 }
 
-.EducationBanner{
- width:390px;
+.EducationBanner {
+  width: 390px;
   background-color: rgba(0, 0, 0, 0.372);
   /* height:60px; */
   display: flex;
-  
+
   /* justify-content: center; */
-  margin:20px;
+  margin: 20px;
 }
-.EdTextHolder{
-  margin-left:10px;
+.ampersomething {
+  margin: 0 5px;
+  font-weight: 100;
+}
+.EdTextHolder {
+  margin-left: 10px;
   display: flex;
   /* justify-content: center; */
   justify-content: space-between;
   height: 50px;
-  width:370px;
+  width: 370px;
   position: relative;
-  bottom:20px;
-
+  bottom: 20px;
 }
-.EducationBannerText2{
-  
+.EducationBannerText2 {
   font-weight: 100;
 }
-.EducationBannerText1 .EducationBannerText2 .EducationBannerText3{
+.EducationBannerText1 .EducationBannerText2 .EducationBannerText3 {
   /* display: flex;
   justify-content: center; */
   /* border:1px solid white; */
-/* 
+  /* 
   padding:5px;
   margin-left:20px */
 }
-.educationSegment{
+.educationSegment {
   /* border:1px solid white; */
   justify-content: space-between;
   display: flex;
-  height:30vh;
-  
+  height: 30vh;
 }
-.segmentOne{
-  height:auto;
+.segmentOne {
+  height: auto;
   /* border:1px dashed black; */
-  width:30%;
-  margin-left:20px;
-
-
-
+  width: 30%;
+  margin-left: 20px;
 }
-.segmentTwo{
+.segmentTwo {
   /* border:1px dashed black; */
-  width:50%;
-  
-
-
+  width: 50%;
 }
-.segmentTwo p h6{
-
-
+.segmentTwo p h6 {
 }
-.schoolInfoHolder{
-  padding: 2px; 
+.schoolInfoHolder {
+  padding: 2px;
   /* height: 30px; */
   padding: 10px;
   border-radius: 0px;
   width: auto;
   margin-bottom: 10px;
   background-color: rgba(0, 0, 0, 0.287);
-
 }
-.schoolInfoTitle{
+.schoolInfoTitle {
   text-align: left;
   /* margin-bottom: -30px; */
   margin: 0;
   padding: 0;
 }
-.EducationYearText{
+.EducationYearText {
   font-weight: 100;
   margin: 0;
-  line-height: 1;}
+  line-height: 1;
+}
 
-.ExTextHolder{
-  margin-left:10px;
+.ExTextHolder {
+  margin-left: 10px;
   display: flex;
   justify-content: space-between;
-  width:32vw;
-
+  width: 32vw;
 }
-.ExperienceSegment{
+.ExperienceSegment {
   position: relative;
   /* margin-bottom:100px; */
-  bottom:100px;
+  bottom: 100px;
 }
-.segmentThree{
-  height:auto;
+.segmentThree {
+  height: auto;
   /* border:1px dashed black; */
   /* width:30%; */
-  margin-left:20px;
+  margin-left: 20px;
 }
-.workExpHolder{
+.workExpHolder {
   /* padding:1px; */
-  margin:0px;
+  margin: 0px;
   border-radius: 30px;
-  width:fit-content;
-  height:50px;
+  width: fit-content;
+  height: 50px;
   /* background-color: rgba(0, 0, 0, 0.155); */
 }
-.workInfoTitle{
-
+.workInfoTitle {
   font-family: inter;
   /* text-shadow: black 10px 0 8px; */
-    margin-left: 20px;;
+  margin-left: 20px;
   text-align: left;
   margin-bottom: -20px;
-
 }
-.WorkSummery{
+.WorkSummery {
   font-family: Rajdhani;
   text-align: left;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   font-size: 14px;
-  margin-left:20px;
-  font-weight:100
+  margin-left: 20px;
+  font-weight: 100;
 }

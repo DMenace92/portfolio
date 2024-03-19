@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './contactModal.module.css'
+import CodeDecal from '../Components/CodeDecal/CodeDecal'
 
 const ContactModal = (props) => {
   // const [isOpen, setIsOpen]= useState(props.isOpen)
@@ -46,19 +47,24 @@ const ContactModal = (props) => {
 
           {/* <label className={styles.inputLableTextArea}>Message</label> */}
           <div className={styles.messageButtonWrapper}>
-            
-            {    props.hideCancel ? null :        <button
-              className={styles.messageStyleButtonCancel}
-              onClick={toggle}
-            >
-              CANCEL
-            </button>}
-      
+            {props.hideCancel ? null : (
+              <button
+                className={styles.messageStyleButtonCancel}
+                onClick={toggle}
+              >
+                CANCEL
+              </button>
+            )}
 
             <button className={styles.messageStyleButtonSend}>SEND</button>
           </div>
         </div>
       </div>
+      {props.hideCancel && (
+        <div className={styles.bottomDecorStyle}>
+          <CodeDecal />
+        </div>
+      )}
     </div>
   )
 }
