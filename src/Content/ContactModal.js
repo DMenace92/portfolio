@@ -60,11 +60,6 @@ const ContactModal = (props) => {
           </div>
         </div>
       </div>
-      {props.hideCancel && (
-        <div className={styles.bottomDecorStyle}>
-          <CodeDecal />
-        </div>
-      )}
     </div>
   )
 }

@@ -6,9 +6,7 @@ const Projects = () => {
   return (
     <div className={styles.ProjectMainContainer}>
       <div className={styles.ProjectBanner}>
-        <div className={styles.objectTest}>
-          <h2>Projects</h2>
-        </div>
+        <h2>Projects</h2>
       </div>
       <div className={styles.MainImageHolderContainer}>
         <div className={styles.projectImageHolderTest}>
@@ -21,7 +19,7 @@ const Projects = () => {
           </button>
         </div>
         <div className={styles.ProjectTitleInfo}>
-          <h2 className={styles.projectTitleText}>Project Title</h2>
+          <h3 className={styles.projectTitleText}>Project Title</h3>
         </div>
       </div>
     </div>

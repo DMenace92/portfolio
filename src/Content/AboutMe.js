@@ -12,9 +12,6 @@ const AboutMe = forwardRef((props, ref) => {
       className={styles.aboutmeMainContainer}
       // style={{ ...style, width: 500, maxWidth: '90%' }}
     >
-      <div className={styles.topDecorStyle}>
-        <CodeDecal />
-      </div>
       <div ref={ref}>
         <h2 className={styles.aboutMeHeader}>About Me</h2>
         <div className={styles.aboutmeDiscription}>
@@ -51,6 +48,7 @@ const AboutMe = forwardRef((props, ref) => {
           ever-evolving world of software development. Together, let's push
           boundaries and create innovative solutions that shape the future.
         </div>
+        <div style={{ marginBottom: 100 }} />
       </div>
     </div>
   )
