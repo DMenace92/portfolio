@@ -6,7 +6,8 @@
 }
 
 .sideBarPositionWrapper {
-  width: 400px;
+  min-width: 400px;
+  position: relative;
 }
 @media only screen and (max-width: 1024px) {
   .sideBarPositionWrapper {
@@ -17,6 +18,6 @@
     /* height: 100vh;
     display: flex;
     flex-direction: row; */
-    margin-left:220px;
+    margin-left: 220px;
   }
 }

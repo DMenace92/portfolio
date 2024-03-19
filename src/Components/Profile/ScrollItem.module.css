@@ -1,21 +1,22 @@
 .aboutmeMainContainer {
-  width: 500px;
-  max-width: 90%;
+  padding: 30px;
 }
 
 .aboutMeHeader {
   margin-top: 0px;
 }
-
+.contentWrapper {
+  flex: 1;
+  position: relative;
+  padding: 30px;
+}
 .aboutMeWrapper {
   max-width: 500px;
-  min-height: 100vh;
-  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: left;
   color: lightgray;
+  text-align: left;
 }
 
 .aboutMeItem {

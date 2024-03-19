@@ -10,20 +10,12 @@ import ContactModal from '../../Content/ContactModal'
 
 const ScrollItems = () => {
   return (
-    <div className={styles.contentContainersWrapper}>
-      <ContentContainer pageNumber={1}>
-        <AboutMe />
-      </ContentContainer>
-      <ContentContainer pageNumber={2}>
-        <Experience />
-      </ContentContainer>
-      <ContentContainer pageNumber={3}>
-        <Projects />
-      </ContentContainer>
-      <ContentContainer pageNumber={4}>
-        {/* <EmailForm /> */}
-        <ContactModal hideCancel={true}/>
-      </ContentContainer >
+    <div className={styles.contentWrapper}>
+      <AboutMe />
+      <Experience />
+      <Projects />
+      {/* <EmailForm /> */}
+      <ContactModal hideCancel={true} />
       <div className={styles.topDecorStyle}>
         <CodeDecal />
       </div>

@@ -42,7 +42,6 @@ function App(props) {
   return (
     <div className="App">
       {/* <div className={window.innerWidth <= 1024 || windowSize <= 1024 ? "WindowTesterOn" : "WindowTesterOff"}> */}
-
       <ActivePageProvider>
         {renderContent()}
 
