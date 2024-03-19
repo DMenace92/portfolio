@@ -11,7 +11,7 @@ import { useActivePage } from '../../providers/activePageProvider'
 
 const ProfileComponent = () => {
   const { activePage } = useActivePage()
-
+// console.log(activePage)
 
   return (
     <div className={styles.gridDesign}>

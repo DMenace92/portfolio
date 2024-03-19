@@ -6,7 +6,7 @@ import ContactModal from '../ContactModal'
 
 
 
-const NavBar = () => {
+const NavBar = (props) => {
     // const [userAdmin, setUserAdmin] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
 
@@ -16,13 +16,15 @@ const NavBar = () => {
   
     
   }
-  console.log(isOpen)
+  // console.log(isOpen)
 
 
   return (
     <div className={styles.PortfolioNavBarComponent}>
       {/* <i i className="fab fa-hamburger"></i> */}
+      <div className={styles.hamburgerMenuContainer}>
       <img   className={styles.hamburgerMenu} src={hamburger} alt="hb"></img>
+      </div>
       <img onClick={toggle} className={styles.mailIcon} src={mail} alt="hb"></img>
    
       <div className={isOpen !== true? styles.hideViewModal: styles.viewModal} >

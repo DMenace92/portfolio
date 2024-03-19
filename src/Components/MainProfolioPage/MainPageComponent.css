@@ -8,8 +8,15 @@
 .sideBarPositionWrapper {
   width: 400px;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1024px) {
   .sideBarPositionWrapper {
     width: 0px;
+  }
+  .MainPageWrapper {
+    /* width: 100vw; */
+    /* height: 100vh;
+    display: flex;
+    flex-direction: row; */
+    margin-left:220px;
   }
 }

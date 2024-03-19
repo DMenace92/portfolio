@@ -46,12 +46,14 @@ const ContactModal = (props) => {
 
           {/* <label className={styles.inputLableTextArea}>Message</label> */}
           <div className={styles.messageButtonWrapper}>
-            <button
+            
+            {    props.hideCancel ? null :        <button
               className={styles.messageStyleButtonCancel}
               onClick={toggle}
             >
               CANCEL
-            </button>
+            </button>}
+      
 
             <button className={styles.messageStyleButtonSend}>SEND</button>
           </div>

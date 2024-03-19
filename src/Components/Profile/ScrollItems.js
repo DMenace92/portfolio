@@ -6,6 +6,7 @@ import Projects from '../../Content/Projects'
 import { ContentContainer } from '../ContentContainer/ContentContainer'
 import CodeDecal from '../CodeDecal/CodeDecal'
 import EmailForm from '../EmailForm/EmailForm'
+import ContactModal from '../../Content/ContactModal'
 
 const ScrollItems = () => {
   return (
@@ -20,8 +21,9 @@ const ScrollItems = () => {
         <Projects />
       </ContentContainer>
       <ContentContainer pageNumber={4}>
-        <EmailForm />
-      </ContentContainer>
+        {/* <EmailForm /> */}
+        <ContactModal hideCancel={true}/>
+      </ContentContainer >
       <div className={styles.topDecorStyle}>
         <CodeDecal />
       </div>

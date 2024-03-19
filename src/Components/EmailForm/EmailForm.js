@@ -17,7 +17,7 @@ class EmailForm extends Component {
     _onSubmit = (e) => {
         e.preventDefault();
        
-        console.log(this.props)
+        // console.log(this.props)
         if (this.state.hidden.trim()!==''){
             console.log("Submission Failed")
           
@@ -32,8 +32,8 @@ class EmailForm extends Component {
         this.setState({ [target.name]: target.value })
     }
     render() {
-        console.log(this.props)
-        console.log(this.state)
+        // console.log(this.props)
+        // console.log(this.state)
         return (
             < Grid >
                 <div className={styles.contactInfoHolder} >

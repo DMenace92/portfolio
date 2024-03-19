@@ -7,10 +7,12 @@ const AboutMe = forwardRef((props, ref) => {
   const { style } = props
 
   return (
-    <div style={{ ...style, width: 500, maxWidth: '90%' }}>
+    <div  className={styles.aboutmeMainContainer} 
+    // style={{ ...style, width: 500, maxWidth: '90%' }}
+    >
       <div ref={ref}>
         <h1 className={styles.aboutMeHeader}>About Me:</h1>
-        <div>
+        <div className={styles.aboutmeDiscription}>
           Hey there! I'm Dennis Enwiya, and I'm thrilled to share my passion for
           software development with you. I have always been captivated by the
           world of technology, and pursuing a career in this field has been a

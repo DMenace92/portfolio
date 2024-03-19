@@ -15,6 +15,12 @@ html{
 
   /* background-color: #116466; */
 }
+.WindowTesterOn{
+  /* visibility: visible; */
+}
+.WindowTesterOff{
+  display: none;
+}
 
 html::-webkit-scrollbar {
   width: 10px;

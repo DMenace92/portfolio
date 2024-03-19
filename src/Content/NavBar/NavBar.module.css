@@ -1,16 +1,22 @@
 .PortfolioNavBarComponent {
   background-color: rgba(2, 0, 0, 0.238);
-  height: 50px;
+  height: 60px;
   width: 100% !important;
   /* width:100vh; */
   /* display: flex; */
 }
+.hamburgerMenuContainer{
+  /* border:1px dashed white; */
+  height:50px;
+  width:40px;
+  /* margin-right:1030px; */
+}
 .hamburgerMenu {
-  position: absolute;
-  right: 75px;
-  top: 7px;
+   position: absolute;
+   margin-top:10px;
 
-  float: right;
+
+  /* float: right; */
 }
 .hamburgerMenuButton {
   position: absolute;
