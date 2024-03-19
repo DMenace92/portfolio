@@ -16,12 +16,6 @@ const ScrollItems = () => {
       <Projects />
       {/* <EmailForm /> */}
       <ContactModal hideCancel={true} />
-      <div className={styles.topDecorStyle}>
-        <CodeDecal />
-      </div>
-      <div className={styles.bottomDecorStyle}>
-        <CodeDecal />
-      </div>
     </div>
   )
 }

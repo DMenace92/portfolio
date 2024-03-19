@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import NavBar from '../../NavBar/NavBarComponent'
 import { Grid, Paper } from '@mui/material'
 
@@ -12,64 +12,82 @@ import UDep from '../../../Images/UniversityD.png'
 import './Certification.css'
 
 const Certification = () => {
-    return (
-        <div>
-            <NavBar />
-            {/* <img className="imageCommingSoon" src={commingSoon}></img>
-             */}
-            <Grid>
-                <div className="certificationContainer">
-                    <Paper className="certificationWrapper" elevation="24">
+  return (
+    <div>
+      <NavBar />
+      {/* <img className="imageCommingSoon" src={commingSoon}></img>
+       */}
+      <Grid>
+        <div className="certificationContainer">
+          <Paper className="certificationWrapper" elevation="24">
+            <div>
+              <h3 className="certificationTitleStyle">
+                University and High School Diplomas
+              </h3>
+              <img
+                className="certificationImages"
+                src={UDep}
+                alt="a certificate"
+              ></img>
+              <img
+                className="certificationImages"
+                src={HSdep}
+                alt="a certificate"
+              ></img>
+              {/* <img className="certificationImages" src={pListCert1} alt='a certificate'></img> */}
+            </div>
+          </Paper>
+        </div>
+      </Grid>
 
-                        <div>
-                            <h1 className="certificationTitleStyle">University and High School Diplomas</h1>
-                            <img className="certificationImages" src={UDep} alt='a certificate'></img>
-                            <img className="certificationImages" src={HSdep} alt='a certificate'></img>
-                            {/* <img className="certificationImages" src={pListCert1} alt='a certificate'></img> */}
-                        </div>
-                    </Paper>
-                </div>
-            </Grid>
-
-            <Grid>
-                <div className="certificationContainerChildren">
-                    <Paper className="certificationWrapper" elevation="24">
-
-                        <div>
-                            <h1 className="certificationTitleStyle">Coding Boot Camp</h1>
-                            <img className="certificationImages" src={galCert} alt='a certificate'></img>
-
-                        </div>
-                    </Paper>
-                </div>
-            </Grid>
-            <Grid>
-                <div className="certificationContainerChildren">
-                    <Paper className="certificationWrapper" elevation="24">
-
-                        <div>
-                            <h1 className="certificationTitleStyle">Technology Certifications</h1>
-                            {/* <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
+      <Grid>
+        <div className="certificationContainerChildren">
+          <Paper className="certificationWrapper" elevation="24">
+            <div>
+              <h3 className="certificationTitleStyle">Coding Boot Camp</h3>
+              <img
+                className="certificationImages"
+                src={galCert}
+                alt="a certificate"
+              ></img>
+            </div>
+          </Paper>
+        </div>
+      </Grid>
+      <Grid>
+        <div className="certificationContainerChildren">
+          <Paper className="certificationWrapper" elevation="24">
+            <div>
+              <h3 className="certificationTitleStyle">
+                Technology Certifications
+              </h3>
+              {/* <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
                             <img className="certificationImages" src={pListCert1} alt='a certificate'></img> */}
-                        </div>
-                    </Paper>
-                </div>
-            </Grid>
-            <Grid>
-                <div className="certificationContainerChildren">
-                    <Paper className="certificationWrapper" elevation="24">
-
-                        <div>
-                            <h1 className="certificationTitleStyle">Academic Achievments</h1>
-                            <img className="certificationImages" src={pListCert2} alt='a certificate'></img>
-                            <img className="certificationImages" src={pListCert1} alt='a certificate'></img>
-                            <img className="certificationImages" src={awards}></img>
-                        </div>
-                    </Paper>
-                </div>
-            </Grid>
-
-        </div >
-    )
+            </div>
+          </Paper>
+        </div>
+      </Grid>
+      <Grid>
+        <div className="certificationContainerChildren">
+          <Paper className="certificationWrapper" elevation="24">
+            <div>
+              <h1 className="certificationTitleStyle">Academic Achievments</h1>
+              <img
+                className="certificationImages"
+                src={pListCert2}
+                alt="a certificate"
+              ></img>
+              <img
+                className="certificationImages"
+                src={pListCert1}
+                alt="a certificate"
+              ></img>
+              <img className="certificationImages" src={awards}></img>
+            </div>
+          </Paper>
+        </div>
+      </Grid>
+    </div>
+  )
 }
 export default Certification

@@ -1,17 +1,22 @@
 import React, { forwardRef } from 'react'
 import { useParams } from 'react-router-dom'
 import styles from '../Components/Profile/ScrollItem.module.css'
+import CodeDecal from '../Components/CodeDecal/CodeDecal'
 
 const AboutMe = forwardRef((props, ref) => {
   useParams()
   const { style } = props
 
   return (
-    <div  className={styles.aboutmeMainContainer} 
-    // style={{ ...style, width: 500, maxWidth: '90%' }}
+    <div
+      className={styles.aboutmeMainContainer}
+      // style={{ ...style, width: 500, maxWidth: '90%' }}
     >
+      <div className={styles.topDecorStyle}>
+        <CodeDecal />
+      </div>
       <div ref={ref}>
-        <h1 className={styles.aboutMeHeader}>About Me:</h1>
+        <h2 className={styles.aboutMeHeader}>About Me</h2>
         <div className={styles.aboutmeDiscription}>
           Hey there! I'm Dennis Enwiya, and I'm thrilled to share my passion for
           software development with you. I have always been captivated by the

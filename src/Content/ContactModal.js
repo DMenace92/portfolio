@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from './contactModal.module.css'
+import CodeDecal from '../Components/CodeDecal/CodeDecal'
 
 const ContactModal = (props) => {
   // const [isOpen, setIsOpen]= useState(props.isOpen)
@@ -59,6 +60,11 @@ const ContactModal = (props) => {
           </div>
         </div>
       </div>
+      {props.hideCancel && (
+        <div className={styles.bottomDecorStyle}>
+          <CodeDecal />
+        </div>
+      )}
     </div>
   )
 }

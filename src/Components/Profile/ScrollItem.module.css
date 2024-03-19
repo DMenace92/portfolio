@@ -1,5 +1,4 @@
 .aboutmeMainContainer {
-  padding: 30px;
 }
 
 .aboutMeHeader {
@@ -8,7 +7,8 @@
 .contentWrapper {
   flex: 1;
   position: relative;
-  padding: 30px;
+  padding: 60px;
+  max-width: calc(100vw - 400px);
 }
 .aboutMeWrapper {
   max-width: 500px;
