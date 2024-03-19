@@ -5,20 +5,20 @@ background: -webkit-linear-gradient(to right, #6f0000, #200122);
 background: linear-gradient(to right, #6f0000, #200122); 
 
 } */
-html{
+
+html {
   background-image: url('./Images//Untitled_Artwork.jpg');
 }
 .App {
   text-align: center;
   /* background-image: URL('./Images/backgroundNode.png') !important; */
 
-
   /* background-color: #116466; */
 }
-.WindowTesterOn{
+.WindowTesterOn {
   /* visibility: visible; */
 }
-.WindowTesterOff{
+.WindowTesterOff {
   display: none;
 }
 
@@ -40,12 +40,7 @@ html::-webkit-scrollbar-thumb {
   scrollbar-width: thin;
 } */
 
-
-
 /* apply background:linear-gradient */
-
-
-
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
