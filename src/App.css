@@ -11,11 +11,6 @@ background: linear-gradient(to right, #6f0000, #200122);
 }
 
 html {
-  background-color: #530000;
-  background-image: url('./Images//Untitled_Artwork.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   position: relative;
   overflow: hidden;
 }
