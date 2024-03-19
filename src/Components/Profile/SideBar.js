@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import profilePic from '../../Images/profilePic.jpg'
 import NodeIcon from '../../Images/NodeIcon.svg'
 import facebook from '../../Images/Vector5.svg'
@@ -11,7 +11,7 @@ import { useActivePage } from '../../providers/activePageProvider'
 
 const ProfileComponent = () => {
   const { activePage } = useActivePage()
-// console.log(activePage)
+  // console.log(activePage)
 
   return (
     <div className={styles.gridDesign}>
@@ -29,57 +29,57 @@ const ProfileComponent = () => {
           <div className={styles.shape2}></div>
         </div>
         <div>
-
-    
           <div className={styles.nameContainer}>
             <h1 className={styles.nameTextStyle}>DENNIS</h1>
             <h1 className={styles.nameTextStyle1}>ENWIYA</h1>
           </div>
 
           <div className={styles.contentItemsWrapper}>
-          <img className={styles.NodeIcon} src={NodeIcon} alt="Node"></img>
+            <img className={styles.NodeIcon} src={NodeIcon} alt="Node"></img>
 
-
-          <ul className={styles.navigationSelection}>
-            {/* <div className={styles.NodeDesign}></div> */}
-            <li
-              className={
-                activePage === 1
-                  ? styles.selectionItemPage
-                  : styles.selectionItem
-              }
-            >
-              About
-            </li>
-            <li
-              className={
-                activePage === 2
-                  ? styles.selectionItemPage
-                  : styles.selectionItem
-              }
-            >
-              Experience
-            </li>
-            <li
-              className={
-                activePage === 3
-                  ? styles.selectionItemPage
-                  : styles.selectionItem
-              }
-            >
-              Project
-            </li>
-            <li
-              className={
-                activePage === 4
-                  ? styles.selectionItemPage
-                  : styles.selectionItem
-              }
-            >
-              Contact Me
-            </li>
-
-          </ul>
+            <ul className={styles.navigationSelection}>
+              {/* <div className={styles.NodeDesign}></div> */}
+              <li
+                className={`${styles.selectionOption} 
+                ${
+                  activePage === 1
+                    ? styles.selectionItemPage
+                    : styles.selectionItem
+                }`}
+              >
+                About
+              </li>
+              <li
+                className={`${styles.selectionOption} 
+                ${
+                  activePage === 2
+                    ? styles.selectionItemPage
+                    : styles.selectionItem
+                }`}
+              >
+                Experience
+              </li>
+              <li
+                className={`${styles.selectionOption} 
+                ${
+                  activePage === 3
+                    ? styles.selectionItemPage
+                    : styles.selectionItem
+                }`}
+              >
+                Project
+              </li>
+              <li
+                className={`${styles.selectionOption} 
+                  ${
+                    activePage === 4
+                      ? styles.selectionItemPage
+                      : styles.selectionItem
+                  }`}
+              >
+                Contact Me
+              </li>
+            </ul>
           </div>
         </div>
         <div className={styles.footerSocialMedia}>
