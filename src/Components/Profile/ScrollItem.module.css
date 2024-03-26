@@ -106,10 +106,15 @@
   visibility: visible;
   /* padding-bottom: 0px; */
 }
+/* 600, 768, 992, 1200 */
 
 @media only screen and (max-width: 1024px) {
   .aboutmeMainContainer {
-    width: 700px;
+    /* width: 70%; */
+    width:85vw;
+  }
+  .aboutmeItemHolder{
+    margin-right:35px;
   }
 
   .contentContainersWrapper {
@@ -120,7 +125,9 @@
     margin-left: -150px;
   }
   .aboutmeDiscription {
-    font-size: 21px;
+    font-size: 14px;
+    font-family: Rajdhani;
+    letter-spacing: 0.1rem;
   }
   .topDecorStyle {
     color: white;
@@ -130,6 +137,8 @@
     left: -100px;
     top: -10px;
     z-index: -1;
+  }
+  .scrollItemsWrapper {
   }
   .bottomDecorStyle {
     color: white;

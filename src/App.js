@@ -46,7 +46,7 @@ function App(props) {
         {renderContent()}
 
         <MainPageComponent />
-        <div
+        {/* <div
           className={
             window.innerWidth <= 1024 || windowSize <= 1024
               ? 'WindowTesterOn'
@@ -54,7 +54,7 @@ function App(props) {
           }
         >
           <MobileNavFooter />
-        </div>
+        </div> */}
         {/* {footerContent()} */}
       </ActivePageProvider>
     </div>

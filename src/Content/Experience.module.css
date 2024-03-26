@@ -115,11 +115,46 @@
   margin-left: 20px;
   font-weight: 100;
 }
-@media only screen and (max-width:1024px){
+
+/* 600, 768, 992, 1200 */
+
+@media only screen and (max-width:1200px){
   .educationSegment{
-    width:700px;
+    width:85vw;
   }
   .ExperienceSegment{
-    width:700px;
+    width:85vw;
+  }
+}
+@media only screen and (max-width:992px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+}
+@media only screen and (max-width:768px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+}
+@media only screen and (max-width:600px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+}
+@media only screen and (max-width:320px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
   }
 }

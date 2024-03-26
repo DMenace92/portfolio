@@ -12,7 +12,7 @@ const AboutMe = forwardRef((props, ref) => {
       className={styles.aboutmeMainContainer}
       // style={{ ...style, width: 500, maxWidth: '90%' }}
     >
-      <div ref={ref}>
+      <div className={styles.aboutmeItemHolder} ref={ref}>
         <h2 className={styles.aboutMeHeader}>About Me</h2>
         <div className={styles.aboutmeDiscription}>
           Hey there! I'm Dennis Enwiya, and I'm thrilled to share my passion for
