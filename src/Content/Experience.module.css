@@ -115,3 +115,11 @@
   margin-left: 20px;
   font-weight: 100;
 }
+@media only screen and (max-width:1024px){
+  .educationSegment{
+    width:700px;
+  }
+  .ExperienceSegment{
+    width:700px;
+  }
+}

@@ -13,12 +13,17 @@
   border-radius: 20px;
   background-color: white;
   height: 500px;
-  width: 100%;
+  width: 50%;
   max-width: 90vw;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   max-height: 90vh;
   display: flex;
   flex-direction: column;
+}
+
+.ContactModalBodyFalse{
+  height: 500px;
+  width: 100%;
 }
 .modalKingWrapper {
   left: 0;
@@ -70,7 +75,6 @@
 }
 .inputLableTextArea {
   font-size: 12px;
-
   display: flex;
   left: 30px;
   position: absolute;
@@ -122,4 +126,11 @@ width:200px; */
   height: 30px;
 
   background-color: #c12854;
+}
+
+@media only screen and (max-width:1024px) {
+  .ContactModleBody{
+    width:700px;
+  }
+  
 }

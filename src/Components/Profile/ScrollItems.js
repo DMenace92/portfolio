@@ -19,7 +19,7 @@ const ScrollItems = () => {
         <Experience />
         <Projects />
         {/* <EmailForm /> */}
-        <div style={{ paddingBottom: 100 }}>
+        <div style={{ paddingBottom: 100, marginLeft:150,}}>
           <ContactModal hideCancel={true} />
         </div>
         <div className={styles.bottomDecorStyle}>
