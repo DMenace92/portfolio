@@ -7,6 +7,7 @@ import NavBar from './Content/NavBar/NavBar'
 import MailNav from './Content/NavBar/MailNav'
 import MobileNavFooter from './Content/NavBar/MobileNavFooter'
 // import styles from './App.css'
+import WebFont from 'webfontloader'
 
 function App(props) {
   console.log(props)
@@ -28,6 +29,17 @@ function App(props) {
     }
 
     window.addEventListener('resize', setWindowRes)
+  }, [])
+
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: [
+          'Fira Sans:100,200,300,400,500,600',
+          'Rajdhani:300,400,500,600',
+        ],
+      },
+    })
   }, [])
 
   // const footerContent =()=>{

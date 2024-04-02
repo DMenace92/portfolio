@@ -1,4 +1,6 @@
 .aboutmeMainContainer {
+  z-index: 1;
+  position: relative;
 }
 
 .aboutMeHeader {
@@ -40,11 +42,13 @@
   position: absolute;
   left: -45px;
   top: -75px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .innerWrapper {
   position: relative;
+  max-width: 600px;
+  margin: auto;
 }
 
 .bottomDecorStyle {
@@ -111,10 +115,10 @@
 @media only screen and (max-width: 1024px) {
   .aboutmeMainContainer {
     /* width: 70%; */
-    width:85vw;
+    /* width:85vw; */
   }
-  .aboutmeItemHolder{
-    margin-right:35px;
+  .aboutmeItemHolder {
+    margin-right: 35px;
   }
 
   .contentContainersWrapper {
@@ -136,7 +140,7 @@
     position: absolute;
     left: -100px;
     top: -10px;
-    z-index: -1;
+    z-index: 0;
   }
   .scrollItemsWrapper {
   }
@@ -174,7 +178,7 @@
     position: absolute;
     left: -100px;
     top: -10px;
-    z-index: -1;
+    z-index: 0;
   }
   .bottomDecorStyle {
     color: white;
