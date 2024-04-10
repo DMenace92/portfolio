@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import styles from './contactModal.module.css'
 import CodeDecal from '../Components/CodeDecal/CodeDecal'
+import { useEmailModal } from '../providers/emailModalProvider'
 
 const ContactModal = (props) => {
-  // const [isOpen, setIsOpen]= useState(props.isOpen)
-  // const toggle =()=>{
-  //   props.setIsOpen(i => !i)
+  const { isVisible, setIsVisible } = useEmailModal()
 
-  //   }
-  const toggle = () => {
-    // Call the setter function passed from the parent component
-    props.setIsOpen((prevIsOpen) => !prevIsOpen)
-  }
-  console.log(props.isOpen)
+  console.log('chokai: ', isVisible)
+
+  // if (!isVisible) return null
+
   return (
-   
-
     <div className={styles.ContactModleBody}>
       <div className={styles.hedderLable}>
         <p className={styles.headerTitle}>Contact me Today</p>
@@ -51,7 +46,7 @@ const ContactModal = (props) => {
             {props.hideCancel ? null : (
               <button
                 className={styles.messageStyleButtonCancel}
-                onClick={toggle}
+                onClick={() => setIsVisible(false)}
               >
                 CANCEL
               </button>
@@ -61,11 +56,7 @@ const ContactModal = (props) => {
           </div>
         </div>
       </div>
-
     </div>
-
-               
-
   )
 }
 

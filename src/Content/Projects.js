@@ -46,9 +46,9 @@ const Projects = () => {
       <div className={styles.ProjectBanner}>
         <h2>Projects</h2>
         {projects.length > 0
-          ? projects.map((project) => (
+          ? projects.map((project, index) => (
               <ProjectCard
-                key={project.title}
+                key={project.title + index}
                 title={project.title}
                 techUsed={project.techUsed}
                 links={project.links}
