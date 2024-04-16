@@ -1,26 +1,23 @@
-.ContactModalMainContainer {
+/* .ContactModalMainContainer {
   background-color: rgba(0, 0, 0, 0.6);
   position: relative;
-  /* z-index: 1 ; */
   display: flex;
-  
-  /* justify-content: space-between; */
-  /* justify-content: center ; */
-  /* height: 100vh; */
-}
+ 
+} */
 .ContactModleBody {
   overflow: hidden;
   position: relative;
   z-index: 1;
   border-radius: 20px;
   background-color: white;
-  height: 500px;
-  width: 50%;
+  height: 30rem;
+  width: 60rem;
   max-width: 90vw;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   max-height: 90vh;
   display: flex;
   flex-direction: column;
+  /* padding:-1px; */
   
 }
 
@@ -102,7 +99,7 @@
   align-items: center;
   display: flex;
   justify-content: flex-end;
-  padding: 30px;
+  padding: 20px;
   /* position: absolute;
     bottom:0px;
     right:10px;

@@ -14,8 +14,6 @@ const ContactModal = (props) => {
   }
   console.log(props.isOpen)
   return (
-   
-
     <div className={styles.ContactModleBody}>
       <div className={styles.hedderLable}>
         <p className={styles.headerTitle}>Contact me Today</p>
