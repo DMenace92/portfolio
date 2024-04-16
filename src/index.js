@@ -1,16 +1,17 @@
-import React from 'react';
+import React from 'react'
 // import ReactDOM from 'react-dom';
-import { createRoot } from "react-dom/client";
+import { createRoot } from 'react-dom/client'
 import { Provider } from 'react-redux'
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
-import App from './App';
+import './index.css'
+import App from './App'
 //import reportWebVitals from './reportWebVitals';
 import store from './store'
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+const rootElement = document.getElementById('root')
+const root = createRoot(rootElement)
+
 root.render(
   <React.StrictMode>
     <Provider store={store}>
@@ -19,8 +20,7 @@ root.render(
       </Router>
     </Provider>
   </React.StrictMode>
-);
-
+)
 
 // ReactDOM.render(
 //   <React.StrictMode>

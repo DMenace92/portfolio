@@ -48,7 +48,7 @@ const AboutMe = forwardRef((props, ref) => {
           ever-evolving world of software development. Together, let's push
           boundaries and create innovative solutions that shape the future.
         </div>
-        <div style={{ marginBottom: 100 }} />
+        <div style={{ marginBottom: 40 }} />
       </div>
     </div>
   )

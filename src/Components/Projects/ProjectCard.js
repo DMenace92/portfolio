@@ -40,7 +40,11 @@ export default function ProjectCard(props) {
           {techUsed && (
             <div className={styles.pillContainer}>
               {techUsed.map((techUsed) => {
-                return <div className={styles.pill}>{techUsed}</div>
+                return (
+                  <div key={techUsed} className={styles.pill}>
+                    {techUsed}
+                  </div>
+                )
               })}
             </div>
           )}
@@ -59,7 +63,7 @@ export default function ProjectCard(props) {
               <ul className={styles.linkList}>
                 {links.map((link) => {
                   return (
-                    <li className={styles.linkItem}>
+                    <li key={link} className={styles.linkItem}>
                       <a href={link.url} target="_blank" rel="noreferrer">
                         {link.label}
                       </a>

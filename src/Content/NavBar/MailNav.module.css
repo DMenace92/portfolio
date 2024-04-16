@@ -4,19 +4,19 @@
   z-index: 3;
 }
 .cornerDesign {
-  background-color: #410a1a;
-  height: 60px;
-  width: 70px;
+  background-color: #c22854;
+  height: 50px;
+  width: 50px;
   position: fixed;
   right: 0px;
   top: 0;
-  border-bottom-left-radius: 30px;
+  border-bottom-left-radius: 7px;
 }
 .mailNavIcon {
   position: absolute;
   top: 10px;
-  right: 15px;
-  height: 36px;
+  right: 12px;
+  height: 26px;
   z-index: 1;
 }
 .hideViewModal {

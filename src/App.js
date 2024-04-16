@@ -7,6 +7,8 @@ import NavBar from './Content/NavBar/NavBar'
 import MailNav from './Content/NavBar/MailNav'
 import MobileNavFooter from './Content/NavBar/MobileNavFooter'
 // import styles from './App.css'
+import WebFont from 'webfontloader'
+import { EmailModalProvider } from './providers/emailModalProvider'
 
 function App(props) {
   console.log(props)
@@ -30,6 +32,17 @@ function App(props) {
     window.addEventListener('resize', setWindowRes)
   }, [])
 
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: [
+          'Fira Sans:100,200,300,400,500,600',
+          'Rajdhani:300,400,500,600',
+        ],
+      },
+    })
+  }, [])
+
   // const footerContent =()=>{
   //   if(window.innerWidth <= 1024){
   //      return <MobileNavFooter/>
@@ -42,11 +55,12 @@ function App(props) {
   return (
     <div className="App">
       {/* <div className={window.innerWidth <= 1024 || windowSize <= 1024 ? "WindowTesterOn" : "WindowTesterOff"}> */}
-      <ActivePageProvider>
-        {renderContent()}
+      <EmailModalProvider>
+        <ActivePageProvider>
+          {renderContent()}
 
-        <MainPageComponent />
-        {/* <div
+          <MainPageComponent />
+          {/* <div
           className={
             window.innerWidth <= 1024 || windowSize <= 1024
               ? 'WindowTesterOn'
@@ -55,8 +69,9 @@ function App(props) {
         >
           <MobileNavFooter />
         </div> */}
-        {/* {footerContent()} */}
-      </ActivePageProvider>
+          {/* {footerContent()} */}
+        </ActivePageProvider>
+      </EmailModalProvider>
     </div>
   )
 }

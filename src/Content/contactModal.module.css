@@ -2,8 +2,11 @@
   background-color: rgba(0, 0, 0, 0.6);
   position: relative;
   display: flex;
- 
-} */
+
+  /* justify-content: space-between; */
+  /* justify-content: center ; */
+  /* height: 100vh; */
+
 .ContactModleBody {
   overflow: hidden;
   position: relative;
@@ -17,11 +20,9 @@
   max-height: 90vh;
   display: flex;
   flex-direction: column;
-  /* padding:-1px; */
-  
 }
 
-.ContactModalBodyFalse{
+.ContactModalBodyFalse {
   height: 500px;
   width: 100%;
 }
@@ -128,44 +129,37 @@ width:200px; */
   background-color: #c12854;
 }
 /*320 600, 768, 992, 1200 */
-@media only screen and (max-width:1200px) {
-  .ContactModleBody{
-    
-    width:85vw;
+@media only screen and (max-width: 1200px) {
+  .ContactModleBody {
+    width: 85vw;
   }
-  
 }
 
-@media only screen and (max-width:992px) {
-  .ContactModleBody{
-    margin-bottom:100px;
+@media only screen and (max-width: 992px) {
+  .ContactModleBody {
+    margin-bottom: 100px;
     /* width:85vw; */
     /* margin-left:-35px; */
   }
-  
 }
-@media only screen and (max-width:768px) {
-  .ContactModleBody{
-    
+@media only screen and (max-width: 768px) {
+  .ContactModleBody {
     /* width:85vw; */
     /* margin-left:-35px; */
   }
-  
 }
 
-@media only screen and (max-width:600px) {
-  .ContactModleBody{
-    
+@media only screen and (max-width: 600px) {
+  .ContactModleBody {
     /* width:85vw; */
     /* margin-left:-35px; */
   }
-  
 }
-@media only screen and (max-width:320px){
+/* @media only screen and (max-width:320px){
   .educationSegment{
     width:85vw;
   }
   .ExperienceSegment{
     width:85vw;
   }
-}
+} */
