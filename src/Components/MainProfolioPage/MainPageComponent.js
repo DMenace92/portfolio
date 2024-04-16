@@ -11,13 +11,11 @@ import './MainPageComponent.css'
 function MainPageComponent() {
   return (
     <div className="MainPageWrapper">
-       
-        <div className="sideBarPositionWrapper">
-            <SideBar/>
-        </div>
-       
-             <ScrollItems/>
-       
+      <div className="sideBarPositionWrapper">
+        <SideBar />
+      </div>
+
+      <ScrollItems />
 
       {/** TODO: Create your <Sidebar /> component here and pull
        * <
