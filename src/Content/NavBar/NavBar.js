@@ -5,7 +5,7 @@ import styles from './NavBar.module.css'
 import ContactModal from '../ContactModal'
 import { useEmailModal } from '../../providers/emailModalProvider'
 
-const NavBar = (props) => {
+const NavBar = () => {
   const { isVisible, setIsVisible } = useEmailModal()
 
   return (
@@ -14,7 +14,7 @@ const NavBar = (props) => {
       <div className={styles.hamburgerMenuContainer}>
         <img className={styles.hamburgerMenu} src={hamburger} alt="hb"></img>
       </div>
-      {console.log('isVisible: ', isVisible)}
+      {/* {console.log('isVisible: ', isVisible)} */}
       <img
         onClick={isVisible ? setIsVisible(true) : () => {}}
         className={styles.mailIcon}
