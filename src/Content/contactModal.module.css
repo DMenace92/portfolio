@@ -8,9 +8,12 @@
   /* height: 100vh; */
 
 .ContactModleBody {
+  position: fixed;
+  top:0;
+  left:0;
   overflow: hidden;
-  position: relative;
-  z-index: 1;
+  /* position: relative; */
+  z-index: 2;
   border-radius: 20px;
   background-color: white;
   height: 30rem;

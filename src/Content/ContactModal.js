@@ -6,9 +6,11 @@ import { useEmailModal } from '../providers/emailModalProvider'
 const ContactModal = (props) => {
   const { isVisible, setIsVisible } = useEmailModal()
 
-  console.log('chokai: ', isVisible)
+  // console.log('chokai: ', isVisible)
 
+  
   // if (!isVisible) return null
+  // console.log(isVisible, "in the contact side")
 
   return (
     <div className={styles.ContactModleBody}>
