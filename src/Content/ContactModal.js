@@ -13,6 +13,8 @@ const ContactModal = (props) => {
   // console.log(isVisible, "in the contact side")
 
   return (
+    <>
+    <div className={styles.modalBackdrop} onClick={()=>setIsVisible(false)}/>
     <div className={styles.ContactModleBody}>
       <div className={styles.hedderLable}>
         <p className={styles.headerTitle}>Contact me Today</p>
@@ -38,7 +40,7 @@ const ContactModal = (props) => {
 
             <textarea
               className={styles.inputTextArea}
-              cols="200"
+              cols="100"
               rows="10"
             ></textarea>
           </div>
@@ -59,6 +61,7 @@ const ContactModal = (props) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 

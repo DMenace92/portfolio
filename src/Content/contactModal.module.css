@@ -7,17 +7,32 @@
   /* justify-content: center ; */
   /* height: 100vh; */
 
+  .modalBackdrop{
+    top:0;
+    left:0;
+    width:100vw;
+    display: block;  
+    height:100vh;
+    position: fixed;
+    content: " ";
+    background-color:rgba(0, 0, 0, 0.6) ;
+    z-index: 9998;
+  }
 .ContactModleBody {
   position: fixed;
+  /* transform: translateX(25%) translateY(25%); */
+  right:0;
+  bottom:0;
+  margin:auto;
   top:0;
   left:0;
   overflow: hidden;
   /* position: relative; */
-  z-index: 2;
+  z-index: 9999;
   border-radius: 20px;
   background-color: white;
   height: 30rem;
-  width: 60rem;
+  width: 700px;
   max-width: 90vw;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   max-height: 90vh;
