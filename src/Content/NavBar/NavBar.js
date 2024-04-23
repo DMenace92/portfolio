@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
-import hamburger from '../../Images/hamburger.svg'
+import React from 'react'
 import mail from '../../Images/mail.svg'
 import styles from './NavBar.module.css'
-import ContactModal from '../ContactModal'
 import { useEmailModal } from '../../providers/emailModalProvider'
 import MenuIcon from './MenuIcon'
 
@@ -23,16 +21,6 @@ const NavBar = (props) => {
         src={mail}
         alt="hb"
       ></img>
-
-      <div className={isVisible ? styles.viewModal : styles.hideViewModal}>
-        <ContactModal />
-        <button
-          onClick={() => setIsVisible(false)}
-          className={styles.closeButton}
-        >
-          close
-        </button>
-      </div>
     </div>
   )
 }

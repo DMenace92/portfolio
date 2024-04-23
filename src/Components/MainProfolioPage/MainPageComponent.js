@@ -6,11 +6,17 @@ import SideBar from '../Profile/SideBar'
 // import EmailForm from '../../Containers/EmailContainer'
 import ScrollItems from '../Profile/ScrollItems'
 import './MainPageComponent.css'
+import ContactModal from '../../Content/ContactModal'
+import { useEmailModal } from '../../providers/emailModalProvider'
 //import { Grid, Paper } from '@material_ui/core'
 
 function MainPageComponent() {
+  const { isVisible } = useEmailModal()
+
   return (
     <div className="MainPageWrapper">
+      {isVisible && <ContactModal />}
+
       <div className="sideBarPositionWrapper">
         <SideBar />
       </div>
