@@ -11,6 +11,18 @@
   /* justify-content: center; */
   margin: 20px;
 }
+.companyIcon {
+  width: 40px;
+  height: 40px;
+  box-shadow: 5px 5px 22px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+.companyAndTitle {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 15px;
+}
 .ampersomething {
   margin: 0 5px;
   font-weight: 100;
@@ -48,6 +60,7 @@
   display: inline-block;
   padding-left: 7px;
   font-weight: 500;
+  margin-bottom: 40px;
 }
 
 .schoolInfoTitle {
@@ -74,6 +87,7 @@
 .segmentThree {
 }
 .workExpHolder {
+  display: flex;
   margin: 0px;
 }
 .workCompanyTitle {

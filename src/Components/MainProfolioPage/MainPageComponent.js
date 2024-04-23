@@ -6,18 +6,22 @@ import SideBar from '../Profile/SideBar'
 // import EmailForm from '../../Containers/EmailContainer'
 import ScrollItems from '../Profile/ScrollItems'
 import './MainPageComponent.css'
+import ContactModal from '../../Content/ContactModal'
+import { useEmailModal } from '../../providers/emailModalProvider'
 //import { Grid, Paper } from '@material_ui/core'
 
 function MainPageComponent() {
+  const { isVisible } = useEmailModal()
+
   return (
     <div className="MainPageWrapper">
-       
-        <div className="sideBarPositionWrapper">
-            <SideBar/>
-        </div>
-       
-             <ScrollItems/>
-       
+      {isVisible && <ContactModal />}
+
+      <div className="sideBarPositionWrapper">
+        <SideBar />
+      </div>
+
+      <ScrollItems />
 
       {/** TODO: Create your <Sidebar /> component here and pull
        * <

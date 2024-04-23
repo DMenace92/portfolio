@@ -18,13 +18,6 @@ const MailNav = () => {
           alt="hb"
         ></img>
       </div>
-
-      {isVisible ?? (
-        <div className={isVisible ? style.viewModal : style.hideViewModal}>
-          <ContactModal />
-          {/* <button onClick={toggle} className={style.closeButton}>close</button> */}
-        </div>
-      )}
     </div>
   )
 }

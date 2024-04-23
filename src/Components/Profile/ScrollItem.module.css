@@ -10,7 +10,6 @@
   flex: 1;
   position: relative;
   padding: 60px;
-  max-width: calc(100vw - 400px);
 }
 .aboutMeWrapper {
   max-width: 500px;
@@ -134,7 +133,7 @@
     /* width:85vw; */
   }
   .aboutmeItemHolder {
-    margin-right: 35px;
+    /* margin-right: 35px; */
   }
 
   .contentContainersWrapper {
@@ -150,13 +149,13 @@
     letter-spacing: 0.1rem;
   }
   .topDecorStyle {
-    color: white;
+    /* color: white;
     display: flex;
-    /* width: 70%; */
+   width: 70%; 
     position: absolute;
     left: -100px;
     top: -10px;
-    z-index: 0;
+    z-index: 0; */
   }
   .scrollItemsWrapper {
   }
@@ -172,25 +171,23 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .aboutmeMainContainer {
-    /* width:100%; */
+@media only screen and (max-width: 768px) {
+  .contentWrapper {
+    padding: 60px 40px;
   }
+  .topDecorStyle {
+    display: none;
+  }
+}
 
+@media only screen and (max-width: 400px) {
   .contentContainersWrapper {
     display: flex;
     justify-content: center;
-    /* margin-right: 20%; */
-    /* width:80vw; */
-    /* margin-left:-px; */
-  }
-  .aboutmeDiscription {
-    /* font-size: 21px; */
   }
   .topDecorStyle {
     color: white;
     display: flex;
-    /* width: 70%; */
     position: absolute;
     left: -100px;
     top: -10px;
@@ -199,7 +196,6 @@
   .bottomDecorStyle {
     color: white;
     display: flex;
-    /* width: 70%; */
     position: absolute;
     right: -200px;
     bottom: 100px;

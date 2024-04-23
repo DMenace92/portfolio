@@ -1,20 +1,21 @@
 .PortfolioNavBarComponent {
   background-color: rgba(2, 0, 0, 0.238);
   height: 60px;
-  width: 100% !important;
-  /* width:100vh; */
-  /* display: flex; */
+  width: 100vh;
+  display: flex;
+  align-items: center;
 }
-.hamburgerMenuContainer{
+.hamburgerMenuContainer {
   /* border:1px dashed white; */
-  height:50px;
-  width:40px;
+  height: 50px;
+  width: 40px;
+  display: flex;
+  align-items: center;
   /* margin-right:1030px; */
 }
 .hamburgerMenu {
-   position: absolute;
-   margin-top:10px;
-
+  position: absolute;
+  margin-top: 10px;
 
   /* float: right; */
 }
@@ -44,17 +45,13 @@
   z-index: 1;
 }
 
-@media only screen and ( max-width:1024px) {
+@media only screen and (max-width: 1024px) {
   .PortfolioNavBarComponent {
-    background-color:rgb(33, 13, 22) ;
-    /* height: 60px;
-    width: 100% !important; */
-    /* width:100vh; */
-    /* display: flex; */
-  } 
+    background-color: rgb(33, 13, 22);
+  }
   .hamburgerMenuButton {
   }
-  .hamburgerMenuContainer{
-    margin-left:10px;
+  .hamburgerMenuContainer {
+    margin-left: 10px;
   }
 }

@@ -16,9 +16,9 @@ function App(props) {
   const [windowSize, setWindowSize] = useState()
 
   const renderContent = () => {
-    if (windowSize > 1024 || window.innerWidth > 1024) {
+    if (windowSize > 768 || window.innerWidth > 768) {
       return <MailNav />
-    } else if (windowSize <= 1024 || window.innerWidth <= 1024) {
+    } else if (windowSize <= 768 || window.innerWidth <= 768) {
       return <NavBar />
     } else {
       return null
