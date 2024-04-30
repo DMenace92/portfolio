@@ -69,17 +69,20 @@
   display: flex;
   justify-content: center;
   margin-right: 5px;
+  font-size: 1em;
 }
 .nameTextStyle {
   margin-top: 60px;
   color: lightgray;
   margin-left: 10px;
+  font-size: 2em;
 }
 .nameTextStyle1 {
   font-weight: 100;
   margin-top: 60px;
   color: lightgray;
   margin-left: 10px;
+  font-size: 2em;
 }
 .navigationSelection {
   display: flex;

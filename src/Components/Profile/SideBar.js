@@ -34,10 +34,10 @@ const ProfileComponent = (props) => {
           <div className={styles.shape2}></div>
         </div>
         <div>
-          <div className={styles.nameContainer}>
-            <h1 className={styles.nameTextStyle}>DENNIS</h1>
-            <h1 className={styles.nameTextStyle1}>ENWIYA</h1>
-          </div>
+          <h1 className={styles.nameContainer}>
+            <span className={styles.nameTextStyle}>DENNIS</span>
+            <span className={styles.nameTextStyle1}>ENWIYA</span>
+          </h1>
 
           <div className={styles.contentItemsWrapper}>
             <img className={styles.NodeIcon} src={NodeIcon} alt="Node"></img>

@@ -42,6 +42,11 @@ const NavBar = (props) => {
         />
       )}
 
+      <div className={styles.mobileTitle}>
+        <span>DENNIS</span>
+        <span>ENWIYA</span>
+      </div>
+
       <img
         onClick={isVisible ? setIsVisible(true) : () => {}}
         className={styles.mailIcon}
