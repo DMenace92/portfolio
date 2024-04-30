@@ -9,12 +9,17 @@ import github from '../../Images/Vector2.svg'
 import styles from './ProfileComponent.module.css'
 import { useActivePage } from '../../providers/activePageProvider'
 
-const ProfileComponent = () => {
+const ProfileComponent = (props) => {
+  const { isDrawerVersion, drawerIsOpen } = props
   const { activePage } = useActivePage()
   // console.log(activePage)
 
   return (
-    <div className={styles.gridDesign}>
+    <div
+      className={`${styles.gridDesign} ${
+        isDrawerVersion && styles.drawerVersion
+      } ${drawerIsOpen && styles.open}`}
+    >
       <div className={styles.portfolioHolder}>
         {/* <div className="ProfileImageHolder"> */}
         <div className={styles.shapeContainer}>

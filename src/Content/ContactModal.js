@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styles from './contactModal.module.css'
-import CodeDecal from '../Components/CodeDecal/CodeDecal'
 import { useEmailModal } from '../providers/emailModalProvider'
 
 const ContactModal = (props) => {
-  const { isVisible, setIsVisible } = useEmailModal()
-
-  console.log('chokai: ', isVisible)
-
-  // if (!isVisible) return null
+  const { setIsVisible } = useEmailModal()
 
   return (
     <div className={styles.ContactModleBody}>

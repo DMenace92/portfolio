@@ -5,6 +5,9 @@
   left: 0;
 }
 
+.drawerVersion {
+}
+
 .portfolioHolder {
   background-color: rgba(0, 0, 0, 0.46);
   width: 400px;
@@ -191,6 +194,40 @@
 @media only screen and (max-width: 768px) {
   .gridDesign {
     display: none;
+  }
+  .gridDesign.drawerVersion {
+    display: flex;
+    left: -300px;
+    transition: 0.2s all ease-in-out;
+  }
+  .gridDesign.drawerVersion.open {
+    left: 0px;
+  }
+  .drawerVersion .portfolioHolder {
+    background: none;
+  }
+  .drawerVersion .nameTextStyle,
+  .drawerVersion .nameTextStyle1,
+  .drawerVersion .selectionItemPage,
+  .drawerVersion .selectionItem {
+    color: black;
+  }
+  .drawerVersion .footerIcons {
+    filter: invert(1);
+  }
+  .drawerVersion .portfolioHolder {
+    width: 300px;
+  }
+  .drawerVersion .shape1 {
+    margin-top: -120px;
+    margin-left: 70px;
+  }
+  .drawerVersion .shape2 {
+    margin-top: -150px;
+    margin-left: 100px;
+  }
+  .drawerVersion .ProfileImageHolder {
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.3);
   }
   .ProfileImageHolder {
   }
