@@ -9,8 +9,8 @@
 
 .contactModalBody {
   overflow: hidden;
-  position: relative;
-  z-index: 1;
+  /* position: relative; */
+  z-index: 2;
   border-radius: 20px;
   background-color: white;
   width: 720px;

@@ -6,7 +6,7 @@ import MenuIcon from './MenuIcon'
 import ProfileComponent from '../../Components/Profile/SideBar'
 import CloseIcon from './CloseIcon'
 
-const NavBar = (props) => {
+const NavBar = () => {
   const { isVisible, setIsVisible } = useEmailModal()
   const [menuIsVisible, setMenuIsVisible] = useState(false)
 
