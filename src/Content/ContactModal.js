@@ -6,7 +6,7 @@ const ContactModal = (props) => {
   const { setIsVisible } = useEmailModal()
 
   return (
-    <div className={styles.ContactModleBody}>
+    <div className={styles.contactModalBody}>
       <div className={styles.hedderLable}>
         <p className={styles.headerTitle}>Contact me Today</p>
       </div>

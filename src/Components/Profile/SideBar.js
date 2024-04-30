@@ -89,7 +89,11 @@ const ProfileComponent = (props) => {
         </div>
         <div className={styles.footerSocialMedia}>
           {/* Add your social media icons or links here */}
-          <a href="https://www.facebook.com/dennis.enwiya/">
+          <a
+            href="https://www.facebook.com/dennis.enwiya/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-facebook"></i>
             <img
               className={styles.footerIcons}
@@ -97,7 +101,11 @@ const ProfileComponent = (props) => {
               alt="Facebook"
             ></img>
           </a>
-          <a href="https://twitter.com/DEnwiya">
+          <a
+            href="https://twitter.com/DEnwiya"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-twitter"></i>
             <img
               className={styles.footerIcons}
@@ -105,7 +113,11 @@ const ProfileComponent = (props) => {
               alt="Twitter"
             ></img>
           </a>
-          <a href="https://www.instagram.com/theonlymenace/">
+          <a
+            href="https://www.instagram.com/theonlymenace/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-instagram"></i>
             <img
               className={styles.footerIcons}
@@ -113,7 +125,11 @@ const ProfileComponent = (props) => {
               alt="Instagram"
             ></img>
           </a>
-          <a href="https://www.linkedin.com/in/dennisenwiya">
+          <a
+            href="https://www.linkedin.com/in/dennisenwiya"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-instagram"></i>
             <img
               className={styles.footerIcons}
@@ -121,7 +137,11 @@ const ProfileComponent = (props) => {
               alt="LinkedIn"
             ></img>
           </a>
-          <a href="https://github.com/DMenace92">
+          <a
+            href="https://github.com/DMenace92"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-twitter"></i>
             <img className={styles.footerIcons} src={github} alt="GitHub"></img>
           </a>

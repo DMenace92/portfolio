@@ -4,22 +4,29 @@
   display: flex;
 
   /* justify-content: space-between; */
-  /* justify-content: center ; */
-  /* height: 100vh; */
+/* justify-content: center ; */
+/* height: 100vh; */
 
-.ContactModleBody {
+.contactModalBody {
   overflow: hidden;
   position: relative;
   z-index: 1;
   border-radius: 20px;
   background-color: white;
-  height: 30rem;
-  width: 60rem;
+  width: 720px;
   max-width: 90vw;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   max-height: 90vh;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  align-self: center;
 }
 
 .ContactModalBodyFalse {
@@ -30,7 +37,6 @@
   left: 0;
   display: flex;
   flex-direction: column;
-  position: absolute;
   top: 0;
   padding: 0 30px;
 }
@@ -49,7 +55,7 @@
   justify-content: space-between;
 }
 .formLayoutDesign {
-  margin-top: 60px;
+  margin-top: 10px;
   display: flex;
   flex: 2 1;
   flex-wrap: wrap;
@@ -130,27 +136,27 @@ width:200px; */
 }
 /*320 600, 768, 992, 1200 */
 @media only screen and (max-width: 1200px) {
-  .ContactModleBody {
+  /* .contactModalBody {
     width: 85vw;
-  }
+  } */
 }
 
 @media only screen and (max-width: 992px) {
-  .ContactModleBody {
-    margin-bottom: 100px;
+  .contactModalBody {
+    /* margin-bottom: 100px; */
     /* width:85vw; */
     /* margin-left:-35px; */
   }
 }
 @media only screen and (max-width: 768px) {
-  .ContactModleBody {
+  .contactModalBody {
     /* width:85vw; */
     /* margin-left:-35px; */
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .ContactModleBody {
+  .contactModalBody {
     /* width:85vw; */
     /* margin-left:-35px; */
   }
