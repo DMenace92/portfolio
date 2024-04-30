@@ -9,12 +9,17 @@ import github from '../../Images/Vector2.svg'
 import styles from './ProfileComponent.module.css'
 import { useActivePage } from '../../providers/activePageProvider'
 
-const ProfileComponent = () => {
+const ProfileComponent = (props) => {
+  const { isDrawerVersion, drawerIsOpen } = props
   const { activePage } = useActivePage()
   // console.log(activePage)
 
   return (
-    <div className={styles.gridDesign}>
+    <div
+      className={`${styles.gridDesign} ${
+        isDrawerVersion && styles.drawerVersion
+      } ${drawerIsOpen && styles.open}`}
+    >
       <div className={styles.portfolioHolder}>
         {/* <div className="ProfileImageHolder"> */}
         <div className={styles.shapeContainer}>
@@ -29,10 +34,10 @@ const ProfileComponent = () => {
           <div className={styles.shape2}></div>
         </div>
         <div>
-          <div className={styles.nameContainer}>
-            <h1 className={styles.nameTextStyle}>DENNIS</h1>
-            <h1 className={styles.nameTextStyle1}>ENWIYA</h1>
-          </div>
+          <h1 className={styles.nameContainer}>
+            <span className={styles.nameTextStyle}>DENNIS</span>
+            <span className={styles.nameTextStyle1}>ENWIYA</span>
+          </h1>
 
           <div className={styles.contentItemsWrapper}>
             <img className={styles.NodeIcon} src={NodeIcon} alt="Node"></img>
@@ -84,7 +89,11 @@ const ProfileComponent = () => {
         </div>
         <div className={styles.footerSocialMedia}>
           {/* Add your social media icons or links here */}
-          <a href="https://www.facebook.com/dennis.enwiya/">
+          <a
+            href="https://www.facebook.com/dennis.enwiya/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-facebook"></i>
             <img
               className={styles.footerIcons}
@@ -92,7 +101,11 @@ const ProfileComponent = () => {
               alt="Facebook"
             ></img>
           </a>
-          <a href="https://twitter.com/DEnwiya">
+          <a
+            href="https://twitter.com/DEnwiya"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-twitter"></i>
             <img
               className={styles.footerIcons}
@@ -100,7 +113,11 @@ const ProfileComponent = () => {
               alt="Twitter"
             ></img>
           </a>
-          <a href="https://www.instagram.com/theonlymenace/">
+          <a
+            href="https://www.instagram.com/theonlymenace/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-instagram"></i>
             <img
               className={styles.footerIcons}
@@ -108,7 +125,11 @@ const ProfileComponent = () => {
               alt="Instagram"
             ></img>
           </a>
-          <a href="https://www.linkedin.com/in/dennisenwiya">
+          <a
+            href="https://www.linkedin.com/in/dennisenwiya"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-instagram"></i>
             <img
               className={styles.footerIcons}
@@ -116,7 +137,11 @@ const ProfileComponent = () => {
               alt="LinkedIn"
             ></img>
           </a>
-          <a href="https://github.com/DMenace92">
+          <a
+            href="https://github.com/DMenace92"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-twitter"></i>
             <img className={styles.footerIcons} src={github} alt="GitHub"></img>
           </a>
