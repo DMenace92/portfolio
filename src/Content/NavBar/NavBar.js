@@ -49,7 +49,7 @@ const NavBar = () => {
       </div>
 
       <img
-        onClick={isVisible ? setIsVisible(true) : () => {}}
+        onClick={() => (!isVisible ? setIsVisible(true) : null)}
         className={styles.mailIcon}
         src={mail}
         alt="hb"

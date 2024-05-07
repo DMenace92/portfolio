@@ -42,6 +42,7 @@
   top: 5px;
   right: 10px;
   height: 36px;
+  cursor: pointer;
 }
 
 .hideViewModal {
