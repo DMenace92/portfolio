@@ -1,0 +1,25 @@
+.projectMainHolder{
+    border:1px dashed black;
+    height:90vh;
+    display: flex;
+    gap:40px;
+    
+}
+
+.leftPMPComponent{
+    border:1px dashed red;
+    height:90vh;
+    width:20%;
+
+}
+.pmpButtons{
+    width:100%;
+    margin-top:20px;
+}
+
+.rightPMPComponent{
+    border:1px dashed blue;
+    height:90vh;
+    width:80%;
+
+}

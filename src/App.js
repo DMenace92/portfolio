@@ -5,14 +5,17 @@ import './App.css'
 import { ActivePageProvider } from './providers/activePageProvider'
 import NavBar from './Content/NavBar/NavBar'
 import MailNav from './Content/NavBar/MailNav'
+import AdminLogin from './Containers/LoginContainer'
+import PMP from './Components/Admin/ProjectPage/ProjectMainPage'
 import MobileNavFooter from './Content/NavBar/MobileNavFooter'
 import ContactModal from './Content/ContactModal'
 // import styles from './App.css'
 import WebFont from 'webfontloader'
 import { EmailModalProvider } from './providers/emailModalProvider'
+import { Route, Routes } from 'react-router-dom'
 
 function App(props) {
-  console.log(props)
+  // console.log(props)
   const [windowSize, setWindowSize] = useState()
 
   const renderContent = () => {
@@ -60,7 +63,11 @@ function App(props) {
         <ActivePageProvider>
           {renderContent()}
 
-          <MainPageComponent />
+          <Routes>
+            <Route path="/" element={<MainPageComponent />} />
+            <Route path="/myAdminPage" element={<AdminLogin />} />
+            <Route path="/pmp" element={<PMP />} />
+          </Routes>
           {/* <div
           className={
             window.innerWidth <= 1024 || windowSize <= 1024
