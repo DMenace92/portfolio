@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import SideBar from '../Profile/SideBar'
 // import AboutInfo from '../PersonalInfoContainer/About/AboutInfo'
 // import SkillInfo from '../PersonalInfoContainer/Skills/SkillsInfo'
@@ -8,13 +8,62 @@ import ScrollItems from '../Profile/ScrollItems'
 import './MainPageComponent.css'
 import ContactModal from '../../Content/ContactModal'
 import { useEmailModal } from '../../providers/emailModalProvider'
+import { useActivePage } from '../../providers/activePageProvider'
+import { sectionIds } from '../../constants'
 //import { Grid, Paper } from '@material_ui/core'
 
 function MainPageComponent() {
   const { isVisible } = useEmailModal()
+  const scrollContainer = useRef(null)
+  const { setActivePage } = useActivePage()
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = Object.values(sectionIds)
+      const currentScrollPosition = scrollContainer.current.scrollTop // Add a threshold if needed
+      const maxScrollPosition =
+        scrollContainer.current.scrollHeight -
+        scrollContainer.current.clientHeight
+
+      if (currentScrollPosition === maxScrollPosition)
+        return setActivePage(sectionIds.contact)
+
+      for (let i = 0; i < sections.length; i++) {
+        const sectionId = sections[i]
+        const sectionElement = document.getElementById(sectionId)
+
+        if (sectionElement) {
+          const sectionTop = sectionElement.offsetTop
+          const sectionBottom = sectionTop + sectionElement.offsetHeight
+          // if the page is scrolled down as far as it can go the active page should be contact
+          if (
+            currentScrollPosition >= sectionTop &&
+            sectionId === sectionIds.contact
+          ) {
+            setActivePage(sectionId)
+            break
+          } // Check if the section's top or bottom is within the viewable area
+          else if (
+            currentScrollPosition >= sectionTop &&
+            currentScrollPosition <= sectionBottom
+          ) {
+            setActivePage(sectionId)
+            break // Once the active section is found, no need to check further
+          }
+        }
+      }
+    }
+
+    const scrollEl = scrollContainer.current
+    scrollEl.addEventListener('scroll', handleScroll)
+
+    return () => {
+      scrollEl.removeEventListener('scroll', handleScroll)
+    }
+  }, [setActivePage])
 
   return (
-    <div className="MainPageWrapper">
+    <div ref={scrollContainer} id="scrollContainer" className="MainPageWrapper">
       {isVisible && <ContactModal />}
 
       <div className="sideBarPositionWrapper">

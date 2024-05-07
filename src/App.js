@@ -11,8 +11,7 @@ import ContactModal from './Content/ContactModal'
 import WebFont from 'webfontloader'
 import { EmailModalProvider } from './providers/emailModalProvider'
 
-function App(props) {
-  console.log(props)
+function App() {
   const [windowSize, setWindowSize] = useState()
 
   const renderContent = () => {

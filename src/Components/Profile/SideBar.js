@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback } from 'react'
 import profilePic from '../../Images/profilePic.jpg'
 import NodeIcon from '../../Images/NodeIcon.svg'
 import facebook from '../../Images/Vector5.svg'
@@ -8,11 +8,42 @@ import linkedin from '../../Images/Vector3.svg'
 import github from '../../Images/Vector2.svg'
 import styles from './ProfileComponent.module.css'
 import { useActivePage } from '../../providers/activePageProvider'
+import { sectionIds } from '../../constants'
 
 const ProfileComponent = (props) => {
-  const { isDrawerVersion, drawerIsOpen } = props
+  const { isDrawerVersion, drawerIsOpen, setMenuIsVisible } = props
   const { activePage } = useActivePage()
-  // console.log(activePage)
+
+  const handleSmoothScroll = useCallback(
+    (targetId) => {
+      const target = document.getElementById(targetId)
+
+      if (!target) {
+        console.error('Target element not found: ', targetId)
+        return
+      }
+
+      const scrollContainer = document.getElementById('scrollContainer')
+      if (!scrollContainer) {
+        console.error('Scroll container not found')
+        return
+      }
+
+      if (drawerIsOpen) setMenuIsVisible(false)
+
+      const containerRect = scrollContainer.getBoundingClientRect()
+      const targetRect = target.getBoundingClientRect()
+      const topPosition =
+        targetRect.top - containerRect.top + scrollContainer.scrollTop
+
+      scrollContainer.scrollTo({
+        top: topPosition,
+        left: 0,
+        behavior: 'smooth',
+      })
+    },
+    [drawerIsOpen, setMenuIsVisible]
+  )
 
   return (
     <div
@@ -45,9 +76,10 @@ const ProfileComponent = (props) => {
             <ul className={styles.navigationSelection}>
               {/* <div className={styles.NodeDesign}></div> */}
               <li
+                onClick={() => handleSmoothScroll(sectionIds.aboutMe)}
                 className={`${styles.selectionOption} 
                 ${
-                  activePage === 1
+                  activePage === sectionIds.aboutMe
                     ? styles.selectionItemPage
                     : styles.selectionItem
                 }`}
@@ -55,9 +87,10 @@ const ProfileComponent = (props) => {
                 About
               </li>
               <li
+                onClick={() => handleSmoothScroll(sectionIds.experience)}
                 className={`${styles.selectionOption} 
                 ${
-                  activePage === 2
+                  activePage === sectionIds.experience
                     ? styles.selectionItemPage
                     : styles.selectionItem
                 }`}
@@ -65,19 +98,21 @@ const ProfileComponent = (props) => {
                 Experience
               </li>
               <li
+                onClick={() => handleSmoothScroll(sectionIds.projects)}
                 className={`${styles.selectionOption} 
                 ${
-                  activePage === 3
+                  activePage === sectionIds.projects
                     ? styles.selectionItemPage
                     : styles.selectionItem
                 }`}
               >
-                Project
+                Projects
               </li>
               <li
+                onClick={() => handleSmoothScroll(sectionIds.contact)}
                 className={`${styles.selectionOption} 
                   ${
-                    activePage === 4
+                    activePage === sectionIds.contact
                       ? styles.selectionItemPage
                       : styles.selectionItem
                   }`}

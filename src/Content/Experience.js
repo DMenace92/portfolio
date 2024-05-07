@@ -5,6 +5,7 @@ import deIcon from '../Images/de.png'
 import walmartIcon from '../Images/walmart.png'
 import ieLinks from '../Images/ielinks.png'
 import banner from '../Images/banner.png'
+import { sectionIds } from '../constants'
 // import CollapsibleComponent from '../Components/PersonalInfoContainer/About/SchoolDetail/CollapsibleComponent'
 
 const Experience = forwardRef((props, ref) => {
@@ -13,7 +14,7 @@ const Experience = forwardRef((props, ref) => {
 
   return (
     // <div style={{ ...style, maxWidth: 'calc(100% - 8vw)', paddingBottom: 100 }}>
-    <div className={styles.EdExMainContainer}>
+    <div id={sectionIds.experience} className={styles.EdExMainContainer}>
       <h2>
         <span>Education</span>
         <span className={styles.ampersomething}>&</span>
