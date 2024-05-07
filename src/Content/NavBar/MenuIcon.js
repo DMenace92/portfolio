@@ -10,7 +10,7 @@ export default function MenuIcon(props) {
       height={height}
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
-      xmlnsxlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       xmlnssvgjs="http://svgjs.com/svgjs"
     >
       <defs id="SvgjsDefs1012"></defs>
@@ -24,7 +24,7 @@ export default function MenuIcon(props) {
           <path
             d="M1.971 1.323c-1.058 0-1.058 1.587 0 1.587h12.996c1.059 0 1.059-1.587 0-1.587zm13.018 6.35H1.97c-1.1-.043-1.1 1.65 0 1.587h12.996c1.08.042 1.101-1.587.022-1.587zM1.97 14.023c-1.058 0-1.058 1.587 0 1.587h12.996c1.059 0 1.059-1.587 0-1.587z"
             fill={color}
-            class="color000 svgShape"
+            className="color000 svgShape"
           ></path>
         </svg>
       </g>

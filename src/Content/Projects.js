@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Projects.module.css'
 import ProjectCard from '../Components/Projects/ProjectCard'
+import { sectionIds } from '../constants'
 
 const Projects = () => {
   const projects = [
@@ -39,16 +40,14 @@ const Projects = () => {
     },
   ]
 
-  console.log('projects.length: ', projects.length)
-
   return (
-    <div className={styles.ProjectMainContainer}>
+    <div id={sectionIds.projects} className={styles.ProjectMainContainer}>
       <div className={styles.ProjectBanner}>
         <h2>Projects</h2>
         {projects.length > 0
-          ? projects.map((project, index) => (
+          ? projects.map((project) => (
               <ProjectCard
-                key={project.title + index}
+                key={`${project.title}-${project.techUsed.join('-')}`}
                 title={project.title}
                 techUsed={project.techUsed}
                 links={project.links}

@@ -2,16 +2,14 @@ import React, { forwardRef } from 'react'
 import { useParams } from 'react-router-dom'
 import styles from '../Components/Profile/ScrollItem.module.css'
 import CodeDecal from '../Components/CodeDecal/CodeDecal'
+import { sectionIds } from '../constants'
 
 const AboutMe = forwardRef((props, ref) => {
   useParams()
   const { style } = props
 
   return (
-    <div
-      className={styles.aboutmeMainContainer}
-      // style={{ ...style, width: 500, maxWidth: '90%' }}
-    >
+    <div id={sectionIds.aboutMe} className={styles.aboutmeMainContainer}>
       <div className={styles.aboutmeItemHolder} ref={ref}>
         <h2 className={styles.aboutMeHeader}>About Me</h2>
         <div className={styles.aboutmeDiscription}>

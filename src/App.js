@@ -14,8 +14,7 @@ import WebFont from 'webfontloader'
 import { EmailModalProvider } from './providers/emailModalProvider'
 import { Route, Routes } from 'react-router-dom'
 
-function App(props) {
-  // console.log(props)
+function App() {
   const [windowSize, setWindowSize] = useState()
 
   const renderContent = () => {

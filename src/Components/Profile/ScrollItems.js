@@ -6,18 +6,15 @@ import Projects from '../../Content/Projects'
 import CodeDecal from '../CodeDecal/CodeDecal'
 import { useEmailModal } from '../../providers/emailModalProvider'
 import ContactModal from '../../Content/ContactModal'
+import { sectionIds } from '../../constants'
 
 const ScrollItems = () => {
   const { isVisible, setIsVisible } = useEmailModal()
   const toggleVisibility = () => {
-    if (!isVisible){
-    
-     return setIsVisible(true)
+    if (!isVisible) {
+      return setIsVisible(true)
     }
-   
   }
-
-  console.log(useEmailModal(), "test test")
 
   return (
     <div className={styles.contentWrapper}>
@@ -28,13 +25,14 @@ const ScrollItems = () => {
         <AboutMe />
         <Experience />
         <Projects />
-       
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
+
+        <div
+          id={sectionIds.contact}
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
           <button className={styles.button} onClick={toggleVisibility}>
             Contact Dennis Today!
-
           </button>
-         
         </div>
 
         <div className={styles.bottomDecorStyle}>
