@@ -69,7 +69,6 @@ const ProfileComponent = (props) => {
             <span className={styles.nameTextStyle}>DENNIS</span>
             <span className={styles.nameTextStyle1}>ENWIYA</span>
           </h1>
-
           <div className={styles.contentItemsWrapper}>
             <img className={styles.NodeIcon} src={NodeIcon} alt="Node"></img>
 
@@ -79,7 +78,7 @@ const ProfileComponent = (props) => {
                 onClick={() => handleSmoothScroll(sectionIds.aboutMe)}
                 className={`${styles.selectionOption} 
                 ${
-                  activePage === sectionIds.aboutMe
+                  activePage === sectionIds.aboutMe || !activePage
                     ? styles.selectionItemPage
                     : styles.selectionItem
                 }`}
