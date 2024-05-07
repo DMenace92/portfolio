@@ -9,14 +9,12 @@ const MailNav = () => {
   const { isVisible, setIsVisible } = useEmailModal()
 
   return (
-    <div className={style.PortfolioMailBarComponent}>
+    <div
+      onClick={() => (isVisible ? () => {} : setIsVisible(true))}
+      className={style.PortfolioMailBarComponent}
+    >
       <div className={style.cornerDesign}>
-        <img
-          onClick={() => (isVisible ? () => {} : setIsVisible(true))}
-          className={style.mailNavIcon}
-          src={mail}
-          alt="hb"
-        ></img>
+        <img className={style.mailNavIcon} src={mail} alt="hb"></img>
       </div>
     </div>
   )
