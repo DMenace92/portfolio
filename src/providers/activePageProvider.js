@@ -1,20 +1,16 @@
 import React, { createContext, useContext, useState } from 'react'
+import { sectionIds } from '../constants'
 
 const ActivePageContext = createContext({
-  activePage: 1,
+  activePage: sectionIds[0],
   setActivePage: () => {},
-  isAnimating: false,
-  setIsAnimating: () => {},
 })
 
 export const ActivePageProvider = ({ children }) => {
-  const [activePage, setActivePage] = useState(1)
-  const [isAnimating, setIsAnimating] = useState(false)
+  const [activePage, setActivePage] = useState(sectionIds[0])
 
   return (
-    <ActivePageContext.Provider
-      value={{ activePage, setActivePage, isAnimating, setIsAnimating }}
-    >
+    <ActivePageContext.Provider value={{ activePage, setActivePage }}>
       {children}
     </ActivePageContext.Provider>
   )

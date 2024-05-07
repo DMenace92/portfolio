@@ -32,6 +32,7 @@ const NavBar = () => {
           <ProfileComponent
             isDrawerVersion={true}
             drawerIsOpen={menuIsVisible}
+            setMenuIsVisible={setMenuIsVisible}
           />
         </div>
       </div>
