@@ -20,14 +20,17 @@ function MainPageComponent() {
   useEffect(() => {
     const handleScroll = () => {
       const sections = Object.values(sectionIds)
-      const currentScrollPosition = scrollContainer.current.scrollTop // Add a threshold if needed
+      const currentScrollPosition = scrollContainer.current.scrollTop
       const maxScrollPosition =
         scrollContainer.current.scrollHeight -
         scrollContainer.current.clientHeight
 
-      if (currentScrollPosition === maxScrollPosition)
+      // Check if the scrollbar is exactly at the bottom
+      if (currentScrollPosition >= maxScrollPosition) {
         return setActivePage(sectionIds.contact)
+      }
 
+      let activeSectionId = sections[0] // Default to the first section
       for (let i = 0; i < sections.length; i++) {
         const sectionId = sections[i]
         const sectionElement = document.getElementById(sectionId)
@@ -35,23 +38,19 @@ function MainPageComponent() {
         if (sectionElement) {
           const sectionTop = sectionElement.offsetTop
           const sectionBottom = sectionTop + sectionElement.offsetHeight
-          // if the page is scrolled down as far as it can go the active page should be contact
+
+          // Expand the considered "active" range slightly above and below the actual section
+          const visibilityOffset = 100 // pixels to look ahead or behind in the scroll
+
           if (
-            currentScrollPosition >= sectionTop &&
-            sectionId === sectionIds.contact
+            currentScrollPosition + visibilityOffset >= sectionTop &&
+            currentScrollPosition - visibilityOffset <= sectionBottom
           ) {
-            setActivePage(sectionId)
-            break
-          } // Check if the section's top or bottom is within the viewable area
-          else if (
-            currentScrollPosition >= sectionTop &&
-            currentScrollPosition <= sectionBottom
-          ) {
-            setActivePage(sectionId)
-            break // Once the active section is found, no need to check further
+            activeSectionId = sectionId
           }
         }
       }
+      setActivePage(activeSectionId)
     }
 
     const scrollEl = scrollContainer.current
