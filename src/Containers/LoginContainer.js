@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 
 const mapStateToProps = (log) => {
   return {
-    log: log.log,
+    log: log,
   }
 }
 

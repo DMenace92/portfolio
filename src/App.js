@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import MainPageComponent from './Components/MainProfolioPage/MainPageComponent'
-import { isMobile } from 'react-device-detect'
+// import { isMobile } from 'react-device-detect'
 import './App.css'
 import { ActivePageProvider } from './providers/activePageProvider'
 import NavBar from './Content/NavBar/NavBar'
 import MailNav from './Content/NavBar/MailNav'
 import AdminLogin from './Containers/LoginContainer'
 import PMP from './Components/Admin/ProjectPage/ProjectMainPage'
-import MobileNavFooter from './Content/NavBar/MobileNavFooter'
-import ContactModal from './Content/ContactModal'
+// import ProtectedRoute from './Components/Admin/ProtectedRoute'
+
+// import MobileNavFooter from './Content/NavBar/MobileNavFooter'
+// import ContactModal from './Content/ContactModal'
 // import styles from './App.css'
 import WebFont from 'webfontloader'
 import { EmailModalProvider } from './providers/emailModalProvider'
@@ -16,6 +18,11 @@ import { Route, Routes } from 'react-router-dom'
 
 function App() {
   const [windowSize, setWindowSize] = useState()
+  const [isAuthenticated, setIsAuthenticated] = useState(false)
+
+  const handleLogin = () => {
+    setIsAuthenticated(true) // Function to set isAuthenticated state to true
+  }
 
   const renderContent = () => {
     if (windowSize > 768 || window.innerWidth > 768) {
@@ -54,6 +61,7 @@ function App() {
 
   //   }
   // }
+  console.log(isAuthenticated)
 
   return (
     <div className="App">
@@ -64,7 +72,20 @@ function App() {
 
           <Routes>
             <Route path="/" element={<MainPageComponent />} />
-            <Route path="/myAdminPage" element={<AdminLogin />} />
+            <Route
+              path="/myAdminPage"
+              element={
+                <AdminLogin
+                  isAuthenticated={isAuthenticated}
+                  handleLogin={handleLogin}
+                />
+              }
+            />
+            {/* <ProtectedRoute
+              path="/pmp"
+              element={<PMP />}
+              isAuthenticated={isAuthenticated} // Pass isAuthenticated prop
+            /> */}
             <Route path="/pmp" element={<PMP />} />
           </Routes>
           {/* <div
