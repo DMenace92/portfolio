@@ -7,7 +7,7 @@ const Projects = () => {
   const projects = [
     {
       title: 'Pharmacy App',
-      techUsed: ['javascript', 'Node.js',"mongoDB", "Mongoose"],
+      techUsed: ['javascript', 'Node.js', 'mongoDB', 'Mongoose'],
       links: [{ url: 'https://', label: 'www.decorative.link.com' }],
       features: [
         'user db search complete with custom api',
