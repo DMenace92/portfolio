@@ -6,8 +6,8 @@ import { sectionIds } from '../constants'
 const Projects = () => {
   const projects = [
     {
-      title: 'Dog App',
-      techUsed: ['javascript', 'typescript'],
+      title: 'Pharmacy App',
+      techUsed: ['javascript', 'Node.js',"mongoDB", "Mongoose"],
       links: [{ url: 'https://', label: 'www.decorative.link.com' }],
       features: [
         'user db search complete with custom api',
