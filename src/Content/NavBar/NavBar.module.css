@@ -1,0 +1,108 @@
+.PortfolioNavBarComponent {
+  background-color: rgba(2, 0, 0, 0.238);
+  height: 60px;
+  width: 100vh;
+  display: flex;
+  align-items: center;
+}
+.hamburgerMenuIconContainer {
+  height: 50px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  right: -55px;
+  top: 0;
+  position: absolute;
+}
+.hamburgerMenu {
+  position: fixed;
+  background: white;
+  left: -300px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 100vh;
+  z-index: 99999;
+  transition: 0.2s all ease-in-out;
+}
+.hamburgerMenu.open {
+  left: 0px;
+}
+.hamburgerMenuButton {
+  position: absolute;
+  right: 75px;
+  top: 7px;
+
+  float: right;
+}
+.mailIcon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  height: 36px;
+  cursor: pointer;
+}
+
+.hideViewModal {
+  display: none;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+}
+
+.mobileMenuBackdrop {
+  background: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  content: ' ';
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.mobileTitle {
+  display: none;
+  font-size: 2em;
+  color: white;
+  margin: auto;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+.mobileTitle span {
+  font-weight: 600;
+}
+
+.mobileTitle span + span {
+  margin-left: 10px;
+  font-weight: 100;
+}
+
+@media only screen and (max-width: 1024px) {
+  .PortfolioNavBarComponent {
+    background-color: rgb(33, 13, 22);
+  }
+  .hamburgerMenuButton {
+  }
+  .hamburgerMenuContainer {
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .mobileTitle {
+    display: flex;
+  }
+}

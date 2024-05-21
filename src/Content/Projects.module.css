@@ -1,0 +1,89 @@
+.ProjectMainContainer {
+  /* border:1px dashed white; */
+}
+.ProjectBanner {
+  /* border:1px dashed white; */
+  margin-bottom: 30px;
+}
+.objectTest {
+  background-color: rgba(0, 0, 0, 0.372);
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+.ProjectTextArea {
+  margin: 0;
+  line-height: 1;
+}
+.MainImageHolderContainer {
+  /* border:1px dashed rgb(30, 0, 255); */
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+}
+.navigationImageButton {
+  position: relative;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  margin: 10px;
+}
+.arrowIconDesign {
+  transform: rotate(180deg);
+  color: white;
+}
+.projectImageHolderTest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectImageHolder {
+  background-color: gray;
+
+  /* border: 1px dashed rgb(0, 255, 34); */
+  width: 90%;
+  height: 350px;
+  /* display: flex; */
+  /* justify-content: center; */
+}
+.ProjectTitleInfo {
+  /* border:1px dashed white; */
+  width: 70%;
+  margin-left: 45px;
+}
+.projectTitleText {
+  text-align: left;
+  font-weight: 600;
+}
+
+/* 600, 768, 992, 1200 */
+
+/* 
+@media only screen and (max-width:1200px){
+  .ProjectMainContainer {
+  width:85vw;
+  }
+}
+@media only screen and (max-width:992px){
+  .ProjectMainContainer {
+  width:85vw;
+  }
+}
+@media only screen and (max-width:768px){
+  .ProjectMainContainer {
+  width:85vw;
+  }
+}
+@media only screen and (max-width:600px){
+  .ProjectMainContainer {
+  width:85vw;
+  }
+}
+@media only screen and (max-width:320px){
+  .ProjectMainContainer {
+  width:85vw;
+  }
+}
+ */
