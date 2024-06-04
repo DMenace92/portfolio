@@ -53,7 +53,7 @@
 }
 
 .hedderLable {
-  background-color: #410a1a;
+  background-color: #4b087b;
   padding: 20px;
 }
 .headerTitle {
@@ -127,8 +127,8 @@ justify-content: space-between;
 width:200px; */
 }
 .messageStyleButtonCancel {
-  border: 1px solid #c12854;
-  color: #c12854;
+  border: 1px solid #cb0842;
+  color: #cb0842;
   background-color: white;
   border-radius: 10px;
   /* margin-left:10px; */
@@ -137,13 +137,13 @@ width:200px; */
   height: 30px;
 }
 .messageStyleButtonSend {
-  border: 1px solid #c12854;
+  border: 1px solid #cb0842;
   border-radius: 10px;
   color: white;
   width: 90px;
   height: 30px;
 
-  background-color: #c12854;
+  background-color: #cb0842;
 }
 /*320 600, 768, 992, 1200 */
 @media only screen and (max-width: 1200px) {

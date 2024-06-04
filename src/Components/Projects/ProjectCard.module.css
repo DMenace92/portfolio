@@ -9,7 +9,8 @@
   flex-direction: column;
   padding: 20px 30px 20px 20px;
   background: rgba(0, 0, 0, 0.3);
-  /* background: linear-gradient(0deg, #c128548c, 30%, #000000a1); */
+  background: linear-gradient(0deg, #2b0129bf, 30%, #000000a1);
+  background: linear-gradient(0deg, #000000a1, 30%, #2b0129bf);
   border-radius: 15px;
   margin-bottom: 30px;
 }
@@ -54,6 +55,7 @@
 
 .media {
   background: gray;
+  border-radius: 15px;
 }
 
 .collapsed .media {
@@ -137,7 +139,7 @@
 
 .linkItem a,
 .linkItem .icon {
-  color: #88f7f7;
+  color: #fd6389;
 }
 
 .pillContainer {
@@ -148,7 +150,7 @@
 
 .pillContainer .pill {
   margin-right: 8px;
-  background: teal;
+  background: #3d0079;
   border-radius: 30px;
   color: white;
   padding: 3px 10px;

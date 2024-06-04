@@ -5,18 +5,18 @@
   cursor: pointer;
 }
 .cornerDesign {
-  background-color: #c22854;
+  background-color: #4b087bb6;
   height: 50px;
   width: 50px;
   position: fixed;
   right: 0px;
   top: 0;
   border-bottom-left-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mailNavIcon {
-  position: absolute;
-  top: 10px;
-  right: 12px;
   height: 26px;
   z-index: 1;
 }

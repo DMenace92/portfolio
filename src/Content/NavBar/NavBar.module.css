@@ -87,12 +87,12 @@
 
 .mobileTitle span + span {
   margin-left: 10px;
-  font-weight: 100;
+  font-weight: 200;
 }
 
 @media only screen and (max-width: 1024px) {
   .PortfolioNavBarComponent {
-    background-color: rgb(33, 13, 22);
+    background-color: #3d0079;
   }
   .hamburgerMenuButton {
   }

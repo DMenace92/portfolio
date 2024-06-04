@@ -1,6 +1,6 @@
 import React from 'react'
 import ContactModal from '../ContactModal'
-import mail from '../../Images/mail.svg'
+import mail from '../../Images/mail-solid.svg'
 
 import style from './MailNav.module.css'
 import { useEmailModal } from '../../providers/emailModalProvider'
@@ -14,7 +14,13 @@ const MailNav = () => {
       className={style.PortfolioMailBarComponent}
     >
       <div className={style.cornerDesign}>
-        <img className={style.mailNavIcon} src={mail} alt="hb"></img>
+        <img
+          className={style.mailNavIcon}
+          src={mail}
+          alt="hb"
+          width="30"
+          height="30"
+        ></img>
       </div>
     </div>
   )

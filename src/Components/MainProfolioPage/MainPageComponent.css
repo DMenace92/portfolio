@@ -3,12 +3,20 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
-  background-image: url('../../Images/Untitled_Artwork.jpg');
+  background-image: url('../../Images/background-desktop.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   overflow-x: scroll;
   /* overflow-y: hidden; */
+}
+
+.MainPageWrapper::before {
+  content: ' ';
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .MainPageWrapper::-webkit-scrollbar {
@@ -24,7 +32,7 @@
 }
 
 .MainPageWrapper::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 6px rgba(251, 2, 2, 0.747);
+  box-shadow: inset 0 0 6px #7900ef;
 }
 
 .sideBarPositionWrapper {
@@ -36,11 +44,7 @@
     min-width: 300px;
   }
   .MainPageWrapper {
-    /* width: 100vw; */
-    /* height: 100vh;
-    display: flex;
-    flex-direction: row; */
-    /* margin-left: 220px; */
+    background-image: url('../../Images/background-tablet.jpg');
   }
 }
 
@@ -56,5 +60,6 @@
   }
   .MainPageWrapper {
     height: calc(100vh - 60px);
+    background-image: url('../../Images/background-mobile.jpg');
   }
 }
