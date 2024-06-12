@@ -21,7 +21,7 @@ export const emailer = (mail) => dispatch => {
         createEmailLoading()
     )
     // fetch(`http://localhost:9000/send-email`, {
-    fetch(`https://myportfolio-api-44ada9ce9fb4.herokuapp.com/send-email`, {
+    fetch(`https://my-personal-portfolio-0-b2805eb1a130.herokuapp./send-email`, {
 
         method: "POST",
         body: JSON.stringify(mail),
