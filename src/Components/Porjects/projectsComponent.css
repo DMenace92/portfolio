@@ -9,41 +9,103 @@
 .projectWrapper {
     width: 60vmax;
     border: 7px solid rgba(67, 0, 0, 0.698);
+    background-color: rgba(0, 0, 0, 0.528) !important;
 
     border-radius: 20px !important;
 }
-
-.projectCommingSoon {
-    z-index: -4;
-    width: 100%;
-    /* height: 100%; */
-
+.VideoTag{
+    width:50vmax;
+}
+.PCStylesMain{
+    display: flex;
+    justify-content: center;
+    /* width: 100vmax; */
+}
+.PCStyles{
+    background-color: white;
+    padding:20px;
+    border-radius: 20px;
+    /* width:50vmax; */
+    
+    
 }
 
-@media only screen and (max-width:400px) {
-    .projectsContainer {
-        height: 100vmax;
-        background-color: black;
+@media only screen and (max-width:1080px) {
+    .PCGrid{
+        display: flex;
+        justify-content: center;
+    }
+
+    .projectContainer {
+        width:40vmax;
+    }
+   
+    .VideoTag{
+        width:35vmax;
+   
+    
 
     }
 
-    .projectCommingSoon {
+}
+@media only screen and (max-width:400px) {
+    .projectContainer {
+       /* width:30vmax; */
+        /* height: 100vmax; */
+        /* background-color: black; */
+
+    }
+    .VideoTag{
+        width:35vmax;
+    }
+    .PCStyles h1{
+        font-size:20px;
+    }
+    .PCStyles h2{
+        font-size: 16px;
+        text-align: left;
+    }
+    .PCStyles p, li {
+        font-size: 12px;
+
+    }
+.PCStyles li{
+    text-align: left;
+
+}
+    /* .projectCommingSoon {
 
         height: 50vmax;
         margin-top: 20%;
 
 
 
-    }
+    } */
 
 }
 
-@media only screen and (max-width: 280px) {
-    .projectCommingSoon {
-        /* height: 100vmax;
-        border: 10px solid white; */
 
 
+@media only screen and (max-width:390px) {
+    /* .MuiGrid-root {
+        display: flex;
+        justify-content: center;
+    } */
+    .PCGrid{
+        display: flex;
+        justify-content: center;
     }
+    .projectContainer {
+       
+        
+        width: 40vmax;
+ 
+ 
+     }
+    .VideoTag{
+        width:29;
+   
+    
 
-}
+    }}
+

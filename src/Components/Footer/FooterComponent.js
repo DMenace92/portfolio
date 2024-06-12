@@ -41,15 +41,15 @@ const FooterComponent = () => {
                 </div>
                 <div className="footer__social-media">
                     {/* Add your social media icons or links here */}
-                    <a href="https://www.facebook.com">
+                    <a href="https://www.facebook.com/dennis.enwiya/">
                         <i className="fab fa-facebook"></i>
                         <img className="footerIcons" src={facebook}></img>
                     </a>
-                    <a href="https://www.twitter.com">
+                    <a href="https://twitter.com/DEnwiya">
                         <i className="fab fa-twitter"></i>
                         <img className="footerIcons" src={twitter}></img>
                     </a>
-                    <a href="https://www.instagram.com">
+                    <a href="https://www.instagram.com/theonlymenace/">
                         <i className="fab fa-instagram"></i>
                         <img className="footerIcons" src={instagram}></img>
                     </a>

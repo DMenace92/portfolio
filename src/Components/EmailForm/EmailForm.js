@@ -10,14 +10,23 @@ class EmailForm extends Component {
         username: '',
         phoneNumber: '',
         email: '',
-        message: ''
+        message: '',
+        hidden:''
     }
 
     _onSubmit = (e) => {
         e.preventDefault();
-        this.props.emailer(this.state);
+       
         console.log(this.props)
+        if (this.state.hidden.trim()!==''){
+            console.log("Submission Failed")
+          
+            return
+        }else{
+            this.props.emailer(this.state);
         this.setState({ username: '', phoneNumber: '', email: '', message: '' })
+        }
+       
     }
     _onChange = ({ target }) => {
         this.setState({ [target.name]: target.value })
@@ -27,7 +36,6 @@ class EmailForm extends Component {
         console.log(this.state)
         return (
             < Grid >
-
                 <div className="contactInfoHolder" >
                     <Paper className="contactWrapper" elevation="12">
                         <form className="contact-form"
@@ -85,6 +93,18 @@ class EmailForm extends Component {
                                     // onChange={(e) => setMessage(e.target.value)}
                                     required
                                 ></textarea>
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="hiddenInput"></label>
+                                <input
+                                    type="hidden"
+                                    onChange={this._onChange}
+                                    id="hiddenInput"
+                                    name="hiddenInput"
+                                    value={this.state.hidden}
+                                    // onChange={handleMessageChange}
+                                    // onChange={(e) => setMessage(e.target.value)}
+                                ></input>
                             </div>
                             <button type="submit">Send</button>
                         </form>
