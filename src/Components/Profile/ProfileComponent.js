@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, Paper } from '@mui/material'
 import profilePic from '../../Images/profilePic.jpg'
 import DownloadImage from '../../Images/download-file.png'
-import FileDownload from '../../Images/Dennis_Andrew_Enwiya_Resume.pdf'
+import FileDownload from '../../Images/DennisResume06-03-2024.pdf'
 import github from '../../Images/github.png'
 import './ProfileComponent.css';
 
@@ -57,8 +57,8 @@ const ProfileComponent = () => {
 
                                 </div>
                                 <div>
-<a href="https://github.com/DMenace92"> 
-                                    <img className="profileImageIcon" src={github}></img>
+                                    <a href="https://github.com/DMenace92">
+                                        <img className="profileImageIcon" src={github}></img>
                                     </a>
                                 </div>
                                 <div className="socialMediaLinks">
