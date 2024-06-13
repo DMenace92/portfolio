@@ -26,7 +26,7 @@ app.use(emailer);
 
 app.use(express.static(path.join(__dirname, "Portfolio", "build")))
 
-app.use(express.static(path.join(__dirname, './Portfolio/build')))
+app.use(express.static(path.join(__dirname, '../Portfolio/build')))
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'Portfolio', "build", "index.html")))
 
 
