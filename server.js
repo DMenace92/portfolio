@@ -24,6 +24,12 @@ app.use(emailer);
 
 // Route to handle form submissions
 
+app.use(express.static(path.join(__dirname, "Portfolio", "build")))
+
+app.use(express.static(path.join(__dirname, '../Portfolio/build')))
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'Portfolio', "build", "index.html")))
+
+
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
