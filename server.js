@@ -4,6 +4,7 @@ const emailer = require('./routes/EmailGenerator');
 // const pizzaRouter = require('./routes/InterviewQuestion/pizzaApp')
 // const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const path = require('path')
 const cors = require('cors')
 // require("./config/db")
 
