@@ -5,7 +5,7 @@ const Router = new express.Router();
 const nodemailer = require("nodemailer");
 const fs = require("fs");
 
-const source = fs.readFileSync("utils/index.html", "utf8");
+const source = fs.readFileSync("utils/email.html", "utf8");
 owner = process.env.G_USER;
 
 Router.post("/send-email", (req, res) => {
