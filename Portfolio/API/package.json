@@ -1,12 +1,10 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "api",
+  "description": "Portfolio API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "heroku-postbuild": "cd Portfolio && npm install --only=dev && npm install && npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dennis A, Enwiya",
   "license": "ISC",
