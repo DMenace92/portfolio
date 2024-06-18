@@ -39,6 +39,7 @@
   flex-direction: column;
   top: 0;
   padding: 0 30px;
+  background: #2e2e2e;
 }
 
 .modalBackdrop {
@@ -53,7 +54,7 @@
 }
 
 .hedderLable {
-  background-color: #4b087b;
+  background-color: #202020;
   padding: 20px;
 }
 .headerTitle {
@@ -78,7 +79,7 @@
 }
 
 .inputLableDesign {
-  color: black;
+  color: white;
   width: 200px;
   margin-top: 30px;
   text-align: left;
@@ -96,12 +97,12 @@
   display: flex;
   left: 30px;
   position: absolute;
-  color: black;
+  color: white;
   /* width:200px; */
 }
 .inputTextArea {
   margin-top: 30px;
-  background-color: #f7f7f7;
+  background: #ffffff0d;
   width: 100%;
 
   /* flex-wrap: nowrap; */
@@ -112,6 +113,7 @@
   border: none;
   border-bottom: 1px solid #b8b8b8;
   outline: none;
+  background: none;
 }
 .messageButtonWrapper {
   align-items: center;
@@ -127,23 +129,22 @@ justify-content: space-between;
 width:200px; */
 }
 .messageStyleButtonCancel {
-  border: 1px solid #cb0842;
-  color: #cb0842;
-  background-color: white;
+  border: 1px solid #fd6389;
+  color: #fd6389;
+  background-color: transparent;
   border-radius: 10px;
-  /* margin-left:10px; */
+  /* margin-left: 10px; */
   margin: 10px;
   width: 90px;
   height: 30px;
 }
 .messageStyleButtonSend {
-  border: 1px solid #cb0842;
+  border: 1px solid #fd6389;
   border-radius: 10px;
-  color: white;
+  color: #2e2e2e;
   width: 90px;
   height: 30px;
-
-  background-color: #cb0842;
+  background-color: #fd6389;
 }
 /*320 600, 768, 992, 1200 */
 @media only screen and (max-width: 1200px) {
