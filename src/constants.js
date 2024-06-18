@@ -4,3 +4,4 @@ export const sectionIds = {
   projects: 'projects',
   contact: 'contact-me',
 }
+

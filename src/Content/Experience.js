@@ -53,7 +53,7 @@ const Experience = forwardRef((props, ref) => {
           />
           <div className={styles.companyAndTitle}>
             <p className={styles.workCompanyTitle}>
-              Enwiya Software Solutions, LLC (March 2019 - present){' '}
+              Enwiya Software Solutions, LLC (March 2019 - present)
             </p>
             <p className={styles.workJobTitle}>Full-Stack Developer</p>
           </div>
@@ -70,13 +70,13 @@ const Experience = forwardRef((props, ref) => {
           tech landscape. This proactive approach ensures that I stay updated
           with the latest trends and advancements, enabling me to deliver
           exceptional results to my clients while pushing the boundaries of web
-          development.{' '}
+          development.
         </p>
         <div className={styles.workExpHolder}>
           <img src={walmartIcon} alt="walmart" className={styles.companyIcon} />
           <div className={styles.companyAndTitle}>
             <p className={styles.workCompanyTitle}>
-              Walmart (April 2012 - present){' '}
+              Walmart (April 2012 - present)
             </p>
             <p className={styles.workJobTitle}>Certified Pharmay Technician</p>
           </div>
@@ -85,7 +85,7 @@ const Experience = forwardRef((props, ref) => {
           Accepted and inputted prescription information and filled
           prescriptions for approval by on-duty pharmacists. Responsible for
           restocking pharmacy materials and ordering drugs. Answered phone calls
-          and aided with patient concerns.{' '}
+          and aided with patient concerns.
         </p>
         <div className={styles.workExpHolder}>
           <img src={ieLinks} alt="ieLinks" className={styles.companyIcon} />

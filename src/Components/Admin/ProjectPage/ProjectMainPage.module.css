@@ -5,6 +5,9 @@
     gap:40px;
     
 }
+.mainProjectScroll{
+    overflow-x: scroll;
+}
 
 .leftPMPComponent{
     border:1px dashed red;
@@ -18,8 +21,15 @@
 }
 
 .rightPMPComponent{
+    overflow-y: scroll;
+
     border:1px dashed blue;
     height:90vh;
     width:80%;
 
+}
+.myProjectCards{
+    border:1px solid black;
+    height:5vh;
+    width:5vw;
 }

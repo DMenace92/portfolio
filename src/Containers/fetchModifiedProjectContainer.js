@@ -1,6 +1,5 @@
 import { connect } from 'react-redux'
-// import ProjectMainPage from '../Components/Admin/ProjectPage/ProjectMainPage'
-import Project from '../Content/Projects'
+import ProjectMainPage from '../Components/Admin/ProjectPage/ProjectMainPage'
 import { fetchProject } from '../Actions/ProjectAction'
 
 const mapStateToProps = ({ pro }) => {
@@ -16,4 +15,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Project)
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectMainPage)

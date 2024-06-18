@@ -55,8 +55,15 @@ export const createProject = (pro) => (dispatch) => {
     })
 }
 //fetch
-export const fetchproject = () => (dispatch) => {
+export const fetchProject = (pro) => (dispatch) => {
   dispatch(fetchProjectLoading())
+  fetch('http://localhost:9000/get_projects', {
+    method: 'GET',
+    body: JSON.stringify(pro),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
     .then((res) => res.json())
     .then((pro) => {
       dispatch(fetchPorjectSuccess(pro))
@@ -70,10 +77,10 @@ export const updateProject = () => (dispatch) => {
   dispatch(updateProjectLoading())
     .then((res) => res.json())
     .then((pro) => {
-      dispatch(fetchPorjectSuccess(pro))
+      dispatch(updatePorjectSuccess(pro))
     })
     .catch((err) => {
-      dispatch(fetchProjectError(err))
+      dispatch(updateProjectError(err))
     })
 }
 

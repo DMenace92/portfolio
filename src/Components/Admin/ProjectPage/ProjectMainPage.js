@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './ProjectMainPage.module.css'
 import ProjectCreateion from '../ProjectUtils/ProjectCreation'
 import EditProject from '../ProjectUtils/EditProject'
 
-const ProjectMainPage = () => {
+const ProjectMainPage = (props) => {
   const [currentPage, setCurrentPage] = useState('')
 
   const _onClick = ({ target }) => {
@@ -19,7 +19,13 @@ const ProjectMainPage = () => {
         return null
     }
   }
-
+  useEffect(
+    (props) => {
+      // props.fetchProject()
+    },
+    [props]
+  )
+  console.log(props.pro)
   return (
     <div style={{ color: 'black' }}>
       this is the project main page
@@ -43,7 +49,14 @@ const ProjectMainPage = () => {
         </div>
 
         <div className={styles.rightPMPComponent}>
-          <div>{direct(currentPage)}</div>
+          <div className={styles.mainProjectScroll}>
+            {props.pro &&
+              props.pro.map((project) => (
+                <div className={styles.myProjectCards} key={project.id}></div>
+              ))}
+            <div></div>
+          </div>
+          {/* <div>{direct(currentPage)}</div> */}
         </div>
       </div>
     </div>

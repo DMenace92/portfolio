@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './Projects.module.css'
 import ProjectCard from '../Components/Projects/ProjectCard'
 import { sectionIds } from '../constants'
 
-const Projects = () => {
-  const projects = [
+const Projects = (props) => {
+  const [projects, setProjects] = useState([])
+
+  useEffect(() => {
+    if (props.fetchProject) {
+      props.fetchProject()
+    }
+  }, [props.fetchProject])
+
+  useEffect(() => {
+    if (props.pro) {
+      setProjects(props.pro)
+    }
+  }, [props.pro])
+
+  const projectsHolder = [
     {
       title: 'Pharmacy App',
       techUsed: ['javascript', 'Node.js', 'mongoDB', 'Mongoose'],
@@ -40,6 +54,8 @@ const Projects = () => {
     },
   ]
 
+  console.log(props.pro.length)
+
   return (
     <div id={sectionIds.projects} className={styles.ProjectMainContainer}>
       <div className={styles.ProjectBanner}>
@@ -47,17 +63,29 @@ const Projects = () => {
         {projects.length > 0
           ? projects.map((project) => (
               <ProjectCard
-                key={`${project.title}-${project.techUsed.join('-')}`}
-                title={project.title}
-                techUsed={project.techUsed}
-                links={project.links}
+                key={project._id}
+                title={project.project_name}
+                techUsed={project.tools}
+                link={project.project_link}
                 features={project.features}
                 image={project.image}
                 video={project.video}
-                description={project.description}
+                description={project.summary}
               />
             ))
-          : null}
+          : projectsHolder.length > 0 &&
+            projectsHolder.map((pProject) => (
+              <ProjectCard
+                key={`${pProject.title}-${pProject.techUsed.join('-')}`}
+                title={pProject.title}
+                techUsed={pProject.techUsed}
+                links={pProject.links}
+                features={pProject.features}
+                image={pProject.image}
+                video={pProject.video}
+                description={pProject.description}
+              />
+            ))}
       </div>
     </div>
   )
