@@ -7,6 +7,7 @@ import NavBar from './Content/NavBar/NavBar'
 import MailNav from './Content/NavBar/MailNav'
 import AdminLogin from './Containers/LoginContainer'
 import PMP from './Components/Admin/ProjectPage/ProjectMainPage'
+import EditProject from './Components/Admin/ProjectUtils/EditProject'
 // import ProtectedRoute from './Components/Admin/ProtectedRoute'
 
 // import MobileNavFooter from './Content/NavBar/MobileNavFooter'
@@ -87,6 +88,7 @@ function App() {
               isAuthenticated={isAuthenticated} // Pass isAuthenticated prop
             /> */}
             <Route path="/pmp" element={<PMP />} />
+            <Route path={'/pmp/edit/:proID'} element={<EditProject />} />
           </Routes>
           {/* <div
           className={

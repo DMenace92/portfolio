@@ -73,8 +73,15 @@ export const fetchProject = (pro) => (dispatch) => {
     })
 }
 
-export const updateProject = () => (dispatch) => {
+export const updateProject = (pro) => (dispatch) => {
   dispatch(updateProjectLoading())
+  fetch('http://localhost:9000/update_project:_id', {
+    method: 'PATCH',
+    body: JSON.stringify(pro),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
     .then((res) => res.json())
     .then((pro) => {
       dispatch(updatePorjectSuccess(pro))
