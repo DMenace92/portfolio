@@ -1,27 +1,21 @@
 import { connect } from 'react-redux'
-import {
-  createProject,
-  updateProject,
-  deleteProject,
-} from '../Actions/PageAction'
+import { createProject, createImage } from '../Actions/ProjectAction'
+import ProjectCreate from '../Components/Admin/ProjectUtils/ProjectCreation'
 
 const mapStateToProps = (pro) => {
   return {
     pro: pro,
   }
 }
+
 const mapDispatchToProps = (dispatch) => {
   return {
     createProject: (pro) => {
       dispatch(createProject(pro))
     },
-    updateProject: (pro) => {
-      dispatch(updateProject(pro))
-    },
-    deleteProject: (pro) => {
-      dispatch(deleteProject(pro))
+    createImage: (pro) => {
+      dispatch(createImage(pro))
     },
   }
 }
-
-export default connect(mapStateToProps, mapDispatchToProps)
+export default connect(mapStateToProps, mapDispatchToProps)(ProjectCreate)

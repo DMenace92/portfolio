@@ -1,37 +1,69 @@
-.projectHolderArea{
-    margin-top:10px;
-    display: flex;
+.createFormContainer{
+  height:100vh;
+  overflow-y: scroll;
 }
-.projectCreateMainContainer{
-    /* height:50vh; */
-    width:40%;
-    border:1px dashed green;
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
-   
-    /* flex-wrap: wrap; */
-    /* flex-direction: column; */
+.projectForm {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.projectCreateForm{
-
-    display: flex;
-    flex-direction: column;
-    gap:20px;
-    /* flex-direction: column; */
-
-}
-.techHolder{
-    height:50px;
-    border:1px dashed black;
-    overflow-x: scroll;
+.formGroup {
+  margin-bottom: 20px;
 }
 
-.ProjectViewArea{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
+.formGroup label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
 
-    
+.formGroup input[type="text"],
+.formGroup textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.linkGroup,
+.featureGroup,
+.mediaGroup {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.addButton {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.addButton:hover {
+  background: #0056b3;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background: #218838;
 }

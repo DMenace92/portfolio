@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import styles from './ProjectMainPage.module.css'
-import ProjectCreateion from '../ProjectUtils/ProjectCreation'
-import EditProject from '../ProjectUtils/EditProject'
+// import ProjectCreateion from '../ProjectUtils/ProjectCreation'
+import ProjectCreation from '../../../Containers/ProjectContainer'
+// import EditProject from '../ProjectUtils/EditProject'
+import EditProject from '../../../Containers/updateProjectContainer'
 import ProjectView from '../../../Containers/FetchItemProjectContainer'
 
 const ProjectMainPage = () => {
@@ -15,7 +17,7 @@ const ProjectMainPage = () => {
       case 'ProjectView':
         return <ProjectView />
       case 'createProject':
-        return <ProjectCreateion />
+        return <ProjectCreation />
       case 'editProject':
         return <EditProject />
       default:

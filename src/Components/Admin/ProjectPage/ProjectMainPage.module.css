@@ -1,5 +1,5 @@
 .projectMainHolder{
-    border:1px dashed black;
+    /* border:1px dashed black; */
     height:90vh;
     display: flex;
     gap:40px;
@@ -7,7 +7,7 @@
 }
 
 .leftPMPComponent{
-    border:1px dashed red;
+    /* border:1px dashed red; */
     height:90vh;
     width:20%;
 
@@ -18,7 +18,7 @@
 }
 
 .rightPMPComponent{
-    border:1px dashed blue;
+    /* border:1px dashed blue; */
     height:90vh;
     width:80%;
 

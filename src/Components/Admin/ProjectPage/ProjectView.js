@@ -18,6 +18,8 @@ const ProjectView = (props) => {
       setProjects(props.pro)
     }
   }, [props.pro])
+
+  console.log(props, 'test here')
   return (
     <div>
       <h2>Projects</h2>
@@ -27,13 +29,13 @@ const ProjectView = (props) => {
               <div>
                 <ProjectCard
                   key={project._id}
-                  title={project.project_name}
-                  techUsed={project.tools}
-                  link={project.project_link}
+                  title={project.title}
+                  techUsed={project.techUsed}
+                  links={project.links}
                   features={project.features}
                   image={project.image}
                   video={project.video}
-                  description={project.summary}
+                  description={project.description}
                 />
                 <button>
                   <Link to={`edit/${project._id}`}>Edit</Link>

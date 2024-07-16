@@ -1,164 +1,244 @@
 import React, { useState } from 'react'
-import Styles from './ProjectCreation.module.css'
+import styles from './ProjectCreation.module.css'
 
-const ProjectCreation = () => {
-  const [formData, setFormData] = useState({
-    projectName: '',
-    projectLink: '',
-    projectFeatures: [''],
-    projectTechnologies: [''],
-    images: [],
-    videos: [],
-  })
+const ProjectForm = ({ createProject, createImage }) => {
+  const [title, setTitle] = useState('')
+  const [techUsed, setTechUsed] = useState('')
+  const [links, setLinks] = useState([{ url: '', label: '' }])
+  const [features, setFeatures] = useState([''])
+  const [images, setImages] = useState([{ link: '', description: '' }])
+  const [videos, setVideos] = useState([{ link: '', description: '' }])
+  const [description, setDescription] = useState('')
+  const [file, setFile] = useState('')
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-
-    if (name.startsWith('projectTechnologies')) {
-      const index = parseInt(name.split('[')[1].split(']')[0])
-      const projectTechnologies = [...formData.projectTechnologies]
-      projectTechnologies[index] = value
-      setFormData({
-        ...formData,
-        projectTechnologies,
-      })
-    } else if (name.startsWith('projectFeatures')) {
-      const index = parseInt(name.split('[')[1].split(']')[0])
-      const projectFeatures = [...formData.projectFeatures]
-      projectFeatures[index] = value
-      setFormData({
-        ...formData,
-        projectFeatures,
-      })
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      })
-    }
-  }
-
-  const handleFileChange = (e) => {
-    const { name, files } = e.target
-    setFormData({
-      ...formData,
-      [name]: [...files],
-    })
-  }
-
-  const addTechnology = () => {
-    setFormData({
-      ...formData,
-      projectTechnologies: [...formData.projectTechnologies, ''],
-    })
-  }
-
-  const addFeature = () => {
-    setFormData({
-      ...formData,
-      projectFeatures: [...formData.projectFeatures, ''],
-    })
+    setFile(e.target.files[0])
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(formData)
-    // Add your logic to handle form submission here
+    const formData = new FormData()
+    formData.append('file', file)
+
+    const projectData = {
+      title,
+      techUsed: techUsed.split(',').map((tech) => tech.trim()),
+      links,
+      features,
+      images: images,
+      videos,
+      description,
+      createdAt: new Date(),
+    }
+
+    console.log('Submitting Project Data: ', projectData)
+    // console.log("Submitting File: ", file);
+
+    createProject(projectData)
+    createImage(formData)
+
+    // Reset form after submit
+    setTitle('')
+    setTechUsed('')
+    setLinks([{ url: '', label: '' }])
+    setFeatures([''])
+    setImages([{ link: '', description: '' }])
+    setVideos([{ link: '', description: '' }])
+    setDescription('')
+    setFile('')
+  }
+
+  const handleAddLink = () => {
+    setLinks([...links, { url: '', label: '' }])
+  }
+
+  const handleAddFeature = () => {
+    setFeatures([...features, ''])
+  }
+  const handleAddImage = () => {
+    setImages([...images, { link: '', description: '' }])
+  }
+
+  const handleAddVideo = () => {
+    setVideos([...videos, { link: '', description: '' }])
   }
 
   return (
-    <div className={Styles.projectHolderArea}>
-      <div className={Styles.projectCreateMainContainer}>
-        <form className={Styles.projectCreateForm} onSubmit={handleSubmit}>
-          <label>
-            Project Name:
-            <input
-              type="text"
-              name="projectName"
-              value={formData.projectName}
-              onChange={handleChange}
-            />
-          </label>
-          <label>
-            Project Link:
-            <input
-              type="text"
-              name="projectLink"
-              value={formData.projectLink}
-              onChange={handleChange}
-            />
-          </label>
+    <div className={styles.createFormContainer}>
+      <form className={styles.projectForm} onSubmit={handleSubmit}>
+        <div className={styles.formGroup}>
+          <label>Title:</label>
+          <input
+            type="text"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            required
+          />
+        </div>
 
-          <label>
-            Project Features:
-            <div className={Styles.techHolder}>
-              {formData.projectFeatures.map((feature, index) => (
-                <div key={index}>
-                  <input
-                    type="text"
-                    name={`projectFeatures[${index}]`}
-                    value={feature}
-                    onChange={handleChange}
-                  />
-                </div>
-              ))}
+        <div className={styles.formGroup}>
+          <label>Technologies Used:</label>
+          <input
+            type="text"
+            value={techUsed}
+            onChange={(e) => setTechUsed(e.target.value)}
+            placeholder="Comma separated values"
+            required
+          />
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Links:</label>
+          {links.map((link, index) => (
+            <div key={index} className={styles.linkGroup}>
+              <input
+                type="text"
+                value={link.url}
+                placeholder="URL"
+                onChange={(e) => {
+                  const newLinks = [...links]
+                  newLinks[index].url = e.target.value
+                  setLinks(newLinks)
+                }}
+                required
+              />
+              <input
+                type="text"
+                value={link.label}
+                placeholder="Label"
+                onChange={(e) => {
+                  const newLinks = [...links]
+                  newLinks[index].label = e.target.value
+                  setLinks(newLinks)
+                }}
+                required
+              />
             </div>
-            <button type="button" onClick={addFeature}>
-              Add Another Feature
-            </button>
-          </label>
+          ))}
+          <button
+            type="button"
+            className={styles.addButton}
+            onClick={handleAddLink}
+          >
+            Add Link
+          </button>
+        </div>
 
-          <label>
-            Project Technologies:
-            <div className={Styles.techHolder}>
-              {formData.projectTechnologies.map((technology, index) => (
-                <div key={index}>
-                  <input
-                    type="text"
-                    name={`projectTechnologies[${index}]`}
-                    value={technology}
-                    onChange={handleChange}
-                  />
-                </div>
-              ))}
+        <div className={styles.formGroup}>
+          <label>Features:</label>
+          {features.map((feature, index) => (
+            <div key={index} className={styles.featureGroup}>
+              <input
+                type="text"
+                value={feature}
+                onChange={(e) => {
+                  const newFeatures = [...features]
+                  newFeatures[index] = e.target.value
+                  setFeatures(newFeatures)
+                }}
+                required
+              />
             </div>
-            <button type="button" onClick={addTechnology}>
-              Add Another Technology
-            </button>
-          </label>
+          ))}
+          <button
+            type="button"
+            className={styles.addButton}
+            onClick={handleAddFeature}
+          >
+            Add Feature
+          </button>
+        </div>
 
-          <label>
-            Images:
-            <input
-              type="file"
-              name="images"
-              accept="image/*"
-              multiple
-              onChange={handleFileChange}
-            />
-          </label>
-          <label>
-            Videos:
-            <input
-              type="file"
-              name="videos"
-              accept="video/*"
-              multiple
-              onChange={handleFileChange}
-            />
-          </label>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-      <div className={Styles.ProjectViewArea}>
-        this is the bottom area
-        <h6>Project Name: {formData.projectName}</h6>
-        <h6>Project Link: {formData.projectLink}</h6>
-        <h6>Project Technologies: {formData.projectTechnologies.join(', ')}</h6>
-        <h6>Project Features: {formData.projectFeatures.join(', ')}</h6>
-      </div>
+        <div className={styles.formGroup}>
+          <label>Images:</label>
+          <input type="file" onChange={handleChange} />
+          {images.map((image, index) => (
+            <div key={index} className={styles.mediaGroup}>
+              <input
+                type="text"
+                value={(image.link = file.name)}
+                placeholder="Link"
+                onChange={(e) => {
+                  const newImages = [...images]
+                  newImages[index].link = e.target.value
+                  setImages(newImages)
+                }}
+                required
+              />
+              <input
+                type="text"
+                value={image.description}
+                placeholder="Description"
+                onChange={(e) => {
+                  const newImages = [...images]
+                  newImages[index].description = e.target.value
+                  setImages(newImages)
+                }}
+                required
+              />
+            </div>
+          ))}
+          <button
+            type="button"
+            className={styles.addButton}
+            onClick={handleAddImage}
+          >
+            Add Image
+          </button>
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Videos:</label>
+          {videos.map((video, index) => (
+            <div key={index} className={styles.mediaGroup}>
+              <input
+                type="text"
+                value={video.link}
+                placeholder="Link"
+                onChange={(e) => {
+                  const newVideos = [...videos]
+                  newVideos[index].link = e.target.value
+                  setVideos(newVideos)
+                }}
+                required
+              />
+              <input
+                type="text"
+                value={video.description}
+                placeholder="Description"
+                onChange={(e) => {
+                  const newVideos = [...videos]
+                  newVideos[index].description = e.target.value
+                  setVideos(newVideos)
+                }}
+                required
+              />
+            </div>
+          ))}
+          <button
+            type="button"
+            className={styles.addButton}
+            onClick={handleAddVideo}
+          >
+            Add Video
+          </button>
+        </div>
+
+        <div className={styles.formGroup}>
+          <label>Description:</label>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            required
+          ></textarea>
+        </div>
+
+        <button type="submit" className={styles.submitButton}>
+          Submit
+        </button>
+      </form>
     </div>
   )
 }
 
-export default ProjectCreation
+export default ProjectForm
