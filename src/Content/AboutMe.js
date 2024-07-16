@@ -11,7 +11,9 @@ const AboutMe = forwardRef((props, ref) => {
   return (
     <div id={sectionIds.aboutMe} className={styles.aboutmeMainContainer}>
       <div className={styles.aboutmeItemHolder} ref={ref}>
-        <h2 className={styles.aboutMeHeader}>About Me</h2>
+        <h2 href="#about" className={styles.aboutMeHeader}>
+          About Me
+        </h2>
         <div className={styles.aboutmeDiscription}>
           Hey there! I'm Dennis Enwiya, and I'm thrilled to share my passion for
           software development with you. I have always been captivated by the

@@ -59,7 +59,7 @@ const Projects = (props) => {
   return (
     <div id={sectionIds.projects} className={styles.ProjectMainContainer}>
       <div className={styles.ProjectBanner}>
-        <h2>Projects</h2>
+        <h2 href="#projects">Projects</h2>
         {projects.length > 0
           ? projects.map((project) => (
               <ProjectCard

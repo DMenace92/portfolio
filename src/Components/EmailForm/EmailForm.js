@@ -38,7 +38,9 @@ class EmailForm extends Component {
         <div className={styles.contactInfoHolder}>
           <Paper className={styles.contactWrapper} elevation="12">
             <form className={styles.contactForm} onSubmit={this._onSubmit}>
-              <h2 className={styles.contactDesign}>Contact Me</h2>
+              <h2 href="#contact" className={styles.contactDesign}>
+                Contact Me
+              </h2>
               <div className={styles.formGroup}>
                 <label htmlFor="username">Name:</label>
                 <input
