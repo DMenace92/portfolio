@@ -15,38 +15,17 @@ const AboutMe = forwardRef((props, ref) => {
           About Me
         </h2>
         <div className={styles.aboutmeDiscription}>
-          Hey there! I'm Dennis Enwiya, and I'm thrilled to share my passion for
-          software development with you. I have always been captivated by the
-          world of technology, and pursuing a career in this field has been a
-          dream come true. To kickstart my journey, I enrolled in Galvanize, a
-          prestigious 6-month boot camp dedicated to software development. This
-          intense program provided me with invaluable certifications, helping me
-          establish a strong foundation in the field. During my time at
-          Galvanize, I not only sharpened my technical skills but also learned
-          the importance of collaboration and innovative problem-solving.
-          <br />
-          <br />
-          Fueling my desire for knowledge, I decided to pursue a degree in
-          Computer Science from Southern New Hampshire University. This academic
-          experience expanded my understanding of core computer science
-          principles, algorithms, and software development methodologies. It
-          also instilled in me a lifelong passion for learning and staying up to
-          date with the latest technological advancements. Equipped with
-          certifications from Galvanize and a degree from Southern New Hampshire
-          University, I am excited to make a meaningful impact in the software
-          development industry. I thrive on tackling complex coding challenges,
-          building robust applications, and contributing to the continuous
-          innovation that drives the tech landscape forward.
-          <br />
-          <br />
-          I'm an avid believer in personal and professional growth, constantly
-          seeking new opportunities to expand my skill set. With my
-          determination, drive, and solid foundation in software development, I
-          am confident in my ability to bring value to any organization looking
-          for a dedicated and accomplished software developer. Join me on this
-          exciting journey as I strive to make a lasting impact in the
-          ever-evolving world of software development. Together, let's push
-          boundaries and create innovative solutions that shape the future.
+          Hi, I'm Dennis Enwiya, a passionate software developer. My journey
+          began with a 6-month boot camp at Galvanize, where I gained invaluable
+          certifications and honed my technical skills, collaboration, and
+          problem-solving abilities. Pursuing a degree in Computer Science from
+          Southern New Hampshire University further deepened my understanding of
+          core principles and fueled my passion for continuous learning.
+          Equipped with these experiences, I am eager to tackle coding
+          challenges, build robust applications, and drive innovation in the
+          tech industry. Committed to personal and professional growth, I aim to
+          make a lasting impact and create innovative solutions that shape the
+          future.
         </div>
         <div style={{ marginBottom: 40 }} />
       </div>

@@ -7,6 +7,15 @@ const createProjectLoading = () => ({ type: C_P_L })
 export const C_P_E = 'C_P_E'
 const createProjectError = () => ({ type: C_P_E })
 
+export const C_I_S = 'C_I_S'
+const createImageSuccess = (pro) => ({ type: C_I_S, payload: pro })
+
+export const C_I_L = 'C_I_L'
+const createImageLoading = () => ({ type: C_I_L })
+
+export const C_I_E = 'C_I_E'
+const createImageError = () => ({ type: C_I_E })
+
 export const F_P_S = 'F_P_S'
 const fetchPorjectSuccess = (pro) => ({ type: F_P_S, payload: pro })
 
@@ -17,7 +26,10 @@ export const F_P_E = 'F_P_E'
 const fetchProjectError = () => ({ type: F_P_E })
 
 export const U_P_S = 'U_P_S'
-const updatePorjectSuccess = (pro) => ({ type: U_P_S, payload: pro })
+const updatePorjectSuccess = (proID, pro) => ({
+  type: U_P_S,
+  payload: { proID, pro },
+})
 
 export const U_P_L = 'U_P_L'
 const updateProjectLoading = () => ({ type: U_P_L })
@@ -35,6 +47,25 @@ export const D_P_E = 'D_P_E'
 const deleteProjectError = () => ({ type: D_P_E })
 
 //thunk
+
+export const createImage = (pro) => (dispatch) => {
+  dispatch(createImageLoading())
+  fetch('http://localhost:9000/create_image', {
+    method: 'POST',
+    body: pro,
+    headers: {
+      'Contnet-Type': 'application/json',
+      //   "Content-Type": "multipart/form-data",
+    },
+  })
+    .then((res) => res.json())
+    .then((pro) => {
+      dispatch(createImageSuccess(pro))
+    })
+    .catch((err) => {
+      dispatch(createImageError(err))
+    })
+}
 
 //create function
 export const createProject = (pro) => (dispatch) => {
@@ -73,8 +104,15 @@ export const fetchProject = (pro) => (dispatch) => {
     })
 }
 
-export const updateProject = () => (dispatch) => {
+export const updateProject = (proID, pro) => (dispatch) => {
   dispatch(updateProjectLoading())
+  fetch(`http://localhost:9000/update_project/${proID}`, {
+    method: 'PATCH',
+    body: JSON.stringify(pro),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  })
     .then((res) => res.json())
     .then((pro) => {
       dispatch(updatePorjectSuccess(pro))

@@ -63,14 +63,22 @@ const Projects = (props) => {
         {projects.length > 0
           ? projects.map((project) => (
               <ProjectCard
+                // key={project._id}
+                // title={project.project_name}
+                // techUsed={project.tools}
+                // link={project.project_link}
+                // features={project.features}
+                // image={project.image}
+                // video={project.video}
+                // description={project.summary}
                 key={project._id}
-                title={project.project_name}
-                techUsed={project.tools}
-                link={project.project_link}
+                title={project.title}
+                techUsed={project.techUsed}
+                links={project.links}
                 features={project.features}
                 image={project.image}
                 video={project.video}
-                description={project.summary}
+                description={project.description}
               />
             ))
           : projectsHolder.length > 0 &&

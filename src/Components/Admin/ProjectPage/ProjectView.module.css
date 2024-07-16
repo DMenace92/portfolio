@@ -1,0 +1,5 @@
+.projectViewerWrapper{
+    height:80vh;
+    width:70vw;
+    overflow-x: scroll;
+}

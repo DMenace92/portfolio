@@ -5,15 +5,19 @@ import {
   F_P_S,
   F_P_L,
   F_P_E,
-  U_P_S,
-  U_P_L,
-  U_P_E,
-  D_P_S,
-  D_P_L,
-  D_P_E,
+  C_I_L,
+  C_I_S,
+  C_I_E,
+  // U_P_S,
+  // U_P_L,
+  // U_P_E,
+  // D_P_S,
+  // D_P_L,
+  // D_P_E,
 } from '../Actions/ProjectAction'
 
 const initState = {
+  image: [],
   pro: [],
   proLoading: false,
   proError: false,
@@ -21,6 +25,19 @@ const initState = {
 
 const ProjectReducers = (state = initState, action) => {
   switch (action.type) {
+    case C_I_L:
+      return {
+        projectLoading: true,
+      }
+    case C_I_S:
+      return {
+        ...state,
+        image: [...state.image, action.payload],
+      }
+    case C_I_E:
+      return {
+        projectError: true,
+      }
     case C_P_L:
       return {
         ...state,

@@ -1,0 +1,102 @@
+/* EditProject.module.css */
+
+.projectHolderArea {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+
+  }
+  
+  .projectCreateMainContainer {
+    width: 60%;
+    margin-right: 20px;
+
+}
+  
+.scrollFormFix{
+/* overflow-x: scroll;
+height:95vh; */
+}
+  .projectCreateForm {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-x: scroll;
+height:95vh;
+
+  }
+  
+  .editProjectLabel {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+  }
+  
+  .editProjectLabel input[type="text"],
+  .editProjectLabel input[type="file"],
+  .editProjectLabel textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .addButton {
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .submitButton {
+    background-color: #008cba;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .projectViewArea {
+    width: 35%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sectionTitle {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .linkGroup,
+  .featureGroup,
+  .technologyGroup {
+    margin-bottom: 10px;
+  }
+  
+  .linkPreview {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
