@@ -1,0 +1,183 @@
+/* .ContactModalMainContainer {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: relative;
+  display: flex;
+
+  /* justify-content: space-between; */
+/* justify-content: center ; */
+/* height: 100vh; */
+
+.contactModalBody {
+  overflow: hidden;
+  /* position: relative; */
+  z-index: 9999;
+  border-radius: 20px;
+  background-color: white;
+  width: 720px;
+  max-width: 90vw;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  align-self: center;
+}
+
+.ContactModalBodyFalse {
+  height: 500px;
+  width: 100%;
+}
+.modalKingWrapper {
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  padding: 0 30px;
+  background: #2e2e2e;
+}
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: ' ';
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 998;
+}
+
+.hedderLable {
+  background-color: #202020;
+  padding: 20px;
+}
+.headerTitle {
+  font-weight: bold;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+.lableDecorator {
+  justify-content: space-between;
+}
+.formLayoutDesign {
+  margin-top: 10px;
+  display: flex;
+  flex: 2 1;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100px;
+  width: 100%;
+}
+
+.inputLableDesign {
+  color: white;
+  width: 200px;
+  margin-top: 30px;
+  text-align: left;
+  font-size: 12px;
+  /* text-align: left; */
+}
+.textAreaContainer {
+  /* border:2px solid black; */
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+.inputLableTextArea {
+  font-size: 12px;
+  display: flex;
+  left: 30px;
+  position: absolute;
+  color: white;
+  /* width:200px; */
+}
+.inputTextArea {
+  margin-top: 30px;
+  background: #ffffff0d;
+  width: 100%;
+
+  /* flex-wrap: nowrap; */
+}
+.inputDesign {
+  width: 100%;
+  margin-right: 0;
+  border: none;
+  border-bottom: 1px solid #b8b8b8;
+  outline: none;
+  background: none;
+}
+.messageButtonWrapper {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  /* position: absolute;
+    bottom:0px;
+    right:10px;
+    margin:10px;
+
+justify-content: space-between;
+width:200px; */
+}
+.messageStyleButtonCancel {
+  border: 1px solid #fd6389;
+  color: #fd6389;
+  background-color: transparent;
+  border-radius: 10px;
+  /* margin-left: 10px; */
+  margin: 10px;
+  width: 90px;
+  height: 30px;
+}
+.messageStyleButtonSend {
+  border: 1px solid #fd6389;
+  border-radius: 10px;
+  color: #2e2e2e;
+  width: 90px;
+  height: 30px;
+  background-color: #fd6389;
+}
+/*320 600, 768, 992, 1200 */
+@media only screen and (max-width: 1200px) {
+  /* .contactModalBody {
+    width: 85vw;
+  } */
+}
+
+@media only screen and (max-width: 992px) {
+  .contactModalBody {
+    /* margin-bottom: 100px; */
+    /* width:85vw; */
+    /* margin-left:-35px; */
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contactModalBody {
+    /* width:85vw; */
+    /* margin-left:-35px; */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .contactModalBody {
+    /* width:85vw; */
+    /* margin-left:-35px; */
+  }
+}
+/* @media only screen and (max-width:320px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+} */

@@ -1,0 +1,45 @@
+.PortfolioMailBarComponent {
+  position: absolute;
+  width: 100vw;
+  z-index: 3;
+  cursor: pointer;
+}
+.cornerDesign {
+  background-color: #4b087bb6;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  right: 0px;
+  top: 0;
+  border-bottom-left-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mailNavIcon {
+  height: 26px;
+  z-index: 1;
+}
+.hideViewModal {
+  display: none;
+}
+.viewModal {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+.closeButton {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+
+  z-index: 1;
+}

@@ -1,0 +1,360 @@
+.gridDesign {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.drawerVersion {
+}
+
+.portfolioHolder {
+  background-color: rgba(0, 0, 0, 0.46);
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.shapeContainer {
+  text-align: center;
+}
+.shapeContainer .ProfileImageHolder .shape1 .shape2 {
+}
+.ProfileImageHolder {
+  position: relative;
+  z-index: 2;
+  margin-top: 30px;
+  max-width: 100%;
+  border-radius: 50%;
+  width: 200px;
+}
+.contentItemsWrapper {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+.shape1 {
+  margin-top: -190px;
+  margin-left: 85px;
+  position: absolute;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  background-color: #cb0842;
+  filter: drop-shadow(0px 4px 18px rgba(253, 99, 137, 0.77));
+  /* border: 3px solid rgb(255, 255, 255); */
+}
+.shape2 {
+  z-index: 1;
+  position: relative;
+  margin-top: -220px;
+  margin-left: 115px;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  /* border: 3px solid black; */
+  background-color: #3d0079;
+  filter: drop-shadow(0px 4px 18px rgba(160, 65, 253, 0.77));
+}
+.NodeIcon {
+  height: 135px;
+  position: relative;
+  left: 30px;
+  top: 30px;
+  /* position: absolute;  
+    left:95px;  
+    
+    bottom:220px; */
+}
+
+.nameContainer {
+  display: flex;
+  justify-content: center;
+  margin-right: 5px;
+  font-size: 1em;
+}
+.nameTextStyle {
+  margin-top: 60px;
+  color: lightgray;
+  font-size: 2em;
+}
+.nameTextStyle1 {
+  font-weight: 200;
+  margin-top: 60px;
+  color: lightgray;
+  margin-left: 10px;
+  font-size: 2em;
+}
+.navigationSelection {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+  height: 160px;
+  width: 200px;
+}
+.selectionOption {
+  font-weight: 600;
+  font-size: 30px;
+  text-decoration: none;
+  list-style-type: none;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+.selectionItem {
+  color: rgba(255, 255, 255, 0.5);
+}
+.selectionItemPage {
+  color: white;
+}
+.ScrollItemsContainer {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+.footerSocialMedia {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0 20px;
+  flex: 1;
+}
+.footerSocialMedia a {
+  margin: 0 10px 20px 10px;
+  position: relative;
+  color: #555555;
+  font-size: 20px;
+}
+
+.footerSocialMedia a:hover {
+  color: #333333;
+}
+
+.footerIcons {
+  width: 30px;
+  margin-top: 10px;
+  transition: all 1s ease-in-out;
+  transform: translateY(0px);
+}
+
+.footerIcons:hover {
+  /* width: 50px; */
+  transform: translateY(-7px);
+  z-index: 6;
+  transition: 0.3s;
+}
+
+@media only screen and (max-width: 1024px) {
+  .ProfileImageHolder,
+  .shape1,
+  .shape2 {
+    width: 130px;
+    height: 130px;
+  }
+
+  .shape1 {
+    margin-top: -120px;
+    margin-left: 70px;
+  }
+
+  .shape2 {
+    margin-top: -150px;
+    margin-left: 100px;
+  }
+
+  .portfolioHolder {
+    width: 300px;
+  }
+
+  .footerIcons {
+    width: 26px;
+    margin-top: 10px;
+    transform: translateY(0px);
+  }
+}
+@media only screen and (max-width: 860px) {
+  .portfolioHolder {
+    width: 250px;
+  }
+  .nameContainer {
+    font-size: 0.8em;
+  }
+  .contentItemsWrapper {
+    margin-top: -20px;
+    transform: scale(0.8);
+  }
+  .shape1 {
+    margin-top: -120px;
+    margin-left: 50px;
+  }
+
+  .shape2 {
+    margin-top: -150px;
+    margin-left: 75px;
+  }
+  .footerSocialMedia a {
+    margin: 0 5px 20px 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .gridDesign {
+    display: none;
+  }
+  .gridDesign.drawerVersion {
+    display: flex;
+    left: -300px;
+    transition: 0.2s all ease-in-out;
+  }
+  .gridDesign.drawerVersion.open {
+    left: 0px;
+  }
+  .drawerVersion .portfolioHolder {
+    background: none;
+  }
+  .drawerVersion .nameTextStyle,
+  .drawerVersion .nameTextStyle1,
+  .drawerVersion .selectionItemPage,
+  .drawerVersion .selectionItem {
+    color: black;
+  }
+  .drawerVersion .footerIcons {
+    filter: invert(1);
+  }
+  .drawerVersion .portfolioHolder {
+    width: 300px;
+  }
+  .drawerVersion .shape1 {
+    margin-top: -125px;
+    margin-left: 75px;
+  }
+
+  .drawerVersion .shape2 {
+    margin-top: -145px;
+    margin-left: 95px;
+  }
+  .drawerVersion .ProfileImageHolder {
+    box-shadow: 0 0 17px rgba(0, 0, 0, 0.3);
+  }
+  .ProfileImageHolder {
+  }
+  /*
+    .selectionItem{
+        font-size:20px;
+       
+    } */
+}
+
+/* .profileHolder {
+
+    display: flex;
+    justify-content: center;
+
+
+
+}
+
+.profileWrapper {
+    width: 60vmax;
+    margin: 10px;
+    border: 7px solid rgba(67, 0, 0, 0.698);
+    border-radius: 20px !important;
+
+}
+
+.profileImageDesign {
+    float: left;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.myImage {
+    width: 200px;
+
+}
+
+.aboutMeWrapper {
+    margin-top: -30px;
+    padding: 20px;
+}
+
+.aboutMeItem {
+    text-align: left;
+    font-size: 14px;
+}
+
+.contactMainWrapper {
+    display: flex;
+}
+
+.contactInfo {
+
+    justify-content: left;
+}
+.phoneAndEmail{
+    
+    margin-left:20px;
+}
+.profileImageIcon {
+    width: 60px;
+    margin-bottom: 10px;
+}
+
+.downloadWrapper {
+    display: flex;
+    justify-content: start;
+
+
+    margin: 20px;
+
+}
+
+.DownloadableContent {
+
+    justify-content: start;
+    border: 4px solid rgba(67, 0, 0, 0.698);
+    border-radius: 10px !important;
+    width: 50px;
+}
+.downloadDiscription{
+    margin:10px;
+}
+
+.DownloadableContent:hover {
+    border: 4px solid rgba(67, 0, 0, 0.944);
+    background-color: rgba(0, 0, 0, 0.364);
+}
+
+
+
+
+
+@media only screen and (max-width: 400px) {
+    .profileHolder {
+        display: flex;
+        justify-content: center;
+        margin-top: -25px;
+    }
+
+    .profileWrapper {
+        width: 60vmax;
+        margin: 10px;
+        padding: 10px;
+
+    }
+
+    .myImage {
+        width: 22vmax;
+    }
+
+    .aboutMeItem {
+        font-size: small;
+    }
+    .phoneAndEmail{
+        margin: 20px;
+    }
+
+} */

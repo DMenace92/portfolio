@@ -1,3 +1,5 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /pmp
+Allow: /
+
+Sitemap: https://www.dennisenwiya.dev/sitemap.xml

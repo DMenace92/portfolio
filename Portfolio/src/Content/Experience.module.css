@@ -1,0 +1,148 @@
+.EdExMainContainer {
+  /* border: 2px solid white; */
+}
+
+.EducationBanner {
+  width: 390px;
+  background-color: rgba(0, 0, 0, 0.372);
+  /* height:60px; */
+  display: flex;
+
+  /* justify-content: center; */
+  margin: 20px;
+}
+.companyIcon {
+  width: 40px;
+  height: 40px;
+  box-shadow: 5px 5px 22px rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+.companyAndTitle {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-left: 15px;
+}
+.ampersomething {
+  margin: 0 5px;
+  font-weight: 200;
+}
+.EdTextHolder {
+  margin-left: 10px;
+  display: flex;
+  /* justify-content: center; */
+  justify-content: space-between;
+  height: 50px;
+  width: 370px;
+  position: relative;
+  bottom: 20px;
+}
+.EducationBannerText2 {
+  font-weight: 200;
+}
+.EducationBannerText1 .EducationBannerText2 .EducationBannerText3 {
+  /* display: flex;
+  justify-content: center; */
+  /* border:1px solid white; */
+  /* 
+  padding:5px;
+  margin-left:20px */
+}
+.educationSegment {
+}
+
+.schoolInfoHolder {
+  width: auto;
+  margin-bottom: 10px;
+}
+.subSectionHeader {
+  border-left: 2px solid white;
+  display: inline-block;
+  padding-left: 7px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.schoolInfoTitle {
+  text-align: left;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+.EducationYearText {
+  font-weight: 200;
+  margin: 0;
+  line-height: 1;
+}
+
+.ExTextHolder {
+  display: flex;
+  justify-content: space-between;
+  width: 32vw;
+}
+.ExperienceSegment {
+  position: relative;
+  margin-top: 30px;
+}
+.segmentThree {
+}
+.workExpHolder {
+  display: flex;
+  margin: 0px;
+}
+.workCompanyTitle {
+  text-align: left;
+  font-weight: 600;
+}
+.workJobTitle {
+  text-align: left;
+  font-style: italic;
+  font-weight: 400;
+}
+.WorkSummery {
+  text-align: left;
+  margin: 10px 0px 40px;
+}
+
+/* 600, 768, 992, 1200 */
+
+/* @media only screen and (max-width:1200px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+}
+@media only screen and (max-width:992px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+}
+@media only screen and (max-width:768px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+}
+@media only screen and (max-width:600px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+}
+@media only screen and (max-width:320px){
+  .educationSegment{
+    width:85vw;
+  }
+  .ExperienceSegment{
+    width:85vw;
+  }
+} */
