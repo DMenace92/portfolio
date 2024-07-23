@@ -4,19 +4,20 @@ import ProjectCard from '../Components/Projects/ProjectCard'
 import { sectionIds } from '../constants'
 
 const Projects = (props) => {
+  const { fetchProject, pro } = props
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    if (props.fetchProject) {
-      props.fetchProject()
+    if (fetchProject) {
+      fetchProject()
     }
-  }, [props.fetchProject])
+  }, [fetchProject])
 
   useEffect(() => {
-    if (props.pro) {
-      setProjects(props.pro)
+    if (pro) {
+      setProjects(pro)
     }
-  }, [props.pro])
+  }, [pro])
 
   const projectsHolder = [
     {
@@ -74,7 +75,7 @@ const Projects = (props) => {
   //   },
   // ]
 
-  // console.log(props.pro.length)
+  // console.log(pro.length)
 
   return (
     <div id={sectionIds.projects} className={styles.ProjectMainContainer}>

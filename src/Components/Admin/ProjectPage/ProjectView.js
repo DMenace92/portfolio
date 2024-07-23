@@ -4,22 +4,21 @@ import Styles from './ProjectView.module.css'
 import { Link } from 'react-router-dom'
 
 const ProjectView = (props) => {
+  const { fetchProject, pro } = props
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    if (props.fetchProject) {
-      props.fetchProject()
+    if (fetchProject) {
+      fetchProject()
     }
-  }, [props.fetchProject])
-  console.log(props)
+  }, [fetchProject])
 
   useEffect(() => {
-    if (props.pro) {
-      setProjects(props.pro)
+    if (pro) {
+      setProjects(pro)
     }
-  }, [props.pro])
+  }, [pro])
 
-  console.log(props, 'test here')
   return (
     <div>
       <h2>Projects</h2>

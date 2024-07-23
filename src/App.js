@@ -72,7 +72,6 @@ function App() {
       <EmailModalProvider>
         <ActivePageProvider>
           {renderContent()}
-          {console.log('firebase config: ', storage)}
           <Routes>
             <Route path="/" element={<MainPageComponent />} />
             <Route
