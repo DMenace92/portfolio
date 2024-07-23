@@ -17,6 +17,7 @@ import EditProject from './Containers/updateProjectContainer'
 import WebFont from 'webfontloader'
 import { EmailModalProvider } from './providers/emailModalProvider'
 import { Route, Routes } from 'react-router-dom'
+import { storage } from './firebaseConfig'
 
 function App() {
   const [windowSize, setWindowSize] = useState()
@@ -71,7 +72,7 @@ function App() {
       <EmailModalProvider>
         <ActivePageProvider>
           {renderContent()}
-
+          {console.log('firebase config: ', storage)}
           <Routes>
             <Route path="/" element={<MainPageComponent />} />
             <Route
