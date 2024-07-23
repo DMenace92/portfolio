@@ -54,7 +54,27 @@ const Projects = (props) => {
     },
   ]
 
-  console.log(props.pro.length)
+  // const cardItems = [
+  //   {
+  //     title: 'Pharmacy App',
+  //     techUsed: ['javascript', 'Node.js', 'mongoDB', 'Mongoose'],
+  //     links: [{ url: 'https://', label: 'www.decorative.link.com' }],
+  //     features: [
+  //       'user db search complete with custom api',
+  //       'user selection screen',
+  //       'user details view',
+  //     ],
+  //     image: {
+  //       link: 'https://www.volumetree.com/wp-content/uploads/2021/11/how-Rover-app-work.png',
+  //       description: 'this image is dog',
+  //     },
+  //     video: { link: 'https://...', description: 'this is also dog' },
+  //     description:
+  //       'it is about dogs and stuffs doing dog things like sniffing and cat nomming. they loves to noms the cats unless the cats is all prickly and pokey. then the doggses cries and poops themselves some morz. is disgustinin',
+  //   },
+  // ]
+
+  // console.log(props.pro.length)
 
   return (
     <div id={sectionIds.projects} className={styles.ProjectMainContainer}>
