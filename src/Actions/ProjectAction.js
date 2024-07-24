@@ -70,7 +70,7 @@ export const createImage = (pro) => (dispatch) => {
 //create function
 export const createProject = (pro) => (dispatch) => {
   dispatch(createProjectLoading())
-  fetch(`http://localhost:9000/create_project`, {
+  fetch(`https://portfolio-api1-8287cc1ebf3b.herokuapp.com/create_project`, {
     method: 'POST',
     body: JSON.stringify(pro),
     headers: {
@@ -88,7 +88,7 @@ export const createProject = (pro) => (dispatch) => {
 //fetch
 export const fetchProject = (pro) => (dispatch) => {
   dispatch(fetchProjectLoading())
-  fetch('http://localhost:9000/get_projects', {
+  fetch('https://portfolio-api1-8287cc1ebf3b.herokuapp.com/get_projects', {
     method: 'GET',
     body: JSON.stringify(pro),
     headers: {

@@ -11,7 +11,7 @@ export const L_O = 'L_O'
 
 export const login = (log) => (dispatch) => {
   dispatch(loginLoading())
-  fetch(`http://localhost:9000/admin/login`, {
+  fetch(`https://portfolio-api1-8287cc1ebf3b.herokuapp.com/admin/login`, {
     method: 'POST',
     body: JSON.stringify(log),
     headers: {
