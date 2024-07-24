@@ -1,11 +1,36 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './ProjectCard.module.css'
 import DownCaret from '../DownCaret'
 import ExternalLink from './ExternalLink'
+import { getDownloadURL, ref } from 'firebase/storage'
+import { storage } from '../../firebaseConfig'
 
 export default function ProjectCard(props) {
   const { title, techUsed, links, features, image, video, description } = props
   const [isCollapsed, setIsCollapsed] = useState(true)
+  const [updatedImages, setUpdatedImages] = useState([])
+
+  const fetchImageUrls = async (image) => {
+    const allImages = []
+    try {
+      const storageRef = ref(storage, `${image.link}`)
+      const url = await getDownloadURL(storageRef)
+
+      allImages.push({ ...image, url: url })
+    } catch (error) {
+      console.error('Error fetching image URL:', error)
+    }
+
+    setUpdatedImages(allImages)
+  }
+
+  useEffect(() => {
+    if (image) {
+      image.map(async (image) => {
+        fetchImageUrls(image)
+      })
+    }
+  }, [image])
 
   return (
     <div
@@ -15,16 +40,18 @@ export default function ProjectCard(props) {
     >
       <div className={styles.cardContent}>
         {/* IMAGE */}
-        {console.log(image)}
-        {image && (
-          <img
-            className={`${styles.media} ${
-              isCollapsed ? styles.collapsed : styles.expanded
-            }`}
-            src={image.link} // Ensure this is the correct URL
-            alt={image.description}
-          />
-        )}
+        {updatedImages &&
+          updatedImages.map((singleImg) => {
+            return (
+              <img
+                className={`${styles.media} ${
+                  isCollapsed ? styles.collapsed : styles.expanded
+                }`}
+                src={singleImg.url} // Ensure this is the correct URL
+                alt={singleImg.description}
+              />
+            )
+          })}
         {/* VIDEO */}
         {video && (
           <video
