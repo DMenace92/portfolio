@@ -4,6 +4,7 @@ import DownCaret from '../DownCaret'
 import ExternalLink from './ExternalLink'
 import { getDownloadURL, ref } from 'firebase/storage'
 import { storage } from '../../firebaseConfig'
+import backgroundImage from '../../Images/project-placeholder-2.jpg'
 
 export default function ProjectCard(props) {
   const { title, techUsed, links, features, image, video, description } = props
@@ -19,13 +20,14 @@ export default function ProjectCard(props) {
       allImages.push({ ...image, url: url })
     } catch (error) {
       console.error('Error fetching image URL:', error)
+      allImages.push({ ...image, url: backgroundImage })
     }
 
     setUpdatedImages(allImages)
   }
 
   useEffect(() => {
-    if (image) {
+    if (image && image.length > 0) {
       image.map(async (image) => {
         fetchImageUrls(image)
       })
@@ -44,6 +46,7 @@ export default function ProjectCard(props) {
           updatedImages.map((singleImg) => {
             return (
               <img
+                key={singleImg.url}
                 className={`${styles.media} ${
                   isCollapsed ? styles.collapsed : styles.expanded
                 }`}
@@ -53,7 +56,7 @@ export default function ProjectCard(props) {
             )
           })}
         {/* VIDEO */}
-        {video && (
+        {video && video.link && (
           <video
             className={styles.media}
             controls
