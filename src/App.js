@@ -1,22 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import MainPageComponent from './Components/MainProfolioPage/MainPageComponent'
-// import { isMobile } from 'react-device-detect'
 import './App.css'
 import { ActivePageProvider } from './providers/activePageProvider'
 import NavBar from './Content/NavBar/NavBar'
 import MailNav from './Content/NavBar/MailNav'
 import AdminLogin from './Containers/LoginContainer'
 import PMP from './Components/Admin/ProjectPage/ProjectMainPage'
-// import EditProject from './Components/Admin/ProjectUtils/EditProject'
 import EditProject from './Containers/updateProjectContainer'
-// import ProtectedRoute from './Components/Admin/ProtectedRoute'
-
-// import MobileNavFooter from './Content/NavBar/MobileNavFooter'
-// import ContactModal from './Content/ContactModal'
-// import styles from './App.css'
 import WebFont from 'webfontloader'
 import { EmailModalProvider } from './providers/emailModalProvider'
 import { Route, Routes } from 'react-router-dom'
+import { AuthProvider } from './providers/Utils/AuthContext'
+import ProtectedRoute from './providers/Utils/ProtectedRoute'
 import { storage } from './firebaseConfig'
 
 function App() {
@@ -72,35 +67,26 @@ function App() {
       <EmailModalProvider>
         <ActivePageProvider>
           {renderContent()}
-          <Routes>
-            <Route path="/" element={<MainPageComponent />} />
-            <Route
-              path="/myAdminPage"
-              element={
-                <AdminLogin
-                  isAuthenticated={isAuthenticated}
-                  handleLogin={handleLogin}
-                />
-              }
-            />
-            {/* <ProtectedRoute
-              path="/pmp"
-              element={<PMP />}
-              isAuthenticated={isAuthenticated} // Pass isAuthenticated prop
-            /> */}
-            <Route path="/pmp" element={<PMP />} />
-            <Route path={'/pmp/edit/:proID'} element={<EditProject />} />
-          </Routes>
-          {/* <div
-          className={
-            window.innerWidth <= 1024 || windowSize <= 1024
-              ? 'WindowTesterOn'
-              : 'WindowTesterOff'
-          }
-        >
-          <MobileNavFooter />
-        </div> */}
-          {/* {footerContent()} */}
+          <AuthProvider>
+            <Routes>
+              <Route path="/" element={<MainPageComponent />} />
+              <Route
+                path="/myAdminPage"
+                element={
+                  <AdminLogin
+                    isAuthenticated={isAuthenticated}
+                    handleLogin={handleLogin}
+                  />
+                }
+              />
+
+              <Route
+                path="/pmp"
+                element={<ProtectedRoute element={<PMP />} />}
+              />
+              <Route path={'/pmp/edit/:proID'} element={<EditProject />} />
+            </Routes>
+          </AuthProvider>
         </ActivePageProvider>
       </EmailModalProvider>
     </div>
