@@ -16,30 +16,12 @@ const Experience = forwardRef((props, ref) => {
     // <div style={{ ...style, maxWidth: 'calc(100% - 8vw)', paddingBottom: 100 }}>
     <div id={sectionIds.experience} className={styles.EdExMainContainer}>
       <h2>
-        <span>Education</span>
-        <span className={styles.ampersomething}>&</span>
         <span>Experience</span>
+
+        <span className={styles.ampersomething}>&</span>
+        <span>Education</span>
       </h2>
 
-      <div className={styles.educationSegment}>
-        <h3 className={styles.subSectionHeader}>Education</h3>
-        <div>
-          <div className={styles.schoolInfoHolder}>
-            <p className={styles.schoolInfoTitle}>
-              Southern New Hampshire University
-            </p>
-            <p className={styles.EducationYearText}>2021 - 2023</p>
-          </div>
-          <div className={styles.schoolInfoHolder}>
-            <p className={styles.schoolInfoTitle}>Galvanize</p>
-            <p className={styles.EducationYearText}>2018 - 2019</p>
-          </div>
-          <div className={styles.schoolInfoHolder}>
-            <p className={styles.schoolInfoTitle}>Greenway High School</p>
-            <p className={styles.EducationYearText}>2021 - 2023</p>
-          </div>
-        </div>
-      </div>
       <div className={styles.ExperienceSegment}>
         <div className={styles.segmentThree}>
           <h3 className={styles.subSectionHeader}>Experience</h3>
@@ -126,6 +108,25 @@ const Experience = forwardRef((props, ref) => {
           pharmacist. Assisted in preparing compounded and intravenous
           medications and chemotherapeutic agents.
         </p>
+      </div>
+      <div className={styles.educationSegment}>
+        <h3 className={styles.subSectionHeader}>Education</h3>
+        <div>
+          <div className={styles.schoolInfoHolder}>
+            <p className={styles.schoolInfoTitle}>
+              Southern New Hampshire University
+            </p>
+            <p className={styles.EducationYearText}>2021 - 2023</p>
+          </div>
+          <div className={styles.schoolInfoHolder}>
+            <p className={styles.schoolInfoTitle}>Galvanize</p>
+            <p className={styles.EducationYearText}>2018 - 2019</p>
+          </div>
+          <div className={styles.schoolInfoHolder}>
+            <p className={styles.schoolInfoTitle}>Greenway High School</p>
+            <p className={styles.EducationYearText}>2021 - 2023</p>
+          </div>
+        </div>
       </div>
     </div>
   )
