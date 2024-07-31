@@ -1,16 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 import SideBar from '../Profile/SideBar'
-// import AboutInfo from '../PersonalInfoContainer/About/AboutInfo'
-// import SkillInfo from '../PersonalInfoContainer/Skills/SkillsInfo'
-// import EmailForm from '../EmailForm/EmailForm'
-// import EmailForm from '../../Containers/EmailContainer'
 import ScrollItems from '../Profile/ScrollItems'
 import './MainPageComponent.css'
-import ContactModal from '../../Content/ContactModal'
+// import ContactModal from '../../Content/ContactModal'
+import ContactModal from '../../Containers/EmailContainer'
 import { useEmailModal } from '../../providers/emailModalProvider'
 import { useActivePage } from '../../providers/activePageProvider'
 import { sectionIds } from '../../constants'
-//import { Grid, Paper } from '@material_ui/core'
 
 function MainPageComponent() {
   const { isVisible } = useEmailModal()

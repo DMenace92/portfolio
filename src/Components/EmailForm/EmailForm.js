@@ -31,7 +31,7 @@ class EmailForm extends Component {
     this.setState({ [target.name]: target.value })
   }
   render() {
-    // console.log(this.props)
+    console.log(this.props)
     // console.log(this.state)
     return (
       <Grid>
