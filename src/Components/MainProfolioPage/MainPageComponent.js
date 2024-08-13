@@ -17,12 +17,13 @@ function MainPageComponent() {
     const handleScroll = () => {
       const sections = Object.values(sectionIds)
       const currentScrollPosition = scrollContainer.current.scrollTop
-      const maxScrollPosition =
-        scrollContainer.current.scrollHeight -
-        scrollContainer.current.clientHeight
+      const clientHeight = scrollContainer.current.clientHeight
+      const scrollHeight = scrollContainer.current.scrollHeight
+      const scrollTop = scrollContainer.current.scrollTop
+      const endReached = Math.ceil(clientHeight + scrollTop) === scrollHeight
 
       // Check if the scrollbar is exactly at the bottom
-      if (currentScrollPosition >= maxScrollPosition) {
+      if (endReached) {
         return setActivePage(sectionIds.contact)
       }
 
@@ -46,6 +47,7 @@ function MainPageComponent() {
           }
         }
       }
+
       setActivePage(activeSectionId)
     }
 
