@@ -5,6 +5,7 @@ import deIcon from '../Images/de.png'
 import walmartIcon from '../Images/walmart.png'
 import ieLinks from '../Images/ielinks.png'
 import banner from '../Images/banner.png'
+import ESS from '../Images/IMG_8687.png'
 import { sectionIds } from '../constants'
 // import CollapsibleComponent from '../Components/PersonalInfoContainer/About/SchoolDetail/CollapsibleComponent'
 
@@ -29,7 +30,7 @@ const Experience = forwardRef((props, ref) => {
         <div className={styles.segmentFour}></div>
         <div className={styles.workExpHolder}>
           <img
-            src={deIcon}
+            src={ESS}
             alt="dennis enwiya freelance"
             className={styles.companyIcon}
           />

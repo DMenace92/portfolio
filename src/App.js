@@ -12,7 +12,7 @@ import { EmailModalProvider } from './providers/emailModalProvider'
 import { Route, Routes } from 'react-router-dom'
 import { AuthProvider } from './providers/Utils/AuthContext'
 import ProtectedRoute from './providers/Utils/ProtectedRoute'
-import { storage } from './firebaseConfig'
+// import { storage } from './firebaseConfig'
 
 function App() {
   const [windowSize, setWindowSize] = useState()
