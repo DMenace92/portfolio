@@ -38,6 +38,7 @@ function MainPageComponent() {
 
           // Expand the considered "active" range slightly above and below the actual section
           const visibilityOffset = 200 // pixels to look ahead or behind in the scroll
+          // console.log(sectionTop)
 
           if (
             currentScrollPosition + visibilityOffset >= sectionTop &&

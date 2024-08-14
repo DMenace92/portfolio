@@ -1,13 +1,10 @@
 import React, { forwardRef } from 'react'
-// import { useParams } from 'react-router-dom'
 import styles from './Experience.module.css'
-import deIcon from '../Images/de.png'
 import walmartIcon from '../Images/walmart.png'
 import ieLinks from '../Images/ielinks.png'
 import banner from '../Images/banner.png'
 import ESS from '../Images/IMG_8687.png'
 import { sectionIds } from '../constants'
-// import CollapsibleComponent from '../Components/PersonalInfoContainer/About/SchoolDetail/CollapsibleComponent'
 
 const Experience = forwardRef((props, ref) => {
   // useParams()
@@ -125,7 +122,7 @@ const Experience = forwardRef((props, ref) => {
           </div>
           <div className={styles.schoolInfoHolder}>
             <p className={styles.schoolInfoTitle}>Greenway High School</p>
-            <p className={styles.EducationYearText}>2021 - 2023</p>
+            <p className={styles.EducationYearText}>2006 - 2010</p>
           </div>
         </div>
       </div>

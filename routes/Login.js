@@ -4,6 +4,7 @@ const Router = new express.Router();
 const auth = require("../middleware/Auth");
 let message = "the proplem is here: ";
 Router.post("/admin/login", async (req, res) => {
+  console.log(process.env.MONGO_URL)
   try {
     const user = await User.findByCredentials(
       req.body.username,

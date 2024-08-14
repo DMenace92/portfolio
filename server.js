@@ -8,7 +8,6 @@ const bodyParser = require("body-parser");
 const projectRouter = require("./routes/projectInput");
 const cors = require("cors");
 const path = require('path')
-// const test = require('./Portfolio/build')
 
 require("./config/db");
 
