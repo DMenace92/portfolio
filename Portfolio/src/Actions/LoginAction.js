@@ -1,4 +1,5 @@
-
+const ApiLink = process.env.REACT_APP_API_URL;
+console.log(ApiLink)
 export const L_S = 'L_S'
 const loginSuccess = (log) => ({ type: L_S, payload: log })
 
@@ -13,7 +14,7 @@ export const L_O = 'L_O'
 export const login = (log) => (dispatch) => {
   dispatch(loginLoading())
   // fetch(`https://portfolio-api1-8287cc1ebf3b.herokuapp.com/admin/login`, {
-  fetch(`https://my-personal-portfolio-0-b2805eb1a130.herokuapp.com/admin/login`, {
+  fetch(`${ApiLink}/admin/login`, {
     method: 'POST',
     body: JSON.stringify(log),
     headers: {

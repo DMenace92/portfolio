@@ -1,4 +1,5 @@
 import api_connect from '../utils'
+const ApiLink = process.env.REACT_APP_API_URL;
 
 export const CREATE_EMAIL_SUCCESS = 'CREATE_EMAIL_SUCCESS'
 const createEmailSuccess = (mail) => ({
@@ -17,7 +18,7 @@ const createEmailError = () => ({ type: CREATE_EMAIL_ERROR })
 export const emailer = (mail) => (dispatch) => {
   // console.log(`${api_connect}send-email`)
   dispatch(createEmailLoading())
-  fetch(`https://my-personal-portfolio-0-b2805eb1a130.herokuapp.com/send-email`, {
+  fetch(`${ApiLink}/send-email`, {
   // fetch(`https://portfolio-api1-8287cc1ebf3b.herokuapp.com/send-email`, {
     method: 'POST',
     body: JSON.stringify(mail),

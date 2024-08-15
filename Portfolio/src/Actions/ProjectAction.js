@@ -1,3 +1,5 @@
+const ApiLink = process.env.REACT_APP_API_URL;
+
 export const C_P_S = 'C_P_S'
 const createPorjectSuccess = (pro) => ({ type: C_P_S, payload: pro })
 
@@ -50,7 +52,7 @@ const deleteProjectError = () => ({ type: D_P_E })
 
 export const createImage = (pro) => (dispatch) => {
   dispatch(createImageLoading())
-  fetch('https://my-personal-portfolio-0-b2805eb1a130.herokuapp.com/create_image', {
+  fetch(`${ApiLink}/create_image`, {
     method: 'POST',
     body: pro,
     headers: {
@@ -71,7 +73,7 @@ export const createImage = (pro) => (dispatch) => {
 export const createProject = (pro) => (dispatch) => {
   dispatch(createProjectLoading())
   // fetch(`https://portfolio-api1-8287cc1ebf3b.herokuapp.com/create_project`, {
-    fetch(`https://my-personal-portfolio-0-b2805eb1a130.herokuapp.com/create_project`, {
+    fetch(`${ApiLink}/create_project`, {
 
     method: 'POST',
     body: JSON.stringify(pro),
@@ -91,7 +93,7 @@ export const createProject = (pro) => (dispatch) => {
 export const fetchProject = (pro) => (dispatch) => {
   dispatch(fetchProjectLoading())
   // fetch('https://portfolio-api1-8287cc1ebf3b.herokuapp.com/get_projects', {
-    fetch('https://my-personal-portfolio-0-b2805eb1a130.herokuapp.com/get_projects', {
+    fetch(`${ApiLink}/get_projects`, {
 
   method: 'GET',
     body: JSON.stringify(pro),
@@ -110,7 +112,7 @@ export const fetchProject = (pro) => (dispatch) => {
 
 export const updateProject = (proID, pro) => (dispatch) => {
   dispatch(updateProjectLoading())
-  fetch(`https://my-personal-portfolio-0-b2805eb1a130.herokuapp.com/update_project/${proID}`, {
+  fetch(`${ApiLink}/update_project/${proID}`, {
     method: 'PATCH',
     body: JSON.stringify(pro),
     headers: {
