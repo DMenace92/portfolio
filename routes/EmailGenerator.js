@@ -9,8 +9,7 @@ const source = fs.readFileSync("utils/index.html", "utf8");
 owner = process.env.G_USER;
 
 Router.post("/send-email", (req, res) => {
-  const { email, customName, message, phoneNumber } = req.body;
-  console.log(req.body);
+  const {username, phoneNumber, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
     service: "gmail",
@@ -32,9 +31,9 @@ Router.post("/send-email", (req, res) => {
     // },
     from: "ESS, LLC",
     to: process.env.G_USER,
-    subject: `Message from ${customName}`,
+    subject: `Message from ${username}`,
     html: source
-      .replaceAll("Your Name", customName)
+      .replaceAll("Your Name", username)
       .replaceAll("Email", email)
       .replaceAll("Message", message)
       .replaceAll("PhoneNumber", phoneNumber),

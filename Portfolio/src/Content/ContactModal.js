@@ -9,31 +9,63 @@ const ContactModal = (props) => {
   const phoneNumberRef = useRef(null)
   const emailRef = useRef(null)
   const messageRef = useRef(null)
-
   const handleSubmit = (e) => {
     e.preventDefault()
 
     const hiddenField = '' // Replace with the appropriate hidden field logic if needed
 
     if (hiddenField.trim() !== '') {
-      console.log('Submission Failed')
-      return
+        console.log('Submission Failed')
+        return
     } else {
-      const formData = {
-        username: usernameRef.current.value,
-        phoneNumber: phoneNumberRef.current.value,
-        email: emailRef.current.value,
-        message: messageRef.current.value,
-      }
-      props.emailer(formData)
-      // usernameRef.current.value = ''
-      // phoneNumberRef.current.value = ''
-      // emailRef.current.value = ''
-      // messageRef.current.value = ''
-    }
-  }
+        // Add a confirmation prompt
+        const confirmation = window.confirm('Are you sure you want to submit this form?')
 
-  console.log(props)
+        if (confirmation) {
+            const formData = {
+                username: usernameRef.current.value,
+                phoneNumber: phoneNumberRef.current.value,
+                email: emailRef.current.value,
+                message: messageRef.current.value,
+            }
+            props.emailer(formData)
+
+            // Clear the form fields
+            usernameRef.current.value = ''
+            phoneNumberRef.current.value = ''
+            emailRef.current.value = ''
+            messageRef.current.value = ''
+        } else {
+            console.log('Submission Cancelled')
+        }
+    }
+}
+
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+
+  //   const hiddenField = '' // Replace with the appropriate hidden field logic if needed
+
+  //   if (hiddenField.trim() !== '') {
+  //     console.log('Submission Failed')
+  //     return
+  //   } else {
+  //     const formData = {
+  //       username: usernameRef.current.value,
+  //       phoneNumber: phoneNumberRef.current.value,
+  //       email: emailRef.current.value,
+  //       message: messageRef.current.value,
+  //     }
+  //     props.emailer(formData)
+      
+  //     usernameRef.current.value = ''
+  //     phoneNumberRef.current.value = ''
+  //     emailRef.current.value = ''
+  //     messageRef.current.value = ''
+  //   }
+  // }
+
   return (
     <>
       <div
@@ -48,7 +80,7 @@ const ContactModal = (props) => {
           <div className={styles.lableDecorator}>
             <form className={styles.formLayoutDesign} onSubmit={handleSubmit}>
               <label className={styles.inputLableDesign}>
-                Email
+                Full Name
                 <input
                   className={styles.inputDesign}
                   ref={usernameRef}
@@ -56,13 +88,14 @@ const ContactModal = (props) => {
                 />
               </label>
               <label className={styles.inputLableDesign}>
-                Subject
+                Email
                 <input
                   className={styles.inputDesign}
                   ref={emailRef}
                   name="email"
                 />
               </label>
+              
               <label className={styles.inputLableDesign}>
                 Phone Number
                 <input

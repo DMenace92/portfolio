@@ -15,7 +15,7 @@ class EmailForm extends Component {
   }
 
   _onSubmit = (e) => {
-    e.preventDefault()
+    // e.preventDefault()
 
     // console.log(this.props)
     if (this.state.hidden.trim() !== '') {

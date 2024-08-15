@@ -48,7 +48,7 @@ const AdminSignin = (props) => {
       navigate('/pmp')
     } else if (token === undefined && !token) {
       setIsAuthenticated(false)
-      // window.location.reload()
+      window.location.reload()
     }
   }, [token, navigate])
 

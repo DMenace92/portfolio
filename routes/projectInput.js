@@ -28,7 +28,6 @@ Router.post("/create_image", upload.single("file"), async (req, res) => {
 });
 
 Router.post("/create_project", async (req, res) => {
-  console.log(req.body);
   const project = new Project({
     title: req.body.title,
     techUsed: req.body.techUsed,
